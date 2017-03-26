@@ -1,0 +1,22 @@
+{
+  "name": "ng_learn",
+  "version": "1.0.0",
+  "description": "ng learn team",
+  "main": "index.html",
+  "scripts": {
+    "test": "n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ngLearn"
+  },
+  "keywords": [
+    "ng",
+    "learn"
+  ],
+  "author": "anil",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.3"
+  }
+}
