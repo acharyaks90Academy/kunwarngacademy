@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<style>
+		.cont div{margin:20px 0;}
+		.cont div>label{display: block; padding:10px 0;}
+		button{cursor: pointer;}
+	</style>
+
+</head>
+<body ng-app="myapp">
+	<form ng-controller="mycont" class="cont" name="rtrtrt">
+		<div>	<span ng-show="mydivshow">{{hi}} </span>
+				<input type="checkbox" name="myshow" id="myshwo" ng-model="mydivshow">
+			<label>Name</label>
+		<input type="text" id="name" ng-model="register.name" />
+		</div>
+		<div>
+			<label>Email</label>
+		<input type="email" id="email" ng-model="register.email" />
+		</div>
+		<div>
+			<label>Password</label>
+		<input type="password" id="password" ng-model="register.password" />
+		</div>
+		<div>
+			<label>Message</label>
+		<input type="text" id="message" ng-model="register.message" />
+		</div>
+		<button value="Submit" ng-click="regisetTeacher();"> Submit </buttom>
+		</form>
+	</div>
+
+</body>
+</html>
