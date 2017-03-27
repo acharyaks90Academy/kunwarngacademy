@@ -58,12 +58,13 @@
 			<th>Email</th>
 			<th>Qualification</th>
 		</tr>
-		<tr>
-			<td>{{person.name}}</td>
-			<td>{{person.email}}</td>
-			<td>{{person.qualification}}</td>
+		<tr ng-repeat="x in addList">
+			<td>{{x.name}}</td>
+			<td>{{x.email}}</td>
+			<td>{{x.qualification}}</td>
 		</tr>
 	</table>
+	{{addList}}
 	</div>
 	</div>
 	<div class="row">
