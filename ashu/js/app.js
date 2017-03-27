@@ -17,15 +17,10 @@ $scope.hi = [];
 
 }
 
-
-
-
-
  $scope.myarra = [
- {name:"anil", class:"12th A", rollno:"2"},
- {name:"Ashu", class:"11th A", rollno:"1"},
- {name:"Ravi", class:"7th A", rollno:"5"},
- {name:"Himanshu", class:"BA ", rollno:"45"}
-
+	 {name:"anil", class:"12th A", rollno:"2"},
+	 {name:"Ashu", class:"11th A", rollno:"1"},
+	 {name:"Ravi", class:"7th A", rollno:"5"},
+	 {name:"Himanshu", class:"BA ", rollno:"45"}
  ]
 })
