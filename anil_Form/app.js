@@ -11,7 +11,7 @@ address:""
 
 $scope.myData=[];
 $scope.successMessage=false;
-$scope.alertMessage=true;
+$scope.alertMessage=false;
 
 $scope.submitForm =function(){
 	console.log($scope.myData);
@@ -19,16 +19,27 @@ $scope.submitForm =function(){
 		alert("pleae fill it");
 
 	};*/
+
+	if($scope.member.name=="" || $scope.member.email==""  || $scope.member.roll=="" || $scope.member.address==""){
+		$scope.alertMessage=true;
+		return true;
+	}else
+	{$scope.myData.push({'name':$scope.member.name, 'email':$scope.member.email, 'roll':$scope.member.roll, 'address':$scope.member.address});}
 	$scope.successMessage=true;
 	$scope.alertMessage=false;
-	//$scope.myData.push(angular.copy($scope.member));
-	$scope.myData.push({'name':$scope.member.name, 'email':$scope.member.email, 'roll':$scope.member.roll, 'address':$scope.member.address});
 	$scope.member={};
+
+
+	//$scope.successMessage=true;
+	//$scope.alertMessage=false;
+	//$scope.myData.push(angular.copy($scope.member));
+	
+	
 };
 
 /*$scope.removeRow = function(){
 	$scope.myData.pop();
-	
+
 };*/
 
 })
