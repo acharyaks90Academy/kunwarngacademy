@@ -12,7 +12,7 @@ $scope.addList = [];
 
 $scope.registerSub = function(){
 	//console.log($scope.person)
-	if($scope.person.name=="" || $scope.person.email=="" || $scope.person.qualification==""){
+	if($scope.person.name=="" && $scope.person.email=="" && $scope.person.qualification==""){
 		alert("please fill it");		
 
 	}
