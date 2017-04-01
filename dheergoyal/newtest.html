@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head></head>
+
+<script src="angular.min.js"></script>
+<script src="mysc.js"></script>
+
+<body ng-app="myApp" >
+<div ng-controller="myctrl">
+First Name:
+<input type="text" id="firstname" ng-model="person.firstName"> <br><br>
+
+Last Name:
+<input type="text" id="lastname" ng-model="person.lastName"><br><br>
+
+UserName:
+<input type="text" id="username" ng-model="person.userName"><br><br>
+
+<button ng-click="addInList(person)"> Submit </button>
+
+MY List of data <br>
+{{myList}}
+
+<table border="1">
+<thead>
+<th>First Name</th>
+<th>Last Name</th>
+<th>User Name</th>
+<th>Action</th>
+
+</thead>
+<tbody>
+<tr ng-repeat="x in myList">
+<td>{{x.firstName}}</td>	
+<td>{{x.lastName}}</td>	
+<td>{{x.userName}}</td>	
+<td>Delete</td>	
+
+</tr>
+
+</table>
+
+
+
+</div>
+
+
+</body>
+</html>
