@@ -54,8 +54,8 @@ $scope.editfun = function(index){
 
 	$scope.teacherList = [
 	{name:"Himanshu", email:"hw@gmail.com", qualification:"Graduate"},
-	{name:"Ravi", email:"rs@gmail.com", qualification:"Graduate"},
-	{name:"Ashu", email:"ashutyagi@gmail.com", qualification:"Graduate"}
+	{name:"Ravi", email:"rs@gmail.com", qualification:"BA"},
+	{name:"Ashu", email:"ashutyagi@gmail.com", qualification:"BCA"}
 
 	];
 

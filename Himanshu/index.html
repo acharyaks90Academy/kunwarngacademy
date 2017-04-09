@@ -54,7 +54,7 @@
 			<th>Qualification</th>
 			<th>Action</th>
 		</tr>
-		<tr ng-repeat="faculityList in teacherList">
+		<tr ng-repeat="faculityList in teacherList" ng-if="faculityList.name != 'Ashu'">
 			<td>{{faculityList.name}}</td>
 			<td>{{faculityList.email}}</td>
 			<td>{{faculityList.qualification}}</td>
