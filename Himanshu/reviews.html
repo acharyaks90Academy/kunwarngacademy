@@ -12,7 +12,7 @@
 <body ng-app="myApp">
 	<div class="container" ng-controller="reviewCtrl">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-4">
 				<h1>Reviews</h1>
 				<hr />
 				<h4>Submit a Reviews</h4>
@@ -37,19 +37,20 @@
 					<button type="button" value="Submit" class="btn btn-primary" ng-click="SubmitReview()">Submit Review</button>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<h4>Product Reviews</h4>	
+			<div class="col-md-8">
+				<h1>Product Reviews</h1>	
 				<ul class="list-group">
 					<li class="list-group-item" ng-repeat="x in reviewList">
 						
 						<strong class="badge">{{x.rating}}</strong>{{x.shortDesc}}
-						<p><i>{{x.emailID}}</i></p>
+						<p><small><i>{{x.emailID}}</i></small></p>
 					</li>
 				</ul>
 			</div>
-
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12" ng-include="'product-description.htm'">
 		</div>
 	</div>
 	

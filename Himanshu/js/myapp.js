@@ -35,4 +35,11 @@ angular.module('myApp', []).controller('reviewCtrl', function($scope){
 
 	}
 
+}).controller('descCtrl', function($scope){
+	alert();
+$scope.description = {
+	product:"Would you really want to be riding over smooth roads all the time? Get this hybrid bike from Hero and make riding more fun as you explore newer terrains."
+};
+
+
 })
