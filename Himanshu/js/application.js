@@ -6,27 +6,39 @@ $scope.person = {
 
 };
 $scope.editRec = false;
-
-	$scope.registerSub = function() {
-		if($scope.editRec){
-			
+$scope.registerSub = function() {
+if($scope.editRec){
+			$scope.teacherList[$scope.listNumber] = angular.copy($scope.person);			
 			alert($scope.editRec)
-		}
+			$scope.listNumber = null;
+			$scope.editRec = false;
+			$scope.person ={
+				name:"",
+				email:"",
+				qualification:"",
+			};
 
-		//alert();
-		if($scope.person!=null && $scope.person.name!=null && $scope.person.name!=null && $scope.person.qualification!=null){
+}
+else{
+if($scope.person!=null && $scope.person.name!=null && $scope.person.name!='' && $scope.person.name!=null && $scope.person.qualification!=null){
 		 	    alert("Data Filled")
 				alert($scope.person.name);
 				$scope.teacherList.push(angular.copy($scope.person))
-				$scope.person = {};
+				$scope.person = {
+					name:"",
+					email:"",
+					qualification:"",
 
-			}else{
+				};
+}
+			else{
 				alert('Please fill the details');
 			}	
-	}
-	$scope.editfun = function(index){
-			alert();
-			$scope.person = $scope.teacherList[index] 
+
+}
+}
+$scope.editfun = function(index){
+			$scope.person = angular.copy($scope.teacherList[index]) 
 			$scope.editRec = true
 			$scope.listNumber = index
 			alert($scope.listNumber)
@@ -46,5 +58,5 @@ $scope.editRec = false;
 	{name:"Ashu", email:"ashutyagi@gmail.com", qualification:"Graduate"}
 
 	];
-})			
 
+})	

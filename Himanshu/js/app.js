@@ -15,7 +15,13 @@ $scope.registerSub = function(){
 	
 	$scope.addList[$scope.listnumber] = angular.copy($scope.person) ;
 	$scope.editRec = false;
-	$scope.person ={};
+	$scope.person = {
+	name:'',
+	email:'',
+	qualification:''
+
+};
+	
 }else{
 if($scope.person!=null && $scope.person.name!=null && $scope.person.email!=null && $scope.person.qualification!=null){
 		
