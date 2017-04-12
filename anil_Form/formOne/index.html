@@ -1,0 +1,128 @@
+<!DOCTYP html>
+<html>
+
+<head>
+    <title>Form | Anuglar JS</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/myApp.js"></script>
+    <link href="js/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        table {
+            font-size: 12px!important;
+        }
+        
+        .mt30 {
+            margin-top: 30px;
+        }
+        
+        .mt10 {
+            margin-top: 10px;
+        }
+        
+        input {
+            border: 1px solid #ccc;
+            padding: 3px;
+            color: #000;
+        }
+        
+        .alert {
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .green {background:green; color:#fff; font-weight: bold;}
+        .red {background:red; }
+    </style>
+
+</head>
+
+<body ng-app="myapp">
+
+    <div ng-controller="firstController" class="container-fluid">
+       <div ng-include="'header.html'" ng-controller="headerMain"></div>
+        <div class="container">
+            <div class="mt30 row">
+                <form name="myForm">
+                    <!--<div class="row">{{team}}</div>-->
+                    
+                    <div class="row">
+                    <h1>Advance Search</h1><hr/>
+                        <input type="text" placeholder="First Name" style="padding:2px; font-size:11px;"  ng-model="allTypeFilter.firstname" />
+                        <input type="text" placeholder="Last Name" style="padding:2px; font-size:11px;"  ng-model="allTypeFilter.lastname" />
+                        <input type="text" placeholder="Position Name" style="padding:2px; font-size:11px;"  ng-model="allTypeFilter.office" />
+                        <input type="text" placeholder="Salary Name" style="padding:2px; font-size:11px;"  ng-model="allTypeFilter.salary" />
+                        
+                    </div>
+                    <hr/>
+                    
+                    <div class="row">
+                        <div>
+                            <h6 style="font-weight:bold;">Filter:<input type="text" ng-model="allTypeFilter.$" style="margin:0 0 0 10px;" />
+                                               
+                            
+                            
+                            <input type="submit" ng-click="addResult();" value="Add Result!" class="btn btn-success btn-sm pull-right" /></h6></div>
+                    </div>
+                    <div class="row mt10">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="row" ng-show="alertDelete">
+                                <p class="text-danger" style="background:#ff0000; padding:5px; font-size:12px; color:#fff;"><b>Record delete successfully..</b></p>
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-danger" ng-show="required">
+                                    <strong>Required!</strong> First Name, Last Name, Office Address, Salary
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-success" ng-hide="savesuccessfull">
+                                    <strong>Success!</strong> Indicates a successful or positive action.
+                                </div>
+                            </div>
+                            <div class="row">
+
+
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th class="bg-primary">Sl. No.</th>
+                                        <th class="bg-primary">* First Name<br/><input type="text" name="firstname" ng-model="team.firstname" /></th>
+                                        <th class="bg-primary">* Last Name<br/><input type="text" name="lastname" ng-model="team.lastname" /></th>
+                                        <th class="bg-primary">Position<br/><input type="text" name="position" ng-model="team.position" /></th>
+                                        <th class="bg-primary">* Office<br/><input type="text" name="position" ng-model="team.office" /></th>
+                                        <th class="bg-primary">* Salary<br/><input type="text" name="salary" ng-model="team.salary" /></th>
+                                        <th class="bg-primary">Edit</th>
+                                        <th class="bg-primary">Delete</th>
+
+                                    </tr>
+                                    <tr ng-repeat="x in myData | filter:allTypeFilter" ng-class="{'bg-warning' : x.lastname=='Kumar'}">
+                                        <td>{{$index+1}}</td>
+                                        <td filter:>{{x.firstname}}</td>
+                                        <td>{{x.lastname}}</td>
+                                        <td ng-class="x.position=='html/css'? 'green': ''">{{x.position | uppercase}}</td>
+                                        <td>{{x.office}}</td> 
+                                        <!--<td>{{x.salary}}</td>-->
+                                        <td><p ng-hide="hidesalary">{{x.salary}}</p><p ng-show="hidesalary">######</p></td>                                      
+                                        <td> <button type="button" class="btn btn-info btn-xs" ng-click="editRecord($index);">
+                                      <span class="glyphicon glyphicon-edit"></span> Edit
+                                    </button></td>
+                                        <td><button ng-click="deleteRecord($index);" type="button" class="btn btn-danger btn-xs"><span  class="glyphicon glyphicon-remove"></span>Delete</button></td>
+                                    </tr>
+                                    <tr>
+                                    <td colspan="8"> <input type="checkbox" ng-model="hidesalary" /> Hide Salary</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
