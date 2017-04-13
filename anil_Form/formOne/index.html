@@ -6,7 +6,7 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/myApp.js"></script>
     <link href="js/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
     <style>
         table {
             font-size: 12px!important;
@@ -32,6 +32,11 @@
         }
         .green {background:green; color:#fff; font-weight: bold;}
         .red {background:red; }
+        
+       input.ng-invalid { background-color:pink;}
+       input.ng-valid {background-color:lightgreen;}
+       form.ng-pristine {border:1px solid orange; padding: 50px;}
+      form.ng-dirty {border:2px solid green; padding: 50px;}
     </style>
 
 </head>
@@ -42,7 +47,7 @@
        <div ng-include="'header.html'" ng-controller="headerMain"></div>
         <div class="container">
             <div class="mt30 row">
-                <form name="myForm">
+                <form name="myForm" novalidate>
                     <!--<div class="row">{{team}}</div>-->
                     
                     <div class="row">
@@ -84,16 +89,16 @@
                                 <table class="table table-striped">
                                     <tr>
                                         <th class="bg-primary">Sl. No.</th>
-                                        <th class="bg-primary">* First Name<br/><input type="text" name="firstname" ng-model="team.firstname" /></th>
-                                        <th class="bg-primary">* Last Name<br/><input type="text" name="lastname" ng-model="team.lastname" /></th>
+                                        <th class="bg-primary">* First Name<br/><input type="text"  ng-model="team.firstname" name="firstname"  required /> <input type="text" ng-model="firstname" name="name" required /></th>
+                                        <th class="bg-primary">* Last Name<br/><input type="text" name="lastname" ng-model="team.lastname"  required /></th>
                                         <th class="bg-primary">Position<br/><input type="text" name="position" ng-model="team.position" /></th>
-                                        <th class="bg-primary">* Office<br/><input type="text" name="position" ng-model="team.office" /></th>
-                                        <th class="bg-primary">* Salary<br/><input type="text" name="salary" ng-model="team.salary" /></th>
+                                        <th class="bg-primary">* Office<br/><input type="text" name="position" ng-model="team.office"  required /></th>
+                                        <th class="bg-primary">* Salary<br/><input type="text" name="salary" ng-model="team.salary"  required /></th>
                                         <th class="bg-primary">Edit</th>
                                         <th class="bg-primary">Delete</th>
 
                                     </tr>
-                                    <tr ng-repeat="x in myData | filter:allTypeFilter" ng-class="{'bg-warning' : x.lastname=='Kumar'}">
+                                    <tr ng-repeat="x in myData | filter:allTypeFilter | orderBy:'salary'" ng-class="{'bg-warning' : x.lastname=='Kumar'}">
                                         <td>{{$index+1}}</td>
                                         <td filter:>{{x.firstname}}</td>
                                         <td>{{x.lastname}}</td>
