@@ -112,7 +112,7 @@ app.controller("firstController", function ($scope, $timeout) {
 
     $scope.editRecord = function(index) {
        // console.log($scope.myData[index])
-        $scope.team = $scope.myData[index];
+        $scope.team = angular.copy($scope.myData[index]);
 
     };
 
