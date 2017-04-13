@@ -10,11 +10,11 @@ app.controller("firstController", function ($scope, $timeout) {
 
 
     $scope.team = {
-        firstname: " ",
-        lastname: " ",
-        position: " ",
-        office: " ",
-        salary: " "
+        firstname: "",
+        lastname: "",
+        position: "",
+        office: "",
+        salary: ""
 
     };
 
