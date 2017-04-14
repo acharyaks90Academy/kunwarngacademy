@@ -12,6 +12,8 @@ password : "",
 message : "",
 class:""
 };
+
+$scope.color = "him";
 $scope.hi = [
 	 {name:"anil", class:"12th A", email:"2",password:"",message:""},
 	 {name:"Ashu", class:"11th A", email:"1",password:"",message:""},
@@ -23,7 +25,7 @@ $scope.hi = [
 	if(!$scope.editRec){
 
 
-	if($scope.register!=null && $scope.register.name!=null && $scope.register.class!=null && $scope.register.password!=null&& $scope.register.message!=null&& $scope.register.email!=null){
+	if($scope.register!=null && $scope.register.name!=null && $scope.register.name!="" && $scope.register.class!=null && $scope.register.password!=null&& $scope.register.message!=null&& $scope.register.email!=null){
 
 	
 	$scope.hi.push(angular.copy($scope.register));
@@ -61,5 +63,11 @@ $scope.indexUse =i;
 $scope.editRec = true
 };
 
+$scope.giveValue = function(val){
+	console.log("printing:"+val)
+};
+
  
-})
+});
+
+

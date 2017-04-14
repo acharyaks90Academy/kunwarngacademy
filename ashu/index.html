@@ -4,21 +4,30 @@
 	<title></title>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/ravictrt.js"></script>
 
 	<style>
 		.cont div{margin:20px 0;}
 		.cont div>label{display: block; padding:10px 0;}
 		button{cursor: pointer;}
+		.him{
+			color: blue;
+		}
+		.ravi{
+			 color: red;
+		}
 	</style>
 
 </head>
+
 <body ng-app="myapp">
 <div ng-controller="mycont">
+		{{color}} -- color
 	<form  class="cont" name="rtrtrt">
 		<div>	
 				<input type="checkbox" name="myshow" id="myshwo" ng-model="mydivshow">
 			<label>Name</label>
-		<input type="text" id="name" ng-model="register.name" />
+		<input type="text" id="name" ng-model="register.name" ng-change="register.message = register.name" />
 		</div>
 		<div>
 			<label>Email</label>
@@ -30,7 +39,7 @@
 		</div>
 		<div>
 			<label>Class</label>
-		<input type="text" id="class" ng-model="register.class" />
+		<input ng-disabled="register.name==''" type="text" id="class" ng-model="register.class" />
 		</div>
 		<div>
 			<label>Message</label>
@@ -38,30 +47,47 @@
 		</div>
 		<button value="Submit" ng-click="regisetTeacher();"> Submit </button>
 		</form>
-
+		<a>
+Anil Kumar
+</a>
 		<table border="1">
 			<thead>
 				<tr>
 				<th>Name</th>
 				<th>email</th>
 				<th>Password</th>
-				<th>Class </th>
+				<th >Class </th>
 				<th>Message</th>
 				<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="x in hi">
-				<td>{{x.name}}</td>
-				<td>{{x.email}}</td>
+				<td ng-class="x.class!='12th A'?'him':'ravi' ">{{x.name}}</td>
+				<td ng-class="{'him':'true'}">{{x.email}}</td>
 				<td>{{x.password}}</td>
-				<td>{{x.class}}</td>
+				<td ng-if="x.class!='12th A'">{{x.class}}</td>
 				<td>{{x.message}}</th>
 				<td><span ng-click="removeTeacher($index);">Delete!</span></td>
 				<td><span ng-click="editTeacher($index);">Edit!</span></td>
 				</tr>
 			</tbody>
 		</table>
+		</div>
+		
+		<div id="ravi" ng-controller="raviCtl"  >
+	<div >
+{{obj}}
+<input type="text" ng-model="obj.myName">
+{{obj.myName}}
+
+<a ng-href="" ng-click="print()">Click me </a>
+</div>
+
+	<div id="anil" ng-controller="raviCtl" ng-include="'anil.html'" ></div>
+		</div>
+		<div ng-controller="raviCtl">
+			<span>{{ashu}}</span>
 		</div>
 	
 
