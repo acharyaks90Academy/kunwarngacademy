@@ -1,4 +1,18 @@
-angular.module("myapp",[]).controller("mycont", function($scope, $rootScope){
+angular.module("myapp",['ngRoute'])
+.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
+
+	$routeProvider
+      .when('/anil', {
+        templateUrl: 'myview.html',
+        controller : 'mycont'
+        
+      })
+      .when('/',{
+      	templateUrl : 'welcome.html'
+      })
+
+}])
+.controller("mycont",['$scope', '$rootScope', function($scope, $rootScope){
 
  $scope.ashu='Hello World!!';
  $rootScope.ashu2='Second row';
@@ -68,6 +82,6 @@ $scope.giveValue = function(val){
 };
 
  
-});
+}]);
 
 
