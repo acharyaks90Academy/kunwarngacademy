@@ -64,7 +64,10 @@ myApp.controller("mySeat", function($scope, $timeout, $http){
 	
 
 	$scope.SubmitData = function(){
-		if($scope.studentForm==null || $scope.studentForm=="" || $scope.studentForm.username==null || $scope.studentForm.username==""
+		
+		if(!$scope.editRec){
+
+			if($scope.studentForm==null || $scope.studentForm=="" || $scope.studentForm.username==null || $scope.studentForm.username==""
 			 || $scope.studentForm.class==null || $scope.studentForm.class=="" || $scope.studentForm.duration==null || $scope.studentForm.duration==""
 			 || $scope.studentForm.course==null || $scope.studentForm.course=="" || $scope.studentForm.password==null || $scope.studentForm.password=="" 
 			 || $scope.studentForm.fee==null || $scope.studentForm.fee==""){
@@ -97,6 +100,17 @@ myApp.controller("mySeat", function($scope, $timeout, $http){
 
 		}
 
+		}else {
+			alert("hellow...ng");
+			$scope.dummyData[$scope.indexHold]= $scope.studentForm;
+			
+
+
+
+		}
+
+
+
 
 
 	}
@@ -115,7 +129,7 @@ myApp.controller("mySeat", function($scope, $timeout, $http){
 		alert(index);
 		//console.log($scope.studentForm = ($scope.dummyData[index]))
 		$scope.studentForm = ($scope.dummyData[index]);		
-		$scope.indedHold=index;
+		$scope.indexHold=index;
 		$scope.editRec=true;
 
 
