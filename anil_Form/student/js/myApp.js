@@ -1,4 +1,4 @@
-angular.module("studentApp",["ngRoute"])
+var myApp= angular.module("studentApp",["ngRoute"])
 
 .config(function($routeProvider) {
     $routeProvider
@@ -16,7 +16,7 @@ angular.module("studentApp",["ngRoute"])
 
 
 
-.controller("mySeat", function($scope, $timeout, $http){
+myApp.controller("mySeat", function($scope, $timeout, $http){
 	
 	$scope.welcomeTime="hello...angular"
 	
@@ -123,23 +123,4 @@ angular.module("studentApp",["ngRoute"])
 	}
 	
 	
-}).controller("loginController", function($scope, $timeout, $http){
-
-	$scope.signIn = function(){
-		
-		if($scope.login.username=="" || $scope.login.username== null || $scope.login.password=="" || $scope.login.password== null){
-			$scope.usererror=true;	
-			$scope.passworderror=true;				
-		}
-		else if($scope.login.username == $scope.login.password){			
-			$scope.loginsuccess=true;
-			$scope.usererror=false;
-			$scope.passworderror=false;			
-			$scope.login={};
-			
-		}else {			
-			alert("Username and Password shoule be same");
-		}		
-	}
-
 })
