@@ -2,3 +2,20 @@
 .h1{margin: 15px 0;}
 .section{margin: 40px 0;}
 .footer{padding: 15px 0;}
+.navbar-static-side {
+    background-color: #2f4050;
+    width: 220px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+.navbar-default, .navbar-static-side {background-color: #2f4050;}
+.navbar-static-side .h1{padding:30px 25px; color: #a7b1c2; border-bottom:#5e6b7f solid 1px; margin:0 0 15px 0;}
+.navbar-static-side .nav{float: none; margin: 20px 0 0 0;}
+.navbar-static-side li{float: none; display: block;}
+.navbar-static-side li a{padding:14px 20px 14px 25px; color:#a7b1c2!important;}
+.navbar-static-side li a:hover{background:#293846!important; color:#fff!important;}
+.page-wrapper{overflow: hidden; margin: 0 0 0 240px; padding:15px;}
+.h1{font-size: 26px;}
+

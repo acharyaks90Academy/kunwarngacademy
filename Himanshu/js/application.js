@@ -1,4 +1,21 @@
-angular.module('myApp',[]).controller('myCtrl', function($scope){
+angular.module('myApp',["ngRoute"])
+
+
+.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "welcome.html"
+    })    
+    .when("/list", {
+        templateUrl : "teacher/list.html",
+		
+    })
+	 .when("/registration", {
+        templateUrl : "teacher/registration.html",
+		
+    })
+   
+}).controller('myCtrl', function($scope){
 $scope.person = {
 		name:"",
 		email:"",
