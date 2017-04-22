@@ -1,0 +1,44 @@
+<div class="container bg-info" style="padding:10px;"  ng-controller="studentListCtrl">
+<h2>Search Result</h2>
+<table cellspacing="5" cellpadding="5">
+    <tr>
+    <td>Search All: <input type="text" style="font-size: 10px; padding: 3px; border: 1px solid #ccc; margin-right: 5px;" ng-model="searchBy.$" placeholder="Search all" /></td> 
+       <td><input type="text" style="font-size: 10px; padding: 3px; border: 1px solid #ccc; margin-right: 5px;" placeholder="search by username" ng-model="searchBy.username" /></td> <td><input type="text" style="font-size: 10px; padding: 3px; border: 1px solid #ccc; margin-right: 5px;" placeholder="search by class" ng-model="searchBy.class" /></td>
+       <td><input type="text" style="font-size: 10px; padding: 3px; border: 1px solid #ccc; margin-right: 5px;" placeholder="search by course" ng-model="searchBy.course" /></td>
+       <td><input type="text" style="font-size: 10px; padding: 3px; border: 1px solid #ccc; margin-right: 5px;" placeholder="search by gender" ng-model="searchBy.gender" /></td>
+    </tr>
+
+</table><br/>
+<p ng-show="recorddeletemessage" class="alert alert-warning">Record delete successfully</p>
+<table class="table table-bordered" style="background:#fff;">   
+      <tr>
+      <th>Photos</th>
+        <th>Username</th>
+        <th>Password <p style="color:blue; font-size: 10px; "><input type="checkbox" ng-model="hide">Show/Hide</p></th>
+        <th>Class</th>
+        <th>Course</th>
+        <th>Duration</th>
+        <th>How Find?</th>
+        <th>Fee</th>
+        <th>Gender</th>
+        <th>Edit</th>
+        <th>Delete</th>        
+      </tr>
+   <tr ng-repeat="x in dummyData | filter:searchBy" ng-class="{'girlColor' : x.gender=='Female'}">
+    <td class="img-rounded"><img ng-src="{{x.photos}}" width="55" height="55"></td>
+       <td>{{x.username}}</td>
+       <td><span ng-show="hide">{{x.password}}</span> <span ng-hide="hide">#######</span></td>
+       <td>{{x.class}}</td>
+       <td>{{x.course | uppercase}}</td>
+       <td>{{x.duration}}</td>
+       <td>{{x.howfind.placementNewspaper == true?'Google':''}} ,{{x.howfind.placementGoogle == true?'Google':''}},{{x.howfind.placementOther == true?'Google':''}} </td>
+       <td ng-class="x.fee=='50'?' highprice' : '' ">{{x.fee}} K</td>
+       <td>{{x.gender}}</td>
+       <td><button type="button" class="btn btn-info btn-xs" ng-click="editRecord($index)"><span class="glyphicon glyphicon-edit"></span>Edit</button></td>
+       <td><button type="button" class="btn btn-info btn-danger btn-xs" ng-click="deleteRecord($deleterow)"><span class="glyphicon glyphicon-edit"></span>Delete</button></td>
+       
+   </tr>
+    
+  </table>
+
+</div>

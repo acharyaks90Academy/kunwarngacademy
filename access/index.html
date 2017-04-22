@@ -7,8 +7,12 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.js"></script>
-<script src="js/myApp.js"></script>
-<script src="js/loginController.js"></script>
+<script src="js/app.js"></script>
+<script src="student/studentListCtrl.js"></script>
+<script src="student/reg/studentRegCtrl.js"></script>
+
+
+<!--<script src="js/loginController.js"></script>-->
 <title>Hey, I am NG</title>
 <style type="text/css">
 body{background:#2b2b2b; }	
@@ -16,7 +20,19 @@ body{background:#2b2b2b; }
 .marginbottom50 {margin-bottom:50px;}
 </style>
 </head>
-<body ng-app="studentApp" >
+<body ng-app="academyApp" >
+    <h1>My Menu </h1>
+    <ul style="display: inline">
+        <li><a href="#/student">Registration</a><li>
+            <li><a href="#/studentList">List</a><li>
+            
+    </ul>
 <div ng-view></div>
+
+
+
+
+
+
 </body>
 </html>

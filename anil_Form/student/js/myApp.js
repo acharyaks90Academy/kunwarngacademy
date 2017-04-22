@@ -6,7 +6,8 @@ var myApp= angular.module("studentApp",["ngRoute"])
         templateUrl : "splash.html"
     })    
     .when("/student", {
-        templateUrl : "studentPage.html"
+        templateUrl : "studentPage.html",
+		controller: 'mySeat'
     })
     .when("/login", {
         templateUrl : "loginPage.html",
@@ -101,11 +102,26 @@ myApp.controller("mySeat", function($scope, $timeout, $http){
 		}
 
 		}else {
-			alert("hellow...ng");
+			
 			$scope.dummyData[$scope.indexHold]= $scope.studentForm;
 			
+			$scope.editRec = false;
+			$scope.studentForm={
+		photos:"",
+		username:"",
+		class:"",
+		duration:"",
+		password:"",
+		course:"",
+		gender:"",
+		fee:"",
+		placementNewspaper:"",
+		placementGoogle:"",
+		placementOther:""
+		
 
 
+	};
 
 		}
 
@@ -126,9 +142,9 @@ myApp.controller("mySeat", function($scope, $timeout, $http){
 	}
 
 	$scope.editRecord = function(index){
-		alert(index);
+		
 		//console.log($scope.studentForm = ($scope.dummyData[index]))
-		$scope.studentForm = ($scope.dummyData[index]);		
+		$scope.studentForm = angular.copy($scope.dummyData[index]);		
 		$scope.indexHold=index;
 		$scope.editRec=true;
 
