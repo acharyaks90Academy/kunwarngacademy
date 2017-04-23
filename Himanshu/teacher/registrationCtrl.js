@@ -1,4 +1,4 @@
-.controller('myCtrl', function($scope){
+app.controller('registrationCtrl', function($scope){
 $scope.person = {
 		name:"",
 		email:"",
