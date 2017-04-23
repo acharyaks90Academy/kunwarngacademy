@@ -1,21 +1,18 @@
 angular.module('myApp',["ngRoute"])
+.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
 
+	$routeProvider
+      .when('/list', {
+        templateUrl: 'teacher/list.html'
+       
+        
+      })
+      .when('/',{
+      	templateUrl : 'welcome.html'
+      })
 
-.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "welcome.html"
-    })    
-    .when("/list", {
-        templateUrl : "teacher/list.html",
-		
-    })
-	 .when("/registration", {
-        templateUrl : "teacher/registration.html",
-		
-    })
-   
-}).controller('myCtrl', function($scope){
+}])
+.controller('myCtrl', function($scope){
 $scope.person = {
 		name:"",
 		email:"",
