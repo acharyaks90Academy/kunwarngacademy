@@ -1,6 +1,5 @@
 <div class="page-wrapper">
 
-		
 <div class="row" ng-controller="registrationCtrl">
 	<div class="col-md-12">
 	 <h1 class="h1">Please find the List below</h1>	
@@ -16,8 +15,8 @@
 			<td>{{x.email}}</td>
 			<td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
 			<td>
-			<a class="btn btn-danger" href="javascript:void(0)" ng-click="registerDelete($index);">Delete</a>
-			<a class="btn btn-primary" href="javascript:void(0)" ng-click="registerEdit($index);">Edit</a>
+			<a class="btn btn-danger" href="#" ng-click="registerDelete($index);">Delete</a>
+			<a class="btn btn-primary" href="#" ng-click="registerEdit($index);">Edit</a>
 			</td>
 		</tr>
 	</table>
