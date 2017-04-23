@@ -9,7 +9,6 @@ var app = angular.module('myApp',["ngRoute"])
 	   .when('/registration', {
         templateUrl: 'teacher/registration.html'
 		
-       
       })
       .when('/',{
       	templateUrl : 'welcome.html'

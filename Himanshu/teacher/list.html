@@ -11,10 +11,10 @@
 			<th>Qualification</th>
 			<th>Action</th>
 		</tr>
-		<tr ng-repeat="x in addList">
+		<tr ng-repeat="x in teacherList">
 			<td>{{x.name}}</td>
 			<td>{{x.email}}</td>
-			<td><span ng-repeat="inner in x.qualification">{{inner.subject}},	</span></td>
+			<td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
 			<td>
 			<span ng-click="registerDelete($index);">Delete</span>
 			<span ng-click="registerEdit($index);">Edit</span>

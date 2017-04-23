@@ -2,9 +2,10 @@ app.controller('registrationCtrl', function($scope){
 $scope.person = {
 		name:"",
 		email:"",
-		qualification:"",
+		qualification:[],
 
 };
+$scope.qualification = [];
 $scope.editRec = false;
 $scope.registerSub = function() {
 if($scope.editRec){
@@ -53,9 +54,9 @@ $scope.editfun = function(index){
 	} 
 
 	$scope.teacherList = [
-	{name:"Himanshu", email:"hw@gmail.com", qualification:"Graduate"},
-	{name:"Ravi", email:"rs@gmail.com", qualification:"BA"},
-	{name:"Ashu", email:"ashutyagi@gmail.com", qualification:"BCA"}
+	{name:"Himanshu", email:"hw@gmail.com", qualification:["Angular", "Javascript"]},
+	{name:"Ravi", email:"rs@gmail.com", qualification:["Angular", "Javascript","SASS"]},
+	{name:"Ashu", email:"ashutyagi@gmail.com", qualification:["Angular", "Javascript"]}
 
 	];
 
