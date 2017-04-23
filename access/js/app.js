@@ -13,6 +13,16 @@ var myApp= angular.module("academyApp",["ngRoute"]) //
         templateUrl : "student/studentList.html",
 		
     })
+    .when("/teacherlist", {
+        templateUrl: "teacher/list.html",
+       
+      })
+	   .when("/registration", {
+        templateUrl: "teacher/registration.html"
+		
+      })
+
+
     .when("/login", {
         templateUrl : "loginPage.html",
         controller: 'loginController'
