@@ -16,8 +16,8 @@
 			<td>{{x.email}}</td>
 			<td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
 			<td>
-			<span ng-click="registerDelete($index);">Delete</span>
-			<span ng-click="registerEdit($index);">Edit</span>
+			<a class="btn btn-danger" href="javascript:void(0)" ng-click="registerDelete($index);">Delete</a>
+			<a class="btn btn-primary" href="javascript:void(0)" ng-click="registerEdit($index);">Edit</a>
 			</td>
 		</tr>
 	</table>
