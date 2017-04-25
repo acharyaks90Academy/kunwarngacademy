@@ -32,9 +32,11 @@
     <label>Duration</label>    
     <select class="form-control input-sm" name="duration" ng-model="studentForm.duration">
         <option value="">Select any</option>
-        <option value="3 Months">3 Months</option>
-        <option value="6 Months">6 Months</option>
-        <option value="9 Months">9 Months</option>
+         <option value="1">1 Months</option>
+        <option value="3">3 Months</option>
+        <option value="6">6 Months</option>
+        <option value="9">9 Months</option>
+        <option value="12">12 Months</option>
     </select>
     <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
   </div>
@@ -64,9 +66,9 @@
   </div> 
   <div class="form-group">
     <label>How you find this site?</label><br/>
-    <input type="checkbox" name="yes" value="Newspaper" ng-model="studentForm.placementNewspaper">Newspaper
-    <input type="checkbox" name="no" value="Google" ng-model="studentForm.placementGoogle">Google
-    <input type="checkbox" name="no" value="Other" ng-model="studentForm.placementOther">Other
+    <input type="checkbox" name="placementNewspaper" ng-value="placementNewspaper" ng-model="studentForm.howfind.placementNewspaper">Newspaper
+    <input type="checkbox" name="placementGoogle" ng-value="placementGoogle" ng-model="studentForm.howfind.placementGoogle">Google
+    <input type="checkbox" name="placementOther" ng-value="placementOther" ng-model="studentForm.howfind.placementOther">Other
   </div> 
    <div class="form-group">
     <label>&nbsp;</label>    
@@ -109,7 +111,7 @@
        <td>{{x.class}}</td>
        <td>{{x.course | uppercase}}</td>
        <td>{{x.duration}}</td>
-       <td>{{x.howfind.placementNewspaper == true?'Google':''}} ,{{x.howfind.placementGoogle == true?'Google':''}},{{x.howfind.placementOther == true?'Google':''}} </td>
+       <td>{{x.howfind.placementNewspaper == true?'Newspaper':''}} ,{{x.howfind.placementGoogle == true?'Google':''}},{{x.howfind.placementOther == true?'Other':''}} </td>
        <td ng-class="x.fee=='50'?' highprice' : '' ">{{x.fee}} K</td>
        <td>{{x.gender}}</td>
        <td><button type="button" class="btn btn-info btn-xs" ng-click="editRecord($index)"><span class="glyphicon glyphicon-edit"></span>Edit</button></td>
