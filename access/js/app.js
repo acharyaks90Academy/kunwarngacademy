@@ -22,6 +22,12 @@ var myApp= angular.module("academyApp",["ngRoute"]) //
 		
       })
 
+      .when("/course", {
+        templateUrl: "course/course.html",
+        controller: "courseCtrl"
+       
+      })
+
 
     .when("/login", {
         templateUrl : "loginPage.html",

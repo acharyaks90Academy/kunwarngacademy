@@ -1,6 +1,5 @@
 myApp.controller("loginController", function($scope, $timeout, $http, $location){
-
-	$scope.hey ="hey..ajs"
+	
 
 	$scope.signIn = function(){
 		

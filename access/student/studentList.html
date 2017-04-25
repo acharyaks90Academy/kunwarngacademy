@@ -31,14 +31,106 @@
        <td>{{x.class}}</td>
        <td>{{x.course | uppercase}}</td>
        <td>{{x.duration}}</td>
-       <td>{{x.howfind.placementNewspaper == true?'Google':''}} ,{{x.howfind.placementGoogle == true?'Google':''}},{{x.howfind.placementOther == true?'Google':''}} </td>
+       <td>{{x.howfind.placementNewspaper == true?'Newspaper':''}} ,{{x.howfind.placementGoogle == true?'Google':''}},{{x.howfind.placementOther == true?'Other':''}} </td>
        <td ng-class="x.fee=='50'?' highprice' : '' ">{{x.fee}} K</td>
        <td>{{x.gender}}</td>
-       <td><button type="button" class="btn btn-info btn-xs" ng-click="editRecord($index)"><span class="glyphicon glyphicon-edit"></span>Edit</button></td>
+       <td><button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info btn-xs" ng-click="editRecord($index)"><span class="glyphicon glyphicon-edit"></span>Edit</button></td>
        <td><button type="button" class="btn btn-info btn-danger btn-xs" ng-click="deleteRecord($deleterow)"><span class="glyphicon glyphicon-edit"></span>Delete</button></td>
        
    </tr>
     
   </table>
 
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog"  ng-controller="studentRegCtrl">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title ">Update {{studentForm.username}} </h4>
+      </div>
+      <div class="modal-body">      
+ <div>
+ <form name="studentTime" novalidate="">
+ 
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+    <div class="form-group">
+    <label>Upload Photo</label>    
+    {{studentForm.photos}}
+    <!-- <input type="text" class="form-control input-sm" name="username" ng-model="studentForm.photos">  -->
+    <input type="file" name="fileupload" ng-model="studentForm.photos" ng-click="fileUp"> 
+  </div>
+  <div class="form-group">
+    <label>Username</label>    
+    <input type="text" class="form-control input-sm" name="username" ng-model="studentForm.username">
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div>
+   <div class="form-group">
+    <label>Class</label>
+    <input type="text" class="form-control input-sm" name="class" ng-model="studentForm.class">
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div>
+  <div class="form-group">
+    <label>Duration</label>    
+    <select class="form-control input-sm" name="duration" ng-model="studentForm.duration">
+        <option value="">Select any</option>
+        <option value="3">3 Months</option>
+        <option value="6">6 Months</option>
+        <option value="9">9 Months</option>
+    </select>
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div>
+  <div class="form-group">
+    <label>Gender</label><br/>
+    <input type="radio" name="demo" ng-model="studentForm.gender" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="demo" ng-model="studentForm.gender" value="Female">&nbsp;Female
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control input-sm" name="password" ng-model="studentForm.password">
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div>
+  
+  <div class="form-group">
+    <label>Course</label>
+    <input type="text" class="form-control input-sm" name="course" ng-model="studentForm.course">
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div> 
+  <div class="form-group">
+    <label>Fee</label>
+    <input type="text" class="form-control input-sm" name="fee" ng-model="studentForm.fee">
+    <p ng-show="requiredField"><span style="font-weight: bold; color: #ff0000; font-size:10px; ">Required field.</span></p>
+  </div> 
+  <div class="form-group">
+    <label>How you find this site?</label><br/>
+    <input type="checkbox" name="yes" value="Newspaper" ng-model="studentForm.placementNewspaper">Newspaper
+    <input type="checkbox" name="no" value="Google" ng-model="studentForm.placementGoogle">Google
+    <input type="checkbox" name="no" value="Other" ng-model="studentForm.placementOther">Other
+  </div> 
+   <div class="form-group">
+    <label>&nbsp;</label>    
+    <input type="submit" value="Submit me!" ng-click="SubmitData()" class="btn btn-info btn-md btn-block">
+  </div> 
+</div>
+</div>
+</form>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>

@@ -12,26 +12,40 @@
 <script src="student/reg/studentRegCtrl.js"></script>
 <script src="teacher/registrationCtrl.js"></script>
 <script src="teacher/teacherlistCtrl.js"></script>
+<script src="course/courseCtrl.js"></script>
 
 
 
 <!--<script src="js/loginController.js"></script>-->
 <title>Hey, I am NG</title>
-<style type="text/css">
-body{background:#2b2b2b; }	
-.margintop50 {margin-top:100px;}
-.marginbottom50 {margin-bottom:50px;}
-</style>
+
 </head>
-<body ng-app="academyApp" >
-    <h1>My Menu </h1>
-    <ul style="display: inline">
+<body ng-app="academyApp" >  
+   
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/" style="margin-top:0px!important;"><img src="images/nglogo.png" height="30" /></a>
+    </div>
+    <ul class="nav navbar-nav">
+    
         <li><a href="#/student">Registration</a><li>
             <li><a href="#/studentList">List</a><li>
+                <li><a href="#/course">Course</a><li>                   
                 <li><a href="#/teacherlist">Faculity List</a></li>
 <li><a href="#/registration">Faculity Registraion</a></li>
             
+    
     </ul>
+    <a href="#/login" class="btn btn-danger navbar-btn">Login Me!</a>
+  </div>
+</nav>
+
+
+
+
+
 <div ng-view></div>
 
 

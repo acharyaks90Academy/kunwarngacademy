@@ -4,12 +4,12 @@ myApp.controller("studentRegCtrl", function($scope, $timeout, $http){
 
 	$scope.welcomeTime="hello...angular"
 	localStorage.myList = JSON.stringify( [
-	{"photos":"images/anil.jpg","username":"Anil","password":"09652","class":"BBA","course":"ui/ux","duration":"6 Month","howfind":"Newspaper","fee":"10","gender":"Male"},
-	{"photos":"images/himanshu.jpg","username":"Himanshu","password":"007","class":"BCA","course":"html/css","duration":"6 Month","howfind":"Google","fee":"20","gender":"Male"},
-	{"photos":"images/ravi.jpg","username":"Bimla","password":"420","class":"B.TECH","course":"php","duration":"12 Month","howfind":"Google","fee":"50","gender":"Female"},
-	{"photos":"images/bimla.jpg","username":"Ramesh","password":"156","class":"BCA","course":"html/css","duration":"6 Month","howfind":"Google","fee":"20","gender":"Male"},
-	{"photos":"images/kishan.jpg","username":"Kishan","password":"420","class":"B.TECH","course":"dot Net","duration":"1 Month","howfind":"Others","fee":"50","gender":"Female"},
-	{"photos":"images/chameli.jpg","username":"Chameli","password":"143","class":"BA","course":"seo","duration":"3 Month","howfind":"Newspaper","fee":"50","gender":"Female"}
+	{"photos":"images/anil.jpg","username":"Anil","password":"09652","class":"BBA","course":"ui/ux","duration":"6 Month","howfind":{"placementNewspaper":true,"placementGoogle":false,"placementOther":false},"fee":"10","gender":"Male"},
+	{"photos":"images/himanshu.jpg","username":"Himanshu","password":"007","class":"BCA","course":"html/css","duration":"6 Month","howfind":{"placementNewspaper":false,"placementGoogle":true,"placementOther":false},"fee":"20","gender":"Male"},
+	{"photos":"images/ravi.jpg","username":"Bimla","password":"420","class":"B.TECH","course":"php","duration":"12 Month","howfind":{"placementNewspaper":false,"placementGoogle":false,"placementOther":true},"fee":"50","gender":"Female"},
+	{"photos":"images/bimla.jpg","username":"Ramesh","password":"156","class":"BCA","course":"html/css","duration":"6 Month","howfind":{"placementNewspaper":false,"placementGoogle":false,"placementOther":true},"fee":"20","gender":"Male"},
+	{"photos":"images/kishan.jpg","username":"Kishan","password":"420","class":"B.TECH","course":"dot Net","duration":"1 Month","howfind":{"placementNewspaper":true,"placementGoogle":false,"placementOther":false},"fee":"50","gender":"Female"},
+	{"photos":"images/chameli.jpg","username":"Chameli","password":"143","class":"BA","course":"seo","duration":"3 Month","howfind":{"placementNewspaper":false,"placementGoogle":false,"placementOther":true},"fee":"50","gender":"Female"}
 	]);
 	$scope.usererror=false;
 	$scope.passworderror=false;
