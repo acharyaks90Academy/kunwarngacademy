@@ -135,3 +135,4 @@ h1 {color:#fff!important;}
 
 .tablefont tr td {font-size: 11px;}
 .font11bold {font-size: 12px; font-weight: bold; color: #ff0000;}
+.required {color:red;  font-weight: bold; }

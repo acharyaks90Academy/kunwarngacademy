@@ -43,26 +43,23 @@ myApp.controller("courseCtrl", function($scope, $rootScope){
 
 // error mesaage
 
-$scope.requireMessage = "";
+$scope.requireMessage = false;
 
 
 
 
 
-$scope.SubmitData = function () {
-if($scope.courseForm == null || 
+$scope.SubmitData = function () {if($scope.courseForm == null || 
 $scope.courseForm.studentId == null || $scope.courseForm.studentId =="" || $scope.courseForm.studentId ==" " ||
 $scope.courseForm.firstName == null || $scope.courseForm.firstName =="" || $scope.courseForm.firstName ==" "  ||
 $scope.courseForm.gender == null || $scope.courseForm.gender =="" || $scope.courseForm.gender ==" "  ||
 $scope.courseForm.lastName == null || $scope.courseForm.lastName =="" || $scope.courseForm.lastName ==" "  ||
 $scope.courseForm.courseName == null || $scope.courseForm.courseName =="" || $scope.courseForm.courseName ==" "  ||
 $scope.courseForm.courseDuration == null || $scope.courseForm.courseDuration =="" || $scope.courseForm.courseDuration ==" "  ||
-$scope.courseForm.batchTiming == null || $scope.courseForm.batchTiming =="" || $scope.courseForm.batchTiming ==" " 
+$scope.courseForm.batchTiming == null || $scope.courseForm.batchTiming =="" || $scope.courseForm.batchTiming ==" " ){
 
-
-
-){
-alert("Please fill the ID, firstname, lastname, gender, coursename, courseduration, batchtiming");
+// alert("Please fill the ID, firstname, lastname, gender, coursename, courseduration, batchtiming");
+$scope.requireMessage = true;
 
 }else {
     console.log($scope.courseForm);
