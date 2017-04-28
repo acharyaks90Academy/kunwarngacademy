@@ -5,3 +5,38 @@
 2. modal 
 
 3. need randomly number in student ID.
+
+
+
+
+can we push for using object name only?
+
+<input type="text" name="name" ng-model="newcontact.name"/>
+        <input type="text" name="email" ng-model="newcontact.email"/>
+		 <input type="text" name="phone" ng-model="newcontact.phone"/>       
+		
+		
+		  $scope.contacts.push($scope.newcontact);
+
+		  
+		  
+		  we are using individual object name
+		  
+		  
+		  $scope.courseData.push({        
+       'studentId': $scope.courseForm.studentId,
+       'phone': $scope.courseForm.phone,
+       'dob': $scope.courseForm.dob,
+       'firstName': $scope.courseForm.firstName,
+       'email': $scope.courseForm.email,
+       'gender': $scope.courseForm.gender,
+       'lastName': $scope.courseForm.lastName,
+       'currentDegreeLevel': $scope.courseForm.currentDegreeLevel,
+       'courseName': $scope.courseForm.courseName,
+       'courseDuration': $scope.courseForm.courseDuration,
+       'batchTiming': $scope.courseForm.batchTiming, 
+       'language': {'hindi': $scope.courseForm.hindi, 'english' : $scope.courseForm.english, 'other' : $scope.courseForm.other},
+       'courseType': $scope.courseForm.courseType,     
+       'isWorking': $scope.courseForm.isWorking   
+    });
+    $scope.courseForm="";
