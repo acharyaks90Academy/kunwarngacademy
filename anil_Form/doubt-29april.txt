@@ -1,0 +1,7 @@
+--- $scope.courseForm = $scope.courseData[editUser];
+
+1. why we use array symbol to edit?
+
+2. modal 
+
+3. need randomly number in student ID.
