@@ -130,6 +130,7 @@ $scope.editCourse = function (editUser) {
     console.log(editUser)
     //console.log($scope.courseData[editUser])
     $scope.courseForm = $scope.courseData[editUser];
+    //$scope.courseForm = $scope.courseData.indexOf(index);
     $scope.indexStop=editUser;
 
 }
