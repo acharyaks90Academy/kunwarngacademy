@@ -133,3 +133,5 @@ h1 {color:#fff!important;}
 .girlColor {background:pink;}
 .highprice {background:green;}
 
+.tablefont tr td {font-size: 11px;}
+.font11bold {font-size: 12px; font-weight: bold; color: #ff0000;}
