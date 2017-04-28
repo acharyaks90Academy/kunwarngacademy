@@ -4,9 +4,19 @@ myApp.controller("courseCtrl", function($scope, $rootScope){
 
     $scope.currentDegreeLevel= ["10th","12th","Graudate","Post Graduate"];
     $scope.courseType= ["Full Time","Part Time"];
+
+
+    //$scope.studentId = Math.ceil(Math.random()*100)
+
+    //$scope.studentDefault = Math.random()
+    //$scope.studentId = $scope.studentDefault(Math.random() + 6874 * 2));
+    console.log(Math.ceil(Math.random()  * 6874 + 2))
+    //$scope.studentId = Math.round((Math.random() * 10) * 10)
+
+    $scope.studentId =["anil"]    
     
     $scope.courseData=[
-     {"studentId": 58965,
+     {"studentId":"" ,
 	"firstName": "Rancho",
 	"lastName": "Das",
 	"phone": "9910736889",
@@ -21,7 +31,7 @@ myApp.controller("courseCtrl", function($scope, $rootScope){
     "courseType": "Part Time",
     "isWorking":"Yes" 
      },
-    {"studentId": 005,
+    {"studentId":"",
 	"firstName": "Pannu",
 	"lastName": "jee",
 	"phone": "1478552366",
@@ -49,6 +59,8 @@ $scope.requireMessage = false;
 
 
 
+
+
 $scope.SubmitData = function () {if($scope.courseForm == null || 
 $scope.courseForm.studentId == null || $scope.courseForm.studentId =="" || $scope.courseForm.studentId ==" " ||
 $scope.courseForm.firstName == null || $scope.courseForm.firstName =="" || $scope.courseForm.firstName ==" "  ||
@@ -61,7 +73,12 @@ $scope.courseForm.batchTiming == null || $scope.courseForm.batchTiming =="" || $
 // alert("Please fill the ID, firstname, lastname, gender, coursename, courseduration, batchtiming");
 $scope.requireMessage = true;
 
-}else {
+}else if($scope.courseForm.studentId.length<5 || isNaN($scope.courseForm.studentId)){
+alert("Please enter 5 digit in Numeric value ")
+}
+
+
+else {
     console.log($scope.courseForm);
     $scope.courseData.push({        
        'studentId': $scope.courseForm.studentId,
