@@ -1,37 +1,33 @@
-<style>
-	body{background: white!important;}
-	h1{color: #333!important;}
-</style>
-<div class="page-wrapper">
-
-<div class="row" ng-controller="teacherLisCtrl">
-	<div class="col-md-12">
-	 <h1 class="h1">Please find the List below</h1>	
-	<table class="table table-bordered">
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Qualification</th>
-			<th>Action</th>
-		</tr>
-		<tr ng-repeat="x in teacherList">
-			<td>{{x.name}}</td>
-			<td>{{x.email}}</td>
-			<td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
-			<td>
-			<a class="btn btn-danger" href="" ng-click="registerDelete($index);">Delete</a>
-			<a class="btn btn-primary" href="" ng-click="registerEdit($index);">Edit</a>
-			</td>
-		</tr>
-	</table>
-
-	</div>
-	</div>
-
-	</div>
-</div>
-
-<div class="modal fade" tabindex="-1" role="dialog">
+<div class="whitebg" ng-controller="teacherLisCtrl">
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-12">
+        <h1 class="h1 inner">Please find the List below</h1>
+        <table class="table table-striped teacher-table">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Class Preference</th>
+            <th>Visit Preference</th>
+            <th>Role</th>
+            <th>Timing Slot</th>
+            <th>Qualification</th>
+            <th>Action</th>
+          </tr>
+          <tr ng-repeat="x in teacherList">
+            <td><img ng-src="{{x.userphoto}}" class="userpic">{{x.name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.preference}}</td>
+            <td>{{x.visit}}</td>
+            <td>{{x.role}}</td>
+            <td>{{x.timeslot}}</td>
+            <td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
+            <td><a class="btn btn-primary" href="" ng-click="registerDelete($index);">Delete</a> <a class="btn btn-danger" href="" ng-click="registerEdit($index);" data-toggle="modal" data-target="#myModal">Edit</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div><div class="modal fade" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -39,38 +35,91 @@
         <h4 class="modal-title">Please update the details</h4>
       </div>
       <div class="modal-body">
-       <form class="form-horizontal">
-	  <div class="form-group">
-	  <label class="col-md-3">Name</label>
-	  <div class="col-md-9"><input type="text" ng-model="person.name" class="form-control">	
-	  </div>	
-	  </div>
-	  <div class="form-group">
-	  <label class="col-md-3">Email</label>
-	  <div class="col-md-9"><input type="text" ng-model="person.email" class="form-control">	
-	  </div>	
-	  </div>
-	  <div class="form-group">
-	  <label class="col-md-3">Qualification</label>
-	  
-	  <div class="col-md-9" ng-repeat="x in person.qualification">
-	  <input type="text" ng-model="x.subject" class="form-control"> 	
-	  
-	  </div>
-	  <a href="" class="btn btn-default" ng-click="addQualification();">+ Add</a>	
-	  </div>
-	  <div class="form-group">
-	  	<div class="col-md-9 col-md-offset-3"><button type="button" value="Submit" class="btn btn-primary" ng-click="registerSub()">Submit</button>	
-	  	</div>
-	  </div>
-	  </form>
-
-
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-md-3">Photo Upload</label>
+            <div class="col-md-9">
+              <input type="file" ng-model="person.userphoto">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Name</label>
+            <div class="col-md-9">
+              <input type="text" ng-model="person.name" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Email</label>
+            <div class="col-md-9">
+              <input type="text" ng-model="person.email" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Class Preference</label>
+            <div class="col-md-9">
+              <select class="form-control"  multiple="" ng-model="person.preference">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+              </select>
+              <small>Press Ctrl to Select Multiple Value</small> </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Visit Preference</label>
+            <div class="col-md-9">
+              <select class="form-control"  ng-model="person.visit">
+                <option value="">Select your visit preference</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Role</label>
+            <div class="col-md-9">
+              <div>
+                <label>
+                  <input value="Temperory" name="role" type="radio" ng-model="person.role">
+                  Temperory </label>
+                <label>
+                  <input value="Permanent" name="role" type="radio" ng-model="person.role">
+                  Permanent </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Timing Slot</label>
+            <div class="col-md-9">
+              <div>
+                <label>
+                  <input value="09:00 A.M. - 12:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
+                  09:00 A.M. - 12:00 P.M. </label>
+                <label>
+                  <input value="03:00 P.M. - 06:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
+                  03:00 P.M. - 06:00 P.M.</label>
+                <label >
+                  <input value="06:00 P.M. - 09:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
+                  06:00 P.M. - 09:00 P.M.</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3">Qualification</label>
+            <div class="col-md-9" ng-repeat="x in person.qualification">
+              <input type="text" ng-model="x.subject" class="form-control">
+            </div>
+            <a style="display:none;" href="" class="btn btn-default" ng-click="addQualification();">+ Add</a> </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" ng-click="registerEdit($index);">Save changes</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+    <!-- /.modal-content --> 
+  </div>
+  <!-- /.modal-dialog --> 
+</div>
+</div>
+
