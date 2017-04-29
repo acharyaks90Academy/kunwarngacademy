@@ -136,3 +136,8 @@ h1 {color:#fff!important;}
 .tablefont tr td {font-size: 11px;}
 .font11bold {font-size: 12px; font-weight: bold; color: #ff0000;}
 .required {color:red;  font-weight: bold; }
+.whitebg{background: white!important; padding: 20px 0;}
+.userpic{width:38px; margin: 0 8px 0 0; border-radius: 50%; }
+.teacher-table td{vertical-align: middle!important;}
+.add-btn{margin:0 0 5px 0; }
+.h1.inner{color: #333!important; font-size: 26px; padding: 0 0 15px 0; margin:15px 0 30px 0; border-bottom:#ddd solid 1px;}
