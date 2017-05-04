@@ -1,21 +1,74 @@
+<div class="col-md-12 col-lg-12 tablefont" style="margin-top:20px;" ng-controller="courseListCtrl">
 
-<div class="container-fluid" ng-controller="courseCtrl" style="background:#fff; padding:20px;">
-<div class="col-lg-12 col-md-12 col-sm-1">
-<h1 style="color:#E16215!important; margin-top:0px;">Pre-Registraction Course</h1>
-<div class="col-lg-12 col-md-12 col-sm-12"><h4 class="text-success">Personal Details</h4></div>
- {{courseForm}}
- <div class="col-lg-12 col-md-12 col-sm-12">
-<div class="alert alert-danger" ng-show="requireMessage">
-  <strong>Required!</strong> Student ID, First Name, Last Name, Gender, Course Name, Course Duration, Batch Timing
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12"><h1 class="text-success">Personal Details 
+
+  </h1>
+  
+  </div>
+   <div class="col-lg-12 col-md-12 col-sm-12">
+<table class="table table-striped">
+<tr>
+<th>Student ID</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Phone No</th>
+<th>Email</th>
+<th>Current Degree Level</th>
+<th>Date of Birth</th>
+<th>Gender</th>
+<th>Course Name</th>
+<th>Course Duration</th>
+<th>Batch Timing</th>
+<th>Language</th>
+<th>Course type</th>
+<th>is Working</th>
+<th>Edit/Delete</th>
+<tr ng-repeat="list in courseData" ng-class-odd="'evenStyle'">
+<td>{{list.studentId}}</td>
+<td>{{list.firstName}}</td>
+<td>{{list.lastName}}</td>
+<td>{{list.phone}}</td>
+<td>{{list.email}}</td>
+<td>{{list.currentDegreeLevel}}</td>
+<td>{{list.dob}}</td>
+<td>{{list.gender}}</td>
+<td>{{list.courseType}}</td>
+<td>{{list.courseDuration}} Months</td>
+<td>{{list.batchTiming}}</td>
+<td>{{list.language.hindi==true ? 'Hindi': ''}},{{list.language.english==true? 'English': ''}},{{list.language.other==true? 'Other': ''}}</td>
+<td>{{list.courseType}}</td>
+<td>{{list.isWorking}}</td>
+<td><a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" ng-click="editCourse($index)"> Edit</a>
+<a href="" class="btn btn-danger btn-sm" ng-click="deleteCourse($index)">Delete</a>
+<input type="button" value="copy"  ng-show="hideButton" ng-click="copyRow($index)"  class="btn btn-info btn-sm pull-right">
+
+
+</td>
+</tr>
+
+
+<input type="button" value="add course"  ng-show="hideButton" ng-click="addCourse(copyIndex)"  class="btn btn-info btn-sm pull-right">
+
+</table>
+   </div>
 </div>
-<form name="courseMain">
- 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
 
- </div>
-<div class="col-lg-4 col-md-4 col-sm-12">  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit {{courseForm.firstName}}</h4>
+      </div>
+      <div class="modal-body">
+       <form name="courseMain">
+ <div class="col-lg-4 col-md-4 col-sm-12">  
 
 <div class="form-group">
-    <label>Student ID <span class="required">*</span></label>
+    <label>Student ID <span class="required">*</span></label>   
     <input type="text" class="form-control input-sm" ng-disabled="studentdisabled"  name="studentId" ng-model="courseForm.studentId">
     <!--<span ng-show="courseMain.studentId.$invalid" class="font11bold">ID is required</span>-->
     <!--<span style="color:red" ng-show="courseMain.studentId.$dirty && courseMain.studentId.$invalid">
@@ -68,7 +121,7 @@
     <label>Course Name <span class="required">*</span></label>
     <input type="text" class="form-control input-sm" ng-model="courseForm.courseName">
   </div>
-  <div class="form-group">{{courseForm.language.hindi}}{{courseForm.language.english}}{{courseForm.language.other}}
+  <div class="form-group">
     <label>Language</label><br/>
     <input type="checkbox" ng-value="hindi" ng-model="courseForm.language.hindi">Hindi &nbsp;&nbsp;
     <input type="checkbox" ng-value="english" ng-model="courseForm.language.english">English &nbsp;&nbsp;
@@ -99,16 +152,30 @@
     <input type="radio" name="isWorking" value="No" ng-model="courseForm.isWorking"/> No
   </div>
 </div>
+<div class="row" style="margin-bottom:30px;">
+  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom:30px;">
+<input type="submit" ng-click="SubmitData()" data-dismiss="modal" class="btn btn-success btn-block" value="Submit" />
+</div>
+</div>
 <div class="row">
-<input type="submit" ng-click="SubmitData()" class="btn btn-success btn-block" value="Submit" />
+ <div class="modal-footer bg-defaut">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+
+  </div>
+       </form>
+ </div>
+
+
+
+
+
+
+    
+     
+    </div>
+
+  </div>
 </div>
-
-
-
-
-</form>
-
-</div>
-
 
 </div>

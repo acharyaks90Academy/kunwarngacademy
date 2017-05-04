@@ -1,22 +1,26 @@
-myApp.controller("courseCtrl", function($scope, $rootScope){
+myApp.controller("courseCtrl", function($scope, $rootScope, $location){
 
-    $scope.welcome="hello";
+    $rootScope.welcome="welcome"; 
+    $scope.requireMessage = false;
 
     $scope.currentDegreeLevel= ["10th","12th","Graudate","Post Graduate"];
     $scope.courseType= ["Full Time","Part Time"];
-
-
-    //$scope.studentId = Math.ceil(Math.random()*100)
-
-    //$scope.studentDefault = Math.random()
-    //$scope.studentId = $scope.studentDefault(Math.random() + 6874 * 2));
-    console.log(Math.ceil(Math.random()  * 6874 + 2))
-    //$scope.studentId = Math.round((Math.random() * 10) * 10)
-
-    $scope.studentId =["anil"]    
+    $scope.studentdisabled = true;
+   
+    $scope.editSection = false;
     
+
+    $scope.courseForm = {    
+    studentId : Math.ceil((Math.random() * 54125) + 1)
+    //gender : male;
+};
+
+
+    
+    localStorage.myCourseList = JSON.stringify($scope.courseData);
+
     $scope.courseData=[
-     {"studentId":"" ,
+     {"studentId":"541252" ,
 	"firstName": "Rancho",
 	"lastName": "Das",
 	"phone": "9910736889",
@@ -31,7 +35,7 @@ myApp.controller("courseCtrl", function($scope, $rootScope){
     "courseType": "Part Time",
     "isWorking":"Yes" 
      },
-    {"studentId":"",
+    {"studentId":"541253",
 	"firstName": "Pannu",
 	"lastName": "jee",
 	"phone": "1478552366",
@@ -45,15 +49,11 @@ myApp.controller("courseCtrl", function($scope, $rootScope){
     "language": {"hindi":false,"english":true,"other":false},    
     "courseType": "Full Time",
     "isWorking":"No"
-    
-    
+       
    
 }];
 
 
-// error mesaage
-
-$scope.requireMessage = false;
 
 
 
@@ -61,7 +61,14 @@ $scope.requireMessage = false;
 
 
 
-$scope.SubmitData = function () {if($scope.courseForm == null || 
+
+
+$scope.SubmitData = function () {
+//console.log($location.path("/courseList"))  
+ console.log($scope.courseForm); 
+    if(!$scope.editSection){
+
+    if($scope.courseForm == null || 
 $scope.courseForm.studentId == null || $scope.courseForm.studentId =="" || $scope.courseForm.studentId ==" " ||
 $scope.courseForm.firstName == null || $scope.courseForm.firstName =="" || $scope.courseForm.firstName ==" "  ||
 $scope.courseForm.gender == null || $scope.courseForm.gender =="" || $scope.courseForm.gender ==" "  ||
@@ -76,10 +83,8 @@ $scope.requireMessage = true;
 }else if($scope.courseForm.studentId.length<5 || isNaN($scope.courseForm.studentId)){
 alert("Please enter 5 digit in Numeric value ")
 }
-
-
 else {
-    console.log($scope.courseForm);
+    console.log($scope.courseForm);    
     $scope.courseData.push({        
        'studentId': $scope.courseForm.studentId,
        'phone': $scope.courseForm.phone,
@@ -96,7 +101,20 @@ else {
        'courseType': $scope.courseForm.courseType,     
        'isWorking': $scope.courseForm.isWorking   
     });
-    $scope.courseForm="";
+       
+    $scope.courseForm="";    
+    $location.path("/courseList")
+    localStorage.myCourseList = JSON.stringify($scope.courseData);
+   
+
+}
+}else{
+
+$scope.courseForm[$scope.editUser] = $scope.courseForm;
+$scope.editSection = false;
+
+}
+
 
 
 }
@@ -104,20 +122,6 @@ else {
 
 
 
-    
-
-  //  $scope.courseForm.push =  $scope.courseData
-
-
-}
-
-$scope.addPushNewRow=[];
-
-
-$scope.addCourse = function(copyIndex){
-   // console.log(copyIndex);  
-    $scope.courseData = angular.copy($scope.copyIndex);    
-};
 
 $scope.deleteCourse = function(deletecourse){
     //console.log(addCourse);  
@@ -136,7 +140,7 @@ $scope.editCourse = function (editUser) {
 }
 
 
-$scope.openModal = function () {
+            $scope.openModal = function () {
                 $modal.open({
 				//controller: 'PopupCont',
                     templateUrl: "course/Pop.html"
