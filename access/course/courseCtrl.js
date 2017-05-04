@@ -84,7 +84,8 @@ $scope.requireMessage = true;
 alert("Please enter 5 digit in Numeric value ")
 }
 else {
-    console.log($scope.courseForm);    
+    console.log($scope.courseForm);  
+     
     $scope.courseData.push({        
        'studentId': $scope.courseForm.studentId,
        'phone': $scope.courseForm.phone,
