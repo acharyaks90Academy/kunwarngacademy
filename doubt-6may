@@ -1,0 +1,25 @@
+how to access scope from another file?
+
+location set after click on submit.
+
+default value set in radio angular
+
+select menu value not selecated
+
+
+
+
+
+
+
+.controller('Ctrl_1',function($rootScope){
+      
+          $rootScope.showNoti= "true"
+
+})
+     
+    .controller('Ctrl_2',function($rootScope){
+  
+      alert("Yay! " + $rootScope.showNoti);
+
+})
