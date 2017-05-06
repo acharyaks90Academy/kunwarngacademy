@@ -17,10 +17,10 @@
           <tr ng-repeat="x in teacherList">
             <td><img ng-src="{{x.userphoto}}" class="userpic">{{x.name}}</td>
             <td>{{x.email}}</td>
-            <td>{{x.preference}}</td>
+            <td><span ng-repeat="y in x.preference">{{y}}, </span></td>
             <td>{{x.visit}}</td>
             <td>{{x.role}}</td>
-            <td>{{x.timeslot}}</td>
+            <td>{{x.timeslot.morning == true?'09:00 A.M. - 12:00 P.M.':''}}  {{x.timeslot.afternoon == true?'03:00 P.M. - 06:00 P.M.':''}} {{x.timeslot.evening == true?'06:00 P.M. - 09:00 P.M.':''}}</td>
             <td><span ng-repeat="inner in x.qualification">{{inner.subject}},</span></td>
             <td><a class="btn btn-primary" href="" ng-click="registerDelete($index);">Delete</a> <a class="btn btn-danger" href="" ng-click="registerEdit($index);" data-toggle="modal" data-target="#myModal">Edit</a></td>
           </tr>
@@ -35,87 +35,99 @@
         <h4 class="modal-title">Please update the details</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-md-3">Photo Upload</label>
-            <div class="col-md-9">
-              <input type="file" ng-model="person.userphoto">
+       <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-md-3">Photo Upload</label>
+          <div class="col-md-9">
+            <input type="file" ng-model="person.userphoto">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Name</label>
+          <div class="col-md-9">
+            <input type="text" ng-model="person.name" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Email</label>
+          <div class="col-md-9">
+            <input type="text" ng-model="person.email" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Class Preference </label>
+          <div class="col-md-9">
+           <select multiple class="form-control" ng-model="person.preference">
+             <option ng-repeat="x in person.preference">{{x}}</option>
+           </select>
+           <small>Press Ctrl to select multiple values</small>
+          </div>
+          <small></small>
+        </div>
+        
+	      <div class="form-group">
+          <label class="col-md-3">Visit Preference</label>
+          <div class="col-md-9">
+            <select class="form-control"  ng-model="person.visit">
+			        <option value="">Select your visit preference</option>	
+              <option value="Weekdays">Weekdays</option>
+              <option value="Weekends">Weekends</option>
+             
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Role</label>
+          <div class="col-md-9">
+            <div>
+              <label>
+                <input value="Temperory" name="role" type="radio" ng-model="person.role">
+                Temperory </label>
+              <label>
+                <input value="Permanent" name="role" type="radio" ng-model="person.role">
+                Permanent </label>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-3">Name</label>
-            <div class="col-md-9">
-              <input type="text" ng-model="person.name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Timing Slot</label>
+          <div class="col-md-9">
+            <div>
+              <label>
+                <input value="09:00 A.M. - 12:00 P.M." name="timeslot" type="checkbox" ng-model="person.timeslot.morning">
+                09:00 A.M. - 12:00 P.M. </label>
+              <label>
+                <input  value="03:00 P.M. - 06:00 P.M." name="timeslot" type="checkbox" ng-model="person.timeslot.afternoon">
+                03:00 P.M. - 06:00 P.M.</label>
+              <label >
+                <input value="06:00 P.M. - 09:00 P.M." name="timeslot" type="checkbox" ng-model="person.timeslot.evening">
+                06:00 P.M. - 09:00 P.M.</label>
             </div>
           </div>
-          <div class="form-group">
-            <label class="col-md-3">Email</label>
-            <div class="col-md-9">
-              <input type="text" ng-model="person.email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label class="col-md-3">Qualification</label>
+          <div class="col-md-9">
+            <div ng-repeat="x in person.qualification">
+            <input type="text" ng-model="x.subject" class="form-control">
             </div>
+           
           </div>
-          <div class="form-group">
-            <label class="col-md-3">Class Preference</label>
-            <div class="col-md-9">
-              <select class="form-control"  multiple="" ng-model="person.preference">
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
-                <option value="Night">Night</option>
-              </select>
-              <small>Press Ctrl to Select Multiple Value</small> </div>
+         
           </div>
-          <div class="form-group">
-            <label class="col-md-3">Visit Preference</label>
-            <div class="col-md-9">
-              <select class="form-control"  ng-model="person.visit">
-                <option value="">Select your visit preference</option>
-                <option value="Weekdays">Weekdays</option>
-                <option value="Weekends">Weekends</option>
-              </select>
-            </div>
+<div class="form-group">
+  <div class="col-md-9 col-md-offset-3">
+ <a href="" class="btn btn-default add-btn" ng-click="addQualification();">+ Add</a>
+          <p> <small>Please click on add to mention multiple certification</small></p></div>
+</div>
+        <div class="form-group">
+          <div class="col-md-9 col-md-offset-3">
+            <button type="button" value="Submit" class="btn btn-danger" ng-click="registerSub()">Submit</button>
           </div>
-          <div class="form-group">
-            <label class="col-md-3">Role</label>
-            <div class="col-md-9">
-              <div>
-                <label>
-                  <input value="Temperory" name="role" type="radio" ng-model="person.role">
-                  Temperory </label>
-                <label>
-                  <input value="Permanent" name="role" type="radio" ng-model="person.role">
-                  Permanent </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3">Timing Slot</label>
-            <div class="col-md-9">
-              <div>
-                <label>
-                  <input value="09:00 A.M. - 12:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
-                  09:00 A.M. - 12:00 P.M. </label>
-                <label>
-                  <input value="03:00 P.M. - 06:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
-                  03:00 P.M. - 06:00 P.M.</label>
-                <label >
-                  <input value="06:00 P.M. - 09:00 P.M." name="timing" type="checkbox" ng-model="person.timeslot">
-                  06:00 P.M. - 09:00 P.M.</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3">Qualification</label>
-            <div class="col-md-9" ng-repeat="x in person.qualification">
-              <input type="text" ng-model="x.subject" class="form-control">
-            </div>
-            <a style="display:none;" href="" class="btn btn-default" ng-click="addQualification();">+ Add</a> </div>
-        </form>
+        </div>
+      </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" ng-click="registerEdit($index);">Save changes</button>
-      </div>
+      
     </div>
     <!-- /.modal-content --> 
   </div>

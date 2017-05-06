@@ -21,6 +21,12 @@ var myApp= angular.module("academyApp",["ngRoute", "ui.bootstrap"]) //
         templateUrl: "teacher/registration.html"
 		
       })
+      .when("/syllabus", {
+        templateUrl: "syllabus/syllabus-detail.html",
+        controller: "syllabusCtrl"
+         
+       
+      })
 
       .when("/course", {
         templateUrl: "course/course.html",
