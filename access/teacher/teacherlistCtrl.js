@@ -20,14 +20,14 @@ myApp.controller('teacherLisCtrl', function($scope,$rootScope){
 		$scope.teacherList.splice(index,1)
 	} 
 	$scope.registerSub = function() {
-		alert($scope.listNumber);
+		
 		$scope.teacherList[$scope.listNumber] = $scope.person ;	
 				
 		
 	}
 	$scope.addQualification = function(){
 	$scope.person.qualification.push({"subject":""});
-	//$scope.qualification = "";
+	
 }
 
 })	
