@@ -3,6 +3,8 @@ myApp.controller("courseCtrl", function($scope, $rootScope, $location){
     $rootScope.welcome="welcome"; 
     $scope.requireMessage = false;
 
+   // $rootScope.try = "hey.... am";
+
     $scope.currentDegreeLevel= ["10th","12th","Graudate","Post Graduate"];
     $scope.courseType= ["Full Time","Part Time"];
     $scope.studentdisabled = true;
@@ -11,13 +13,13 @@ myApp.controller("courseCtrl", function($scope, $rootScope, $location){
     
 
     $scope.courseForm = {    
-    studentId : Math.ceil((Math.random() * 54125) + 1)
-    //gender : male;
+    studentId : Math.ceil((Math.random() * 54125) + 1),
+    gender : "male"
 };
 
 
-    
-    localStorage.myCourseList = JSON.stringify($scope.courseData);
+    console.log('Before the local '+$scope.courseData);
+   
 
     $scope.courseData=[
      {"studentId":"541252" ,
@@ -53,9 +55,14 @@ myApp.controller("courseCtrl", function($scope, $rootScope, $location){
    
 }];
 
+if(localStorage.myCourseList== null){
 
 
 
+ localStorage.myCourseList = JSON.stringify($scope.courseData);
+}else{
+    $scope.courseData = JSON.parse(localStorage.myCourseList);
+}
 
 
 
@@ -105,7 +112,10 @@ else {
        
     $scope.courseForm="";    
     $location.path("/courseList")
+    
     localStorage.myCourseList = JSON.stringify($scope.courseData);
+
+    //$scope.courseData == localStorage.myCourseList != null && localStorage.myCourseList == ""
    
 
 }

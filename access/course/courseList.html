@@ -1,5 +1,5 @@
-<div class="col-md-12 col-lg-12 tablefont" style="margin-top:20px;" ng-controller="courseListCtrl">
-
+<div class="col-md-12 col-lg-12 tablefont" style="margin-top:20px;" >
+ {{try}}
 <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12"><h1 class="text-success">Personal Details 
 
@@ -41,14 +41,19 @@
 <td>{{list.isWorking}}</td>
 <td><a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" ng-click="editCourse($index)"> Edit</a>
 <a href="" class="btn btn-danger btn-sm" ng-click="deleteCourse($index)">Delete</a>
-<input type="button" value="copy"  ng-show="hideButton" ng-click="copyRow($index)"  class="btn btn-info btn-sm pull-right">
-
-
+<input type="button" value="copy"  ng-show="$last" ng-click="copyRow($index)"  class="btn btn-info btn-sm pull-right">
 </td>
 </tr>
+<!--<tr>
+<td colspan="15">
+<input type="button" value="copy"   ng-click="copyRow($index)"  class="btn btn-info btn-sm pull-right">
+</td>
+</tr>-->
 
 
-<input type="button" value="add course"  ng-show="hideButton" ng-click="addCourse(copyIndex)"  class="btn btn-info btn-sm pull-right">
+
+
+<!--<input type="button" value="add course"  ng-show="hideButton" ng-click="addCourse(copyIndex)"  class="btn btn-info btn-sm pull-right">-->
 
 </table>
    </div>

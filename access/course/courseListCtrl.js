@@ -7,53 +7,23 @@ myApp.controller("courseListCtrl", function($scope, $rootScope){
    $scope.requireMessage = false;
 
     $scope.hideButton = true;
-    $scope.courseData = JSON.parse(localStorage.myCourseList);
+   
+    $scope.currentDegreeLevel= ["10th","12th","Graudate","Post Graduate"];  
     
 
-//  $scope.courseForm = {    
-//     studentId : Math.ceil((Math.random() * 54125) + 1)
-//     };
-    
-//     $scope.courseData=[
-//      {"studentId":"" ,
-// 	"firstName": "Rancho",
-// 	"lastName": "Das",
-// 	"phone": "9910736889",
-// 	"email": "rancho.gk@gmail.com",
-// 	"currentDegreeLevel": "Graudate",
-// 	"dob": "01-01-1988",
-// 	"gender": "Male",
-//     "courseName": "PHP",
-//     "courseDuration": "3",
-//     "batchTiming": "Morning",   
-//     "language": {"hindi":true,"english":false,"other":false}, 
-//     "courseType": "Part Time",
-//     "isWorking":"Yes" 
-//      },
-//     {"studentId":"",
-// 	"firstName": "Pannu",
-// 	"lastName": "jee",
-// 	"phone": "1478552366",
-// 	"email": "pannu.jee@gmail.com",
-// 	"currentDegreeLevel": "12th",
-// 	"dob": "01-01-1988",
-// 	"gender": "Male",
-//     "courseName": "dot net",
-//     "courseDuration": "12",
-//     "batchTiming": "Afternoon",    
-//     "language": {"hindi":false,"english":true,"other":false},    
-//     "courseType": "Full Time",
-//     "isWorking":"No"
-// }];
 
+ $scope.courseData = JSON.parse(localStorage.myCourseList);
+
+ 
 
 
 $scope.newrecord = {};
 
 
-$scope.copyRow = function(anil){
-    console.log($scope.courseData.push(anil))
-    $scope.courseData($scope.courseForm);
+$scope.copyRow = function(ndex){
+$scope.courseData.push(angular.copy($scope.courseData[ndex]));
+console.log(JSON.stringify($scope.courseData));
+    
 
 
 }
@@ -84,7 +54,7 @@ $scope.deleteCourse = function(deletecourse){
 $scope.editCourse = function (editUser) {
     console.log(editUser)
     //console.log($scope.courseData[editUser])
-    $scope.courseForm = $scope.courseData[editUser];
+    $scope.courseForm = angular.copy($scope.courseData[editUser]);
     //$scope.courseForm = $scope.courseData.indexOf(index);
     $scope.indexStop=editUser;
     $scope.editTruCondi=true;
