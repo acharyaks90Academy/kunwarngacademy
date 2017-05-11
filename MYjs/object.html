@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Index Of Email</h2>
+
+Username: <input type="text" id="myUsername" value=""><br/>
+E-mail: <input type="email" id="myEmail2" value="">
+
+
+<p>Click the button to display the email address of the email field.</p>
+
+<button onclick="submitForm()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function submitForm() {
+
+	var y = document.getElementById("myUsername").value;     
+    var x = document.getElementById("myEmail2").value;
+    var emailSet = x.indexOf("@");
+    
+    
+    if(y == ""|| isNaN(y)){     
+     alert("value should be numeric");         
+    }else if(emailSet<1){
+    alert("check email bro");
+     } else{    
+  	 //alert(isNaN(y));    
+    document.write("good job"); 
+    }
+    //document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<div id="demoOne" style="background:red; height:100px;"></div>
+<form name="emailForm">
+<input type="text" name="email"/>
+<input type="button" onclick="myTime()" value="my TIME" />
+</form>
+
+
+
+
+
+<script>
+
+function myTime(){
+var inpTime= document.emailForm.email.value;
+alert(inpTime);
+
+
+document.getElementById("demoOne").innerHTML=inpTime;
+console.log(inpTime);
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+<h2>Object loop and array</h2>
+<p id="demo"></p>
+
+<script>
+			
+	var person = [{"firstName": "Reginauld", "address": "14 Eggendart Drive"}, {"firstName": "Sephira","address": "1 Butternut Plaza"}, {"firstName": "Theda","address": "20 Packers Trail"}];
+		
+		
+				var text = "";		
+
+				for(x=0; x<person.length; x++){
+				
+				document.getElementById("demo").innerHTML=text += person[x].firstName + person[x].address +  "<br/>";
+				
+				console.log(person[x].firstName)
+				}
+				var fruits=["APPLE","BANANA","MANGO","PAPAYA"];
+				
+				
+					var i=0;
+
+					for(x=0; x<fruits.length; x++){
+
+					if(x==1){continue;}
+					document.write(x +  " " + "is" + " " +  fruits[x] + "<br/>");}
+
+</script>
+
+
+<h2>javascript switch case</h2>
+
+<p id="dayTime"></p>
+
+
+<script>
+
+
+var day;
+var x= new Date();
+var y= x.getDay();
+
+
+switch (y){
+case 0: 
+	day = "its sunday!!"; 
+	break;	
+
+case 1: 
+	day = "its monday!!"
+	break;
+
+case 2: 
+	day = "its tuesday!!"
+	break;
+
+case 3: 
+	day = "its wednesday!!"
+	break;
+
+case 4: 
+	day = "its thursday!!"
+	break;
+
+case 5: 
+	day = "its friday!!"
+	break;
+
+case 6: 
+	day = "its saturday!!"
+	break;
+
+}
+
+console.log(new Date().getDay())
+
+document.getElementById("dayTime").innerHTML=day;
+
+
+</script>
+
+<h2>Input field error validation</h2>
+
+<script>
+
+function myBtn(){
+
+console.log(inp);
+var inp= document.myForm.username.value;
+if(inp=="anil"){
+document.write("typed correctly...");
+alert("hi");
+}else if(inp != " " || inp != ""){
+document.write("please type 'anil' ");
+}else{
+document.write("nothing typed");
+}
+}
+
+</script>
+
+<form name="myForm">
+<input type="text" name="username"/>
+<input type="submit" onclick="myBtn()" value="try it" />
+</form>
+
+<h2>Input typing...</h2>
+
+
+
+E-mail: <input type="email" id="myEmail" value="johndoe@example.com">
+
+<p>Click the button to change the email address of the email field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("myEmail").value = "steve@w3schools.com";
+}
+</script>
+
+
+
+
+
+</body>
+
+
+
+</html> 
