@@ -1,0 +1,70 @@
+<!doctype>
+<html>
+    <head>
+        <script src="angular.min.js"></script>
+        <script src="exampleCtrl.js"></script>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <style>
+
+
+        </style>
+    </head>
+
+<body ng-app="exampleApp">
+<div ng-controller="mainController">
+
+<div class="container">
+
+
+
+<table class="table table-striped">
+
+<tr class="success">
+<th>Sr. No.</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Position</th>
+<th>Salary</th>
+</tr>
+
+<tr ng-repeat="x in myJsonData" ng-class-even="'info'">
+<td>{{$index+1}}</td>
+<td ng-class="{'success' : x.firstName=='Gilberte', 'warning' : x.firstName=='Iolande'}">{{x.firstName}}</td>
+<td>{{x.lastName}}</td>
+<td>{{x.email}}</td>
+<td>{{x.position}}</td>
+<td ng-class="x.salary=='45000'? 'danger' : ''">{{x.salary}}<a href="#"ng-show="$last" class="btn btn-danger">try it</a></td>
+</tr>
+
+</table>
+
+
+
+
+</div>
+
+{{welcome}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
