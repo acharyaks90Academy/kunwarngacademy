@@ -1,0 +1,44 @@
+var y = document.getElementById("myUsername").value; 
+
+
+ var email = document.getElementById('txtEmail');
+    
+    if (!filter.test(email.value)) 
+	
+	
+	
+	value using in js in variable and if conditio also?
+	
+	
+	
+	
+	
+	
+	----- why are using data word after response?
+	
+	-------
+	
+	
+	
+	
+	
+	Properties
+	The response from the server is an object with these properties:
+
+.config the object used to generate the request.
+.data a string, or an object, carrying the response from the server.
+.headers a function to use to get header information.
+.status a number defining the HTTP status.
+.statusText a string defining the HTTP status.
+
+
+
+
+//how can use the json name with name "records"?
+
+
+------ I need multiple name for json like records, my data ?
+
+
+----- multiple ng-class
+
