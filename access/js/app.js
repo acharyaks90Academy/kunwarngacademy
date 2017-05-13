@@ -49,5 +49,13 @@ var myApp= angular.module("academyApp",["ngRoute", "ui.bootstrap"]) //
     });
 })
 
+myApp.constant({ url :{
+    
+
+    'baseUrl': "https://jsonplaceholder.typicode.com/",
+    'syl': "posts/"
+    }
+})
+
 
 
