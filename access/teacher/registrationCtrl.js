@@ -1,7 +1,23 @@
-myApp.controller('registrationCtrl', function($scope, $rootScope, $location){
+myApp.controller('registrationCtrl', function($scope, $rootScope, $location, $log, $interval, $timeout, dataServic){
+
+
+	//decalring variabls
+$scope.welcome="hello world!!"
+
+
+$timeout(function(){
+$scope.welcome="change by timeout!!!"
+
+},2000)
 
 
 
+	$scope.myVarA = 1;
+
+	$scope.intr = $interval(function(){
+		$scope.myVarA += 1;  
+
+	},1000)
 	
 	$scope.teacherList = [
 	{userphoto:"images/himanshu.jpg", name:"Himanshu", email:"hw@gmail.com",  preference:["Morning", "Afternoon"],  visit:"Weekdays", role:"Temperory", timeslot:{morning:true, afternoon:true, evening:false},  qualification:[{subject:"Angular, Javascript"}]},
@@ -15,13 +31,13 @@ myApp.controller('registrationCtrl', function($scope, $rootScope, $location){
 	//sessionStorage.faculityList =  JSON.stringify($scope.teacherList);
 
 	//initialize the array for teacher
-	//$rootScope.teachers = $scope.teacherList;
-	
+    $rootScope.teachers = $scope.teacherList;
+	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
 	$scope.person = {
 		userphoto:"",
 		name:"",
 		email:"",
-		preference:["Morning", "Afternoon", "Evening", "Night"],
+		preference:"",
 		visit:"",
 		role:"Permanent",
 		timeslot:{morning:"", afternoon:"", evening:""},
@@ -45,7 +61,9 @@ if($scope.editRec){
 }
 else{
 if($scope.person!=null && $scope.person.userphoto!=null && $scope.person.name!=null && $scope.person.email!=null && $scope.person.preference!=null && $scope.person.visit!=null && $scope.person.role!=null && $scope.person.timeslot!=null && $scope.person.qualification!=null){
-		 	  	$scope.teacherList.push(angular.copy($scope.person))
+		 	  	console.log("The inserted objct"+JSON.stringify($scope.person));
+				   $log.warn("$ log The inserted objct"+JSON.stringify($scope.person));
+			   	$scope.teacherList.push(angular.copy($scope.person))
 				$scope.person = {
 					userphoto:"",
 					name:"",
@@ -83,6 +101,10 @@ $scope.addQualification = function(){
 	$scope.person.qualification.push({"subject":""});
 	//$scope.qualification = "";
 }
-	
-
+	$timeout(function(){
+		$interval.cancel($scope.intr);
+		//clearInterval($scope.intr);
+	},10000)
+	var d = 1;
+console.log(dataServic.getData(d));
 })	

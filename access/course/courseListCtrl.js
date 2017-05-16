@@ -1,4 +1,4 @@
-myApp.controller("courseListCtrl", function($scope, $rootScope){
+myApp.controller("courseListCtrl", function($scope, $rootScope, dataServic){
 
     $scope.bye="bye";
 
@@ -54,10 +54,15 @@ $scope.deleteCourse = function(deletecourse){
 $scope.editCourse = function (editUser) {
     console.log(editUser)
     //console.log($scope.courseData[editUser])
-    $scope.courseForm = angular.copy($scope.courseData[editUser]);
-    //$scope.courseForm = $scope.courseData.indexOf(index);
-    $scope.indexStop=editUser;
-    $scope.editTruCondi=true;
+
+    //     $scope.courseForm = angular.copy($scope.courseData[index]);
+//     //$scope.courseForm = $scope.courseData.indexOf(index);
+//     $scope.indexStop=index;
+//     $scope.editTruCondi=true;
+//$scope.courseData, $scope.courseForm, editUser,$scope.editTruCondi, $scope.indexStop
+    dataServic.editRecord($scope,editUser);
+
+    
 
 }
 

@@ -15,6 +15,7 @@ $http({
 }).then(function successCallback(response) {
   
   $scope.myJsonData= response.data.records;
+  //$scope.students = response.data.students;
 
   }, function errorCallback(response) {
       alert("404 PAGE");

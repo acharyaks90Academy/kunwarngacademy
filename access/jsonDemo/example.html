@@ -30,8 +30,8 @@
 
 <tr ng-repeat="x in myJsonData" ng-class-even="'info'">
 <td>{{$index+1}}</td>
-<td ng-class="{'success' : x.firstName=='Gilberte', 'warning' : x.firstName=='Iolande'}">{{x.firstName}}</td>
-<td>{{x.lastName}}</td>
+<td ng-class="{'success' : x.firstName=='Gilberte' &&, 'warning' : x.firstName=='Iolande'}">{{x.firstName}}</td>
+<td ng-class="x?'red:'green''">{{x.lastName}}</td>
 <td>{{x.email}}</td>
 <td>{{x.position}}</td>
 <td ng-class="x.salary=='45000'? 'danger' : ''">{{x.salary}}<a href="#"ng-show="$last" class="btn btn-danger">try it</a></td>
