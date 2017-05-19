@@ -25,8 +25,6 @@ gender : "Male"
 
 
 
-
-
   $http({
     method: 'GET',
     url: 'json/jsonData.json'
@@ -40,7 +38,7 @@ gender : "Male"
 
 
   $scope.editRow = function (index) {
-    //console.log(JSON.stringify($scope.MyData[index]))
+   //console.log(JSON.stringify($scope.MyData[index]))    
     $scope.dataInsert = angular.copy($scope.MyData[index]);
    
   }
