@@ -1,16 +1,14 @@
 
+myApp.service("deleteItem", function () {
 
-myApp.service("DeleteItem", function(){
+    this.rowDelete = function ($scope, index) {
+        alert(index);
+        console.log(index);
+        $scope.MyData.splice(index, 1);
+        
+        
 
-this.removeRow = function($scope, index){
-
-$scope.MyData.splice(index);
-
-alert(index);
-
-console.log($scope, index)
-
-}
+    }
 
 
 })

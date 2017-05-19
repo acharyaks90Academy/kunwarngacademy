@@ -8,7 +8,7 @@
   "gender": "Male",
   "appName": "Wrapsafe",
   "office": "Sumber Tengah",
-  "language": null
+  "language": {"hindi":true,"english":true,"others":true}
 }, {
   "index": 2,
   "firstName": "Janaye",
@@ -18,7 +18,7 @@
   "gender": "Female",
   "appName": "Subin",
   "office": "Yenagoa",
-  "language": null
+ "language": {"hindi":true,"english":false,"others":false}
 }, {
   "index": 3,
   "firstName": "Helene",
@@ -28,7 +28,7 @@
   "gender": "Female",
   "appName": "Cardify",
   "office": "Turanj",
-  "language": null
+  "language": {"hindi":true,"english":false,"others":false}
 }, {
   "index": 4,
   "firstName": "Archibold",
@@ -38,7 +38,7 @@
   "gender": "Male",
   "appName": "Matsoft",
   "office": "Chełmiec",
-  "language": null
+ "language": {"hindi":true,"english":false,"others":false}
 }, {
   "index": 5,
   "firstName": "Phaidra",
@@ -48,7 +48,7 @@
   "gender": "Female",
   "appName": "Redhold",
   "office": "Laibin",
-  "language": null
+  "language": {"hindi":true,"english":false,"others":false}
 }, {
   "index": 6,
   "firstName": "Evelyn",
@@ -58,7 +58,7 @@
   "gender": "Female",
   "appName": "Cookley",
   "office": "Ōta",
-  "language": null
+ "language": {"hindi":true,"english":false,"others":true}
 }, {
   "index": 7,
   "firstName": "Gaye",
@@ -68,7 +68,7 @@
   "gender": "Female",
   "appName": "Greenlam",
   "office": "Nanjiao",
-  "language": null
+  "language": {"hindi":false,"english":true,"others":false}
 }, {
   "index": 8,
   "firstName": "Taryn",
@@ -78,7 +78,7 @@
   "gender": "Female",
   "appName": "Flexidy",
   "office": "Peña Blanca",
-  "language": null
+  "language": {"hindi":true,"english":false,"others":true}
 }, {
   "index": 9,
   "firstName": "Uriel",
@@ -88,7 +88,7 @@
   "gender": "Male",
   "appName": "Duobam",
   "office": "Yanji",
-  "language": null
+  "language": {"hindi":true,"english":true,"others":false}
 }, {
   "index": 10,
   "firstName": "Lynnell",
@@ -98,6 +98,6 @@
   "gender": "Female",
   "appName": "Konklab",
   "office": "Qiewa",
-  "language": null
+  "language": {"hindi":true,"english":false,"others":true}
 }]
 }

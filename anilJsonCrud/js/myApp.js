@@ -1,6 +1,6 @@
 var myApp = angular.module("mainApp", []);
 
-myApp.controller("mainController", function ($scope, $http) {
+myApp.controller("mainController", function ($scope, $http, deleteItem) {
 
 
 
@@ -12,14 +12,19 @@ gender : "Male"
 
   $scope.noDataFound = false;
 
-  $scope.removeRow = function (index) {
-    alert(index);
-    $scope.MyData.splice(index, 1);
+  $scope.removeRow = function (index) {   
+    // alert(index);
+    // $scope.MyData.splice(index, 1);
 
-    console.log(index)
-
+    // console.log(index)
+    deleteItem.rowDelete($scope, index);
 
   }
+
+
+
+
+
 
 
   $http({

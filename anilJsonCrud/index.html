@@ -5,6 +5,7 @@
         <script src="js\angular.min.js"></script>
         <script src="js\bootstrap.min.js"></script>
         <script src="js\myApp.js"></script>
+        <script src="js\myService.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
     </head>
@@ -37,7 +38,7 @@
         <td>{{x.gender}}</td>
         <td>{{x.appName}}</td>
         <td>{{x.office}}</td>
-        <td>{{x.language}}</td>
+        <td>{{x.language.hindi==true? 'Hindi' :'' }}, {{x.language.english==true? 'English' :'' }},{{x.language.others==true? 'Others' :'' }}<span ng-hide="$last"></span></td>
         <td><input type="button" class="btn btn-success btn-sm" ng-click="editRow($index)" data-toggle="modal" data-target="#myModal" value="Edit"></td>
         <td><input type="button" ng-click="removeRow($index)" class="btn  btn-danger btn-sm" value="Delete"><br/>
         <input ng-show="$last" type="button" class="btn  btn-warning btn-sm" value="Add Row" data-toggle="modal" data-target="#addModal" >
