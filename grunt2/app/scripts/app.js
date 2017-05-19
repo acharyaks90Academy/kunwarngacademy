@@ -34,6 +34,21 @@ angular
         controller: 'StudentregCtrl',
         controllerAs: 'studentReg'
       })
+      .when('/teacherReg', {
+        templateUrl: 'views/teacherreg.html',
+        controller: 'TeacherregCtrl',
+        controllerAs: 'teacherReg'
+      })
+      .when('/teacherList', {
+        templateUrl: 'views/teacherlist.html',
+        controller: 'TeacherlistCtrl',
+        controllerAs: 'teacherList'
+      })
+      .when('/studentList', {
+        templateUrl: 'views/studentlist.html',
+        controller: 'StudentlistCtrl',
+        controllerAs: 'studentList'
+      })
       .otherwise({
         redirectTo: '/'
       });
