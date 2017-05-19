@@ -14,4 +14,7 @@ myApp.service("deleteItem", function () {
 
 
 
-confusion with $scope and index
+----- confusion with $scope and index
+
+
+"," issue with multiple record in checkbox
