@@ -35,7 +35,7 @@ gender : "Male"
 
 
   $scope.editRow = function (index) {
-    console.log(JSON.stringify($scope.MyData[index]))
+    //console.log(JSON.stringify($scope.MyData[index]))
     $scope.dataInsert = angular.copy($scope.MyData[index]);
    
   }
@@ -46,13 +46,17 @@ gender : "Male"
   
 
   $scope.addRow = function () {
-    console.log($scope.dataInsert);
+   // console.log($scope.dataInsert);
     $scope.MyData.push({
       'firstName': $scope.dataInsert.firstName,
       'lastName': $scope.dataInsert.lastName,
+      'firstName': $scope.dataInsert.firstName,
+      'position': $scope.dataInsert.position,
       'email': $scope.dataInsert.email,
       'gender': $scope.dataInsert.gender,
-      'appName': $scope.dataInsert.appName
+      'appName': $scope.dataInsert.appName,
+      'office': $scope.dataInsert.office,
+      'language': $scope.dataInsert.language
 
     });
 

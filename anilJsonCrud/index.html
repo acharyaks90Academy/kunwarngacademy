@@ -22,6 +22,7 @@
         <th>Gender</th>
         <th>App Name</th> 
         <th>Office</th> 
+        <th>Language</th> 
         <th>Edit</th>    
         <th>Delete</th>      
       </tr>
@@ -36,6 +37,7 @@
         <td>{{x.gender}}</td>
         <td>{{x.appName}}</td>
         <td>{{x.office}}</td>
+        <td>{{x.language}}</td>
         <td><input type="button" class="btn btn-success btn-sm" ng-click="editRow($index)" data-toggle="modal" data-target="#myModal" value="Edit"></td>
         <td><input type="button" ng-click="removeRow($index)" class="btn  btn-danger btn-sm" value="Delete"><br/>
         <input ng-show="$last" type="button" class="btn  btn-warning btn-sm" value="Add Row" data-toggle="modal" data-target="#addModal" >
@@ -64,14 +66,17 @@
 
   <div class="col-lg-6 col-md-6 col-sm-12">
      
-      <div class="form-group">
-          
+      <div class="form-group">          
     <label>First Name</label>
     <input type="text" class="form-control" ng-model="dataInsert.firstName">
   </div>
   <div class="form-group">
     <label>Last Name</label>
     <input type="text" class="form-control" ng-model="dataInsert.lastName">
+  </div>  
+   <div class="form-group">
+    <label>Position</label>
+    <input type="text" class="form-control" ng-model="dataInsert.position">
   </div>  
   <div class="form-group">
     <label>Email</label>
@@ -89,6 +94,11 @@
     <label>App Name</label>
     <input type="text" class="form-control" ng-model="dataInsert.appName">
   </div>  
+   </div>
+  <div class="form-group">
+    <label>Office</label>
+    <input type="text" class="form-control" ng-model="dataInsert.office">
+  </div>
   
   </div>
  <div class="modal-footer" style="border:0px!important;">
@@ -131,6 +141,10 @@
     <input type="text" class="form-control" ng-model="dataInsert.lastName">
   </div>  
   <div class="form-group">
+    <label>Position</label>
+    <input type="text" class="form-control" ng-model="dataInsert.position">
+  </div>  
+  <div class="form-group">
     <label>Email</label>
     <input type="text" class="form-control" ng-model="dataInsert.email">
   </div>  
@@ -146,6 +160,10 @@
     <label>App Name</label>
     <input type="text" class="form-control" ng-model="dataInsert.appName">
   </div>  
+   <div class="form-group">
+    <label>Office</label>
+    <input type="text" class="form-control" ng-model="dataInsert.office">
+  </div> 
   
   </div>
  <div class="modal-footer" style="border:0px!important;">
