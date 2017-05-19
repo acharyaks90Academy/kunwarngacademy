@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="js\jquery.min.js"></script>
+        <script src="js\angular.min.js"></script>
+        <script src="js\bootstrap.min.js"></script>
+        <script src="js\myApp.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    </head>
+<body ng-app="mainApp">
+<div ng-controller="mainController" class="fluid-container">
+ <p class="alert alert-danger" ng-show="noDataFound">Sorry...no data found!</p>
+<table class="table table-bordered" ng-hide="noDataFound">
+   
+      <tr class="success">
+        <th>Index</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>App Name</th> 
+        <th>Office</th> 
+        <th>Edit</th>    
+        <th>Delete</th>      
+      </tr>
+    
+      <tr ng-repeat="x in MyData" ng-class-even="'info'">
+         
+        <td>{{$index+1}}</td>
+        <td>{{x.firstName}}</td>
+        <td>{{x.lastName}}</td>
+        <td>{{x.position}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.gender}}</td>
+        <td>{{x.appName}}</td>
+        <td>{{x.office}}</td>
+        <td><input type="button" class="btn btn-success btn-sm" ng-click="editRow($index)" data-toggle="modal" data-target="#myModal" value="Edit"></td>
+        <td><input type="button" ng-click="removeRow($index)" class="btn  btn-danger btn-sm" value="Delete"><br/>
+        <input ng-show="$last" type="button" class="btn  btn-warning btn-sm" value="Add Row" data-toggle="modal" data-target="#addModal" >
+       </td>
+      </tr>
+   
+    
+  </table>
+
+
+
+
+<div id="addModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Add Row  content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Please Add data</h4>
+      </div>
+      
+     <div class="modal-body">
+       <form>
+   
+
+  <div class="col-lg-6 col-md-6 col-sm-12">
+     
+      <div class="form-group">
+          
+    <label>First Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.firstName">
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.lastName">
+  </div>  
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" ng-model="dataInsert.email">
+  </div>  
+  
+  </div>
+   <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="form-group">
+    <label>Gender</label><br/> 
+    <input type="radio" name="gender" value="Male"  ng-model="dataInsert.gender">Male
+    <input type="radio" name="gender" value="Female" ng-model="dataInsert.gender">Female
+  </div>
+  <div class="form-group">
+    <label>App Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.appName">
+  </div>  
+  
+  </div>
+ <div class="modal-footer" style="border:0px!important;">
+        <button type="button" class="btn btn-success" ng-click="addRow()" data-dismiss="modal">Submit</button>
+      </div>
+      </form>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Edit row content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit to {{::formAll.firstName}}</h4>
+      </div>
+      
+     <div class="modal-body">
+       <form>
+  
+
+  <div class="col-lg-6 col-md-6 col-sm-12">
+     
+      <div class="form-group">
+          
+    <label>First Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.firstName">
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.lastName">
+  </div>  
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" ng-model="dataInsert.email">
+  </div>  
+  
+  </div>
+   <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="form-group">
+    <label>Gender</label><br/>
+    <input type="radio" name="gender" value="Male" ng-model="dataInsert.gender">Male
+    <input type="radio"  name="gender" value="Female" ng-model="dataInsert.gender">Female
+  </div>
+  <div class="form-group">
+    <label>App Name</label>
+    <input type="text" class="form-control" ng-model="dataInsert.appName">
+  </div>  
+  
+  </div>
+ <div class="modal-footer" style="border:0px!important;">
+        <button type="button" class="btn btn-success" ng-click="addRow()" data-dismiss="modal">Submit</button>
+      </div>
+      </form>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>
