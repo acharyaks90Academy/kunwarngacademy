@@ -1,15 +1,12 @@
-myApp.controller('teacherLisCtrl', function($scope,$rootScope){
+myApp.controller('teacherLisCtrl', function($scope,$rootScope, dataServic){
 	//$scope.teacherList = $rootScope.teachers;
 	//$scope.teacherList = localStorage.faculityList
 	//$scope.teacherList = JSON.parse(sessionStorage.faculityList);
 	$scope.teacherList = $rootScope.fmyList;
-
+	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
 	
 	$scope.registerEdit = function(index){
-			$scope.person = angular.copy($scope.teacherList[index]) 
-			$scope.editRec = true
-			$scope.listNumber = index
-			alert($scope.listNumber)
+			dataServic.editRecord($scope, index);
 
 	}
 	$scope.registerDelete = function(index){

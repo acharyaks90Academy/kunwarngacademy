@@ -1,10 +1,12 @@
 <div class="whitebg">
 <div class="container">
   <div class="row">
-   
+  
     <div class="col-md-6" ng-controller="registrationCtrl">
-      
+      Time is : {{myVarA}}
       <h1 class="h1 inner">Faculity Registration</h1>
+
+       <h1 style="color:red!important;">{{welcome}}</h1>
       <form class="form-horizontal">
         <div class="form-group">
           <label class="col-md-3">Photo Upload</label>
@@ -28,7 +30,7 @@
           <label class="col-md-3">Class Preference </label>
           <div class="col-md-9">
            <select multiple class="form-control" ng-model="person.classPreference">
-             <option ng-repeat="x in person.preference">{{x}}</option>
+             <option ng-repeat="x in perferenceList" value="{{x}}">{{x}}</option>
            </select>
            <small>Press Ctrl to select multiple values</small>
           </div>
