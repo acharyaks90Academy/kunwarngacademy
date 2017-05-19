@@ -6,6 +6,8 @@ myApp.controller("mainController", function ($scope, $http, deleteItem) {
 
 $scope.dataInsert = {
 gender : "Male"
+//language:"hindi"
+
 
 };
 
@@ -38,7 +40,7 @@ gender : "Male"
 
 
   $scope.editRow = function (index) {
-   //console.log(JSON.stringify($scope.MyData[index]))    
+   console.log(JSON.stringify($scope.MyData[index]))    
     $scope.dataInsert = angular.copy($scope.MyData[index]);
    
   }
