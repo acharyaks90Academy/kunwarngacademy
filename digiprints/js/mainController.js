@@ -1,4 +1,4 @@
-myApp.controller("mainController", function($scope, $rootScope, $location){
+myApp.controller("mainController", function($scope, $http, $rootScope, $location){
 
     $rootScope.welcome="welcome"; 
    
@@ -9,7 +9,7 @@ myApp.controller("mainController", function($scope, $rootScope, $location){
     method: 'GET',
     url: 'json/menu.json'
   }).then(function successCallback(response) {
-    $scope.menu = response.data.records;
+    $scope.menu = response.data.mainMenu;
 
   }, function errorCallback(response) {
     $scope.noDataFound = true;
