@@ -9,8 +9,9 @@ var myApp = angular.module("mainApp", ["ngRoute"])
         templateUrl : "mainPage.html",
         controller: "mainController"
     })    
-    .when("/productDetails", {
-        templateUrl : "student/reg/studentPage.html"
+    .when("/product", {
+        templateUrl : "product.html",
+        controller: "sideNavCtrl"
 		
     })
 	 

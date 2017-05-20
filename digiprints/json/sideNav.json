@@ -1,0 +1,20 @@
+{"sideNavMenu":
+[
+    {
+    "productHeading" : "3D Sublimation Machine",
+    "sideNavLinks" : [
+        {"name":"Freesub 3D Sublimation Machine"},
+        {"name":"Mini ST-1520"},
+        {"name":"ST-3042"}
+    ]
+},
+  {
+    "productHeading" : "New Item",
+    "sideNavLinks" : [
+        {"name":"Aluminum Photo Panel"},
+        {"name":"Mugs"},
+        {"name":"Bottle"},
+        {"name":"Plate"}
+    ]
+}
+]}

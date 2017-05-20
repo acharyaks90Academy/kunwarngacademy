@@ -2,3 +2,39 @@ img {
     max-width: 100%;
     height: auto;
 }
+.product-detail {
+	padding:20px 0;
+}
+.bullets>li {
+	padding: 0 0 0 20px;
+	margin: 0 0 5px 0;
+	position: relative;
+}
+.bullets>li>a {
+	color: #222;
+}
+.bullets>li:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '\25CF';
+	color: #222;
+}
+.grey-heading {
+	color: #333;
+	font-size: 24px;
+	font-weight: 400;
+	position: relative;
+	margin: 0 0 30px;
+}
+.grey-heading:before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	height: 3px;
+	width: 26px;
+	background: #333;
+}
+.margin-tb20{margin-top:40px; margin-bottom: 40px;}
+.margin-btm40{margin-bottom: 40px;}
