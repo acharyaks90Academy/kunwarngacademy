@@ -3,11 +3,11 @@ myApp.controller("commonController", function($scope, $rootScope, $location){
 
    var d = new Date();
     var n = d.getFullYear();
-   // var t = d.getDay();
-$scope.dateTme = n;
+   
+        $scope.dateTme = n;
 
 
-    $scope.footer="footer"; 
+  
    
 
 
