@@ -1,0 +1,14 @@
+{"mainMenu":[{
+  "home": true,
+  "sublimationMachine": true,
+  "newItem": true,
+  "heatPressMachine": false,
+  "mug": false,
+  "aboutUs": false,
+  "videos": false,
+  "photos": false,
+  "contactUs": false
+
+
+}]
+}

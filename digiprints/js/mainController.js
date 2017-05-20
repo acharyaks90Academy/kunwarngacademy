@@ -5,16 +5,16 @@ myApp.controller("mainController", function($scope, $rootScope, $location){
 
 
 
-  // $http({
-  //   method: 'GET',
-  //   url: 'json/menu.json'
-  // }).then(function successCallback(response) {
-  //   $scope.menu = response.data.records;
+  $http({
+    method: 'GET',
+    url: 'json/menu.json'
+  }).then(function successCallback(response) {
+    $scope.menu = response.data.records;
 
-  // }, function errorCallback(response) {
-  //   $scope.noDataFound = true;
+  }, function errorCallback(response) {
+    $scope.noDataFound = true;
 
-  // });
+  });
 
 
    
