@@ -1,0 +1,48 @@
+{"sideNavMenu":
+[
+    {
+    "productHeading" : "3D Sublimation Machine",
+    "sideNavLinks" : [
+        {"name":"Freesub 3D Sublimation Machine"},
+        {"name":"Mini ST-1520"},
+        {"name":"ST-3042"}
+    ]
+},
+  {
+    "productHeading" : "New Item",
+    "sideNavLinks" : [
+        {"name":"Aluminum Photo Panel"},
+        {"name":"Mugs"},
+        {"name":"Bottle"},
+        {"name":"Plate"}
+    ]
+}
+],
+"productTableData" :[
+    {
+        "tableHeading" :"Freesub Mini double-station Mug Press Machine For doing mugs",
+        "tableData":[
+            {"itemNo": "ST-210"},
+            {"specification": "11oz*2"},
+            {"unit": "set"},
+            {"category": "Freesub 3D Sublimation Machine"},
+            {"brows": "5077"}
+        ]
+    }   
+
+],
+"productListData": [
+    {"data": "Freesub Double-station Mug Press Machine For doing Mugs"},
+    {"data": "Item No.: ST-210"},
+    {"data": "Transfer mug size: 11oz,12oz, 9oz, 17oz.6oz."},
+    {"data": "Power: 280w+280w"},
+    {"data": "Net Weight: 5.8Kgs"},
+    {"data": "Control Mode: LCD, Automatic control."},
+    {"data": "Color: silver black"},
+    {"data": "Transfer Tempature: 180 ℃"},
+    {"data": "Time: 180 Seconds"}
+]
+
+}
+
+
