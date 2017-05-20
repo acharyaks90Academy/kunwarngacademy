@@ -1,86 +1,103 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="kunwarAcadApp">
-    <!--[if lte IE 8]>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="kunwarAcadApp">
+  <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-   <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#/" style="margin-top:0px!important;"><img src="images/nglogo.png" height="30" /></a>
+  <!-- Add your site or application content here -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/" style="margin-top:0px!important;"><img src="images/nglogo.png" height="30" /></a>
+      </div>
+     <ul class="nav navbar-nav">
+  <li>
+    <a href="#!/studentReg">Student Registration</a>
+    <li>
+      <li><a href="#!/studentList">Student List</a>
+        <li>
+          <li><a href="#!/courseReg">Course Registration</a>
+            <li>
+              <li><a href="#!/courseList">Course List</a>
+                <li>
+                  <li><a href="#!/teacherList">Faculity List</a></li>
+                  <li><a href="#!/teacherReg">Faculity Registraion</a></li>
+                  <li><a href="#!/syllabusList">Syllabus List</a></li>
+                  <li><a href="#!/syllabusReg">Syllabus</a></li>
+
+
+</ul>
+      <a href="#!/login" class="btn btn-danger navbar-btn">Login Me!</a>
     </div>
-    <ul class="nav navbar-nav">
-    
-        <li><a href="#/student">Registration</a><li>
-            <li><a href="#/studentList">List</a><li>
-                <li><a href="#/course">Course</a><li>  
-                  <li><a href="#/courseList">Course List</a><li>                  
-                <li><a href="#/teacherlist">Faculity List</a></li>
-<li><a href="#/registration">Faculity Registraion</a></li>
-<li><a href="#/syllabus">Syllabus</a></li>
-            
-    
-    </ul>
-    <a href="#/login" class="btn btn-danger navbar-btn">Login Me!</a>
-  </div>
-</nav>
+  </nav>
 
-    <div ng-view=""></div>
-   
-
-  
+  <div ng-view=""></div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/studentreg.js"></script>
-        <script src="scripts/controllers/teacherreg.js"></script>
-        <script src="scripts/controllers/teacherlist.js"></script>
-        <script src="scripts/controllers/studentlist.js"></script>
-        <!-- endbuild -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+      (A[l].q = A[l].q || []).push(arguments)    
+}, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    } (window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/studentreg.js"></script>
+  <script src="scripts/controllers/teacherreg.js"></script>
+  <script src="scripts/controllers/teacherlist.js"></script>
+  <script src="scripts/controllers/studentlist.js"></script>
+  <script src="scripts/services/dataservice.js"></script>
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/coursereg.js"></script>
+  <script src="scripts/controllers/courselist.js"></script>
+  <script src="scripts/controllers/syllabuslist.js"></script>
+  <script src="scripts/controllers/syllabusreg.js"></script>
+  <script src="scripts/services/url.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>

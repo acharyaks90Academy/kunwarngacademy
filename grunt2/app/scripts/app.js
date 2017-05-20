@@ -49,6 +49,31 @@ angular
         controller: 'StudentlistCtrl',
         controllerAs: 'studentList'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/courseReg', {
+        templateUrl: 'views/coursereg.html',
+        controller: 'CourseregCtrl',
+        controllerAs: 'courseReg'
+      })
+      .when('/courseList', {
+        templateUrl: 'views/courselist.html',
+        controller: 'CourselistCtrl',
+        controllerAs: 'courseList'
+      })
+      .when('/syllabusList', {
+        templateUrl: 'views/syllabuslist.html',
+        controller: 'SyllabuslistCtrl',
+        controllerAs: 'syllabusList'
+      })
+      .when('/syllabusReg', {
+        templateUrl: 'views/syllabusreg.html',
+        controller: 'SyllabusregCtrl',
+        controllerAs: 'syllabusReg'
+      })
       .otherwise({
         redirectTo: '/'
       });

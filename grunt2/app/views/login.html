@@ -1,0 +1,52 @@
+
+<div style="color:#fff;">
+ <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text-center" style="color:#fff;">
+                            <h1><strong>Welcome</strong> my session</h1>
+                            <div class="description">
+
+                            	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3 style="color:#666!important;">Login to Student site</h3>
+                            		<p style="color:#666!important;">Enter your username and password to log on:</p>
+                        		</div>                        		
+                            </div>
+                            <div class="form-bottom">
+							
+			                    <form role="form"  method="get"  name="loginForm" class="login-form" novalidate="">
+								
+			                    	<div class="form-group">
+										<div ng-show="usererror" class="text-danger"><strong>Please enter your Username</strong></div>
+										<div class="text-success" ng-show="loginsuccess"><h5><b>Login successfully!!!</b></h5></div>
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="username" ng-model="login.username" placeholder="Username..." class="form-username form-control">
+			                        </div>
+			                        <div class="form-group">
+									<div ng-show="passworderror" class="text-danger"><strong>Please enter your Password</strong></div>
+			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<input type="text" name="password"  ng-model="login.password" placeholder="Password..." class="form-password form-control">
+			                        </div>
+			                        <input type="submit" class="btn btn-success" ng-click="signIn()" value="Sign in!"/>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="container text-center" style="margin-top:20px; ">
+                        <a href="#/" class="btn btn-default">Back</a> 
+                </div>
+            </div>
+            
+        </div>
+
+</div>
