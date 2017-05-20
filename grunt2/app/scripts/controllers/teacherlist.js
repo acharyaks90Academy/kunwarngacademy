@@ -8,12 +8,8 @@
  * Controller of the kunwarAcadApp
  */
 angular.module('kunwarAcadApp')
-  .controller('TeacherlistCtrl', function ($scope,$rootScope, dataService) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('TeacherlistCtrl', function ($scope,$rootScope) {
+    
  
 	//$scope.teacherList = $rootScope.teachers;
 	//$scope.teacherList = localStorage.faculityList
@@ -22,7 +18,7 @@ angular.module('kunwarAcadApp')
 	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
 	
 	$scope.registerEdit = function(index){
-			dataService.editRecord($scope, index);
+			//dataService.editRecord($scope, index);
 	};
 	$scope.registerDelete = function(index){
 		
@@ -40,6 +36,6 @@ angular.module('kunwarAcadApp')
 	$scope.addQualification = function(){
 	$scope.person.qualification.push({"subject":""});
 	
-};
+	};
 
 });	
