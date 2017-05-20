@@ -1,14 +1,18 @@
-{"mainMenu":[{
-  "home": true,
-  "sublimationMachine": true,
-  "newItem": true,
-  "heatPressMachine": false,
-  "mug": false,
-  "aboutUs": false,
-  "videos": false,
-  "photos": false,
-  "contactUs": false
 
 
-}]
+
+
+{"mainMenu":[
+
+
+    {"key" : "home", "value" : "Home"},
+    {"key" : "sublimationMachine","value" : "3D Sublimation Machine"},
+    {"key" : "newItem","value" : "New Item"},
+    {"key" : "heatPressMachine","value" : "Heat Press Machine"},
+    {"key" : "mug","value" : "Mug"},
+    {"key" : "aboutUs","value" : "About Us"},
+    {"key" : "videos","value" : "Videos"},
+    {"key" : "photos","value" : "Photos"},
+    {"key" : "contactUs","value" : "Contact Us"}
+  ]
 }

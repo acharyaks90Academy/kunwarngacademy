@@ -16,28 +16,29 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
-  
+
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
- 
- <script src="js/jquery.min.js"></script>
- <script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/angular-route.js"></script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+
+  <script src="js/myApp.js"></script>
   
- <script src="js/myApp.js"></script>
- <script src="js/commonController.js"></script>
+  <script src="js/commonController.js"></script>
 
   <script src="js/mainController.js"></script>
-  
- <script>
+
+  <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
   </script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
       (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-        function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+        b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+          function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
         e = o.createElement(i); r = o.getElementsByTagName(i)[0];
         e.src = '//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e, r)
@@ -50,32 +51,30 @@
 </head>
 
 <body ng-app="mainApp">
- <div class="fluid-container">
+  <div class="fluid-container" ng-controller="commonController">
 
-<p ng-repeat="x in menu">{{x}}</p>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Digit Prints</a>
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Digit Prints</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li ng-repeat="x in menu">
+            <a href="#">{{x.value}}</a>           
+          </li>
+
+        </ul>
       </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">3D Sublimation</a></li>
-        <li><a href="#">New Item</a></li>
-        <li><a href="#">Heat Press Machine</a></li>
-        <li><a href="#">Mug</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Photos</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
- </div>
-<div ng-view></div>
- <footer ng-controller="commonController">
-      <p>&copy; digit prints {{dateTme}}</p>
-    </footer>
+    </nav>
+  
+  <div ng-view></div>
+  <div class="fluid-container">
+  <footer>
+    <p>&copy; digit prints {{dateTme}}</p>
+  </footer>
+  </div>
+  </div>
 </body>
 
 </html>
