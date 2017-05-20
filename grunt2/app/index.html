@@ -21,42 +21,31 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">kunwarAcad</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/" style="margin-top:0px!important;"><img src="images/nglogo.png" height="30" /></a>
     </div>
+    <ul class="nav navbar-nav">
+    
+        <li><a href="#/student">Registration</a><li>
+            <li><a href="#/studentList">List</a><li>
+                <li><a href="#/course">Course</a><li>  
+                  <li><a href="#/courseList">Course List</a><li>                  
+                <li><a href="#/teacherlist">Faculity List</a></li>
+<li><a href="#/registration">Faculity Registraion</a></li>
+<li><a href="#/syllabus">Syllabus</a></li>
+            
+    
+    </ul>
+    <a href="#/login" class="btn btn-danger navbar-btn">Login Me!</a>
+  </div>
+</nav>
 
-    <div class="container">
     <div ng-view=""></div>
-    </div>
+   
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+  
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
