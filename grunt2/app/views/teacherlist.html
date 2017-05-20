@@ -15,7 +15,7 @@
             <th>Qualification</th>
             <th>Action</th>
           </tr>
-          <tr ng-repeat="x in teacherList">
+          <tr ng-repeat="x in list">
             <td><img ng-src="{{x.userphoto}}" class="userpic">{{x.name}}</td>
             <td>{{x.email}}</td>
             <td><span ng-repeat="y in x.preference">{{y}}<span ng-hide="$last">,<span>  </span></td>
@@ -28,7 +28,9 @@
         </table>
       </div>
     </div>
-  </div><div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  </div>
+  
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -130,9 +132,9 @@
       </div>
       
     </div>
-    <!-- /.modal-content --> 
+    
   </div>
-  <!-- /.modal-dialog --> 
+  
 </div>
 </div>
 

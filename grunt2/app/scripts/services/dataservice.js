@@ -17,7 +17,7 @@ angular.module('kunwarAcadApp')
     this.editRecord = function($scope,index){
     
     if($scope.teacherList){
-         $scope.person = angular.copy($scope.teacherList[index]) ;
+         $scope.person = angular.copy($scope.list[index]) ;
 			$scope.editRec = true;
 			$scope.listNumber = index;
     }else{

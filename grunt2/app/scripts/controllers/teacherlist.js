@@ -8,34 +8,34 @@
  * Controller of the kunwarAcadApp
  */
 angular.module('kunwarAcadApp')
-  .controller('TeacherlistCtrl', function ($scope,$rootScope) {
-    
+  .controller('TeacherlistCtrl', function ($scope,$rootScope, dataService) {
+   
  
-	//$scope.teacherList = $rootScope.teachers;
-	//$scope.teacherList = localStorage.faculityList
-	//$scope.teacherList = JSON.parse(sessionStorage.faculityList);
-	$scope.teacherList = $rootScope.fmyList;
+	//$scope.list = $rootScope.teachers;
+	//$scope.list = localStorage.faculityList
+	//$scope.list = JSON.parse(sessionStorage.faculityList);
+	$scope.list = $rootScope.fmyList;
 	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
 	
 	$scope.registerEdit = function(index){
-			//dataService.editRecord($scope, index);
+			dataService.editRecord($scope, index);
 	};
 	$scope.registerDelete = function(index){
 		
-		//alert($scope.teacherList.splice(index,1));
+		//alert($scope.list.splice(index,1));
 		$scope.number = index
 		alert($scope.number);
-		$scope.teacherList.splice(index,1)
+		$scope.list.splice(index,1)
 	} ;
 	$scope.registerSub = function() {
 		
-		$scope.teacherList[$scope.listNumber] = $scope.person ;	
+		$scope.list[$scope.listNumber] = $scope.person ;	
 				
 		
 	};
 	$scope.addQualification = function(){
 	$scope.person.qualification.push({"subject":""});
 	
-	};
+};
 
 });	

@@ -18,11 +18,11 @@ angular.module('kunwarAcadApp')
 
 
 	//decalring variabls
-$scope.welcome="hello world!!"
+$scope.welcome="hello world!!";
 
 
 $timeout(function(){
-$scope.welcome="change by timeout!!!"
+$scope.welcome="change by timeout!!!";
 
 },2000)
 
@@ -33,7 +33,7 @@ $scope.welcome="change by timeout!!!"
 	$scope.intr = $interval(function(){
 		$scope.myVarA += 1;  
 
-	},1000)
+	},1000);
 	
 	$scope.teacherList = [
 	{userphoto:"images/himanshu.jpg", name:"Himanshu", email:"hw@gmail.com",  preference:["Morning", "Afternoon"],  visit:"Weekdays", role:"Temperory", timeslot:{morning:true, afternoon:true, evening:false},  qualification:[{subject:"Angular, Javascript"}]},
