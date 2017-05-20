@@ -1,8 +1,5 @@
 var myApp = angular.module("mainApp", ["ngRoute"])
 
-
-
-
 .config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -11,7 +8,7 @@ var myApp = angular.module("mainApp", ["ngRoute"])
     })    
     .when("/product", {
         templateUrl : "product.html",
-        controller: "sideNavCtrl"
+        controller: "productDetailCtrl"
 		
     })
 	 
