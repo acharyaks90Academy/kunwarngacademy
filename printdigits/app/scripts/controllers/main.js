@@ -8,10 +8,11 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($rootScope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+     $rootScope.welcome="welcome"; 
   });

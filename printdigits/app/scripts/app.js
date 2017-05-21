@@ -29,6 +29,21 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/productDetails', {
+        templateUrl: 'views/productdetails.html',
+        controller: 'ProductdetailsCtrl',
+        controllerAs: 'productDetails'
+      })
+      .when('/common', {
+        templateUrl: 'views/common.html',
+        controller: 'CommonCtrl',
+        controllerAs: 'common'
+      })
+      .when('/sidenav', {
+        templateUrl: 'views/sidenav.html',
+        controller: 'SidenavCtrl',
+        controllerAs: 'sidenav'
+      })
       .otherwise({
         redirectTo: '/'
       });
