@@ -8,7 +8,7 @@
  * Controller of the kunwarAcadApp
  */
 angular.module('kunwarAcadApp')
-  .controller('TeacherregCtrl', function ($scope, $rootScope, $location, $log, $interval, $timeout, dataService) {
+  .controller('TeacherregCtrl', function ($scope, $rootScope, $location, $log, $interval, $timeout, dataService,local) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -45,7 +45,7 @@ $scope.welcome="change by timeout!!!";
 	$rootScope.fmyList = $scope.teacherList;
 	
     $rootScope.teachers = $scope.teacherList;
-	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
+	$scope.perferenceList = local.giveperferences();
 	$scope.person = {
 		userphoto:"",
 		name:"",
@@ -110,5 +110,9 @@ $scope.addQualification = function(){
 		//clearInterval($scope.intr);
 	},10000)
 	var d = 1;
-console.log(dataService.getData(d));
+	console.log(dataService.getData(d));
+
+	$scope.getSum = function(a){
+		return local.someMethod(a);
+	};
 })	

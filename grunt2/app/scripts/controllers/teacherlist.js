@@ -8,14 +8,14 @@
  * Controller of the kunwarAcadApp
  */
 angular.module('kunwarAcadApp')
-  .controller('TeacherlistCtrl', function ($scope,$rootScope, dataService) {
+  .controller('TeacherlistCtrl', function ($scope,$rootScope, dataService,local) {
    
  
 	//$scope.list = $rootScope.teachers;
 	//$scope.list = localStorage.faculityList
 	//$scope.list = JSON.parse(sessionStorage.faculityList);
 	$scope.list = $rootScope.fmyList;
-	$scope.perferenceList = ["Morning", "Afternoon", "Evening", "Night"];
+	$scope.perferenceList = local.giveperferences();//["Morning", "Afternoon", "Evening", "Night"];
 	
 	$scope.registerEdit = function(index){
 			dataService.editRecord($scope, index);
@@ -37,5 +37,8 @@ angular.module('kunwarAcadApp')
 	$scope.person.qualification.push({"subject":""});
 	
 };
+$scope.getSum = function(){
+		return local.anotherMethod();
+	};
 
 });	

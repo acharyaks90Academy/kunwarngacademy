@@ -1,4 +1,4 @@
-myApp.controller("courseCtrl", function($scope, $rootScope, $location){
+myApp.controller("courseCtrl", function($scope, $rootScope, $location, localDataServ, dataServic){
 
     $rootScope.welcome="welcome"; 
     $scope.requireMessage = false;
@@ -152,14 +152,20 @@ $scope.editCourse = function (editUser) {
 
 
             $scope.openModal = function () {
-                $modal.open({
+               // $modal.open({
 				//controller: 'PopupCont',
-                    templateUrl: "course/Pop.html"
-                })
+                   // templateUrl: "course/Pop.html"
+                //})
             }
 
             // $scope.closeModal = function () {
             //     $modalInstance.dismiss('cancel');
             // };
+
+            $scope.sum = function(){
+              return localDataServ.save(3)
+            }
+
+            
 
 });

@@ -13,11 +13,15 @@
       <h3 class="grey-heading">{{productTable.tableHeading}}</h3>
       <div class="row margin-tb20">
         <div class="col-md-3"><img src="images/20151207104626_8574173.jpg" class="img-responsive" /></div>
-        <div class="col-md-9">
+
           <table class="table table-striped" >
-            <tr >
+            <tr ng-repeat="(key, value) in productTable[0].tableData" >
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>
+            <tr  >
               <td>Item No</td>
-              <td>{{productTable.tableData.itemNo}}</td>
+              <td>{{myItem.itemNo}}</td>
             </tr>
             <tr >
               <td>Specification</td>

@@ -1,5 +1,6 @@
 myApp.service('dataServic', function(){
     // var myserv = {}
+
     this.getData = function(a){
         return a+1; 
     }
@@ -23,7 +24,38 @@ myApp.service('dataServic', function(){
    
 
     }
+    
+    this.someMethod = function (sum) {
+        
+        return sum+1;
+      }
 
    
     // return myserv
 })
+
+
+
+  myApp.factory('localDataServ', localDataServ);
+
+
+  function localDataServ() {
+    var someValue = 42;
+    var service = {
+        save: save,
+        validate: validate
+    };
+    return service;
+
+    ////////////
+
+    function save(a) {
+
+        return someValue+a;
+        /* */
+    };
+
+    function validate() {
+        /* */
+    };
+}

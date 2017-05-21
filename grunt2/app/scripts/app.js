@@ -74,6 +74,11 @@ angular
         controller: 'SyllabusregCtrl',
         controllerAs: 'syllabusReg'
       })
+      .when('/attendacne', {
+        templateUrl: 'views/attendacne.html',
+        controller: 'AttendacneCtrl',
+        controllerAs: 'attendacne'
+      })
       .otherwise({
         redirectTo: '/'
       });
