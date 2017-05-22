@@ -1,16 +1,23 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
 
- 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-
-  <div class="fluid-container">
-    <img src="images/header.jpg" width="1170" class="img-responsive" border="0">
+<div class="fluid-container">
+  <img src="images/headerimg.png" class="img-responsive" border="0">
+</div>
+<div class="well well-lg">
+  <div class="container">
+    <div class="col-lg-12 col-sm-12">
+      View our entire sublimation product line through the PDF catalog
+      <a href="#"><img src="images/pdfbtn.png"></a>
+    </div>
   </div>
+</div>
 
 
-  <div class="fluid-container">
-    <!-- Example row of columns -->
 
- <h3>3D Sublimation Machine</h3>
+<div class="fluid-container">
+  <!-- Example row of columns -->
+
+  <h3>3D Sublimation Machine</h3>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Machine  Accessories</a></li>
     <li><a data-toggle="tab" href="#menu1">ST-3042s</a></li>
@@ -20,113 +27,81 @@
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h3>Machine  Accessories</h3>
-      
+      <h3>Machine Accessories</h3>
+
       <div class="row">
-  <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/1.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210s</p>
+        <div class="col-md-3  text-center" ng-repeat="x in ListPro">
+          <div class="thumbnail">
+            <img src="{{x.productName}}">
+          </div>
+          {{x.price}}<br/>
+          <a ng-href="{{viewMore}}">{{x.viewMore}}</a> <br/>
         </div>
-      </a>
-    </div>
-  </div>
-   <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/2.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
-        </div>
-      </a>
-    </div>
-  </div>
-   <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/3.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/4.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
+
+      </div>
 
 
 
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>ST-3042s</h3>
-     <div class="row">
-  <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/1.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210s</p>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <a href="#">
+              <img src="images/1.jpg" s>
+              <div class="caption">
+                <p>ItemNo:ST-210s</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
-    </div>
-  </div>
-   <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/2.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <a href="#">
+              <img src="images/2.jpg" s>
+              <div class="caption">
+                <p>ItemNo:ST-210</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
-    </div>
-  </div>
-   <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/3.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <a href="#">
+              <img src="images/3.jpg" s>
+              <div class="caption">
+                <p>ItemNo:ST-210</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
-    </div>
-  </div>
- 
-</div>
+
+      </div>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Mini ST-1520s</h3>
       <div class="col-md-3">
-    <div class="thumbnail">
-      <a href="#">
-        <img src="images/4.jpg"s>
-        <div class="caption">
-          <p>ItemNo:ST-210</p>
+        <div class="thumbnail">
+          <a href="#">
+            <img src="images/4.jpg" s>
+            <div class="caption">
+              <p>ItemNo:ST-210</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-  </div>
+      </div>
     </div>
     <div id="menu3" class="tab-pane fade">
       <h3>Freesub 3D Sublimation Machine</h3>
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
 
-    
+
 
     <hr>
 
-    
+
   </div>
-   </div>
-  <!-- /container -->
+</div>
+<!-- /container -->

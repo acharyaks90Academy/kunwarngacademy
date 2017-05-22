@@ -16,9 +16,10 @@ angular.module('printdigtsApp')
     ];
     $http({
     method: 'GET',
-    url: 'json/menu.json'
+    url: 'json/demoData.json'
   }).then(function successCallback(response) {
     $scope.menu = response.data.mainMenu;
+    $scope.ListPro = response.data.ProductList;
 
   }, function errorCallback(response) {
     $scope.noDataFound = true;
