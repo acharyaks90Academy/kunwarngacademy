@@ -1,39 +1,117 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    
-    <!-- endbuild -->
-  </head>
-  <body ng-app="printdigtsApp">
-    <!--[if lte IE 8]>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- endbuild -->
+</head>
+
+<body ng-app="printdigtsApp">
+  <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-<div  class="container-fluid" ng-controller="CommonCtrl">
-  <!--<div class="container text-center">
-  <img src="images/logo.png">
-  </div>-->
-  <div class="container text-center"> 
-    <nav class="navbar">
-      <ul class="nav navbar-nav">
+  <!-- Add your site or application content here -->
+
+
+
+  <div class="topBgBlack">
+    <div class="container text-center">
+      <div class="row white">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left textCenterMobile">Welcome to Print digits
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right textCenterMobile">
+          <a ng-href="#" data-toggle="modal" data-target="#myModal">SIGN IN</a> |
+          <a ng-href="#">CREATE AN ACCOUNT</a> |
+          <img ng-src="images/chaticon.png"> <a ng-href="#">LIVE CHAT</a>
+
+        </div>
+        <!-- Modal -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header bg-Blue">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign in Print Digits</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control radiusZero" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control radiusZero" id="pwd">
+            </div>           
+            <button type="submit" class="btn btn-success radiusZero">Submit</button>
+          </form>
+        </div>
+      
+      </div>
+
+    </div>
+  </div>
+  <span><img ng-src="images/logo.png" class="logoStyle"></span>
+  <div class="container text-center">
+    <div class="row marginT20">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+        <form name="filterMain">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid" ng-controller="CommonCtrl">
+    <div class="container text-center marginTB15">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav lastChildColor">
           <li ng-repeat="x in menu">
             <a href="#" style="display:inline-block;">{{x.value}}</a >        
           </li>
         </ul>
-    </nav>
+    
+      </div>
 </div>
  </div> 
 <div>
@@ -45,7 +123,7 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-  <p><img src="images/logofooter.png"></p>
+  <p><img ng-src="images/logofooter.png"></p>
   Copyright © {{dateTme}} Print Digits International 
 Business Development Ltd. 
 All rights reserved.
@@ -55,68 +133,72 @@ All rights reserved.
   <ul>
 <span>COMPANY</span>
 <li><a ng-href="#">Home</a></li>
-<li><a ng-href="#">About Us</a></li>
-<li><a ng-href="#">Contact us</a></li>
-<li><a ng-href="#">Press Release</a></li>
-</ul>
+          <li><a ng-href="#">About Us</a></li>
+          <li><a ng-href="#">Contact us</a></li>
+          <li><a ng-href="#">Press Release</a></li>
+        </ul>
 
-</div>
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footerList"> <ul>
-<span>SERVICES</span>
-<li><a ng-href="#">3D Sublimation</a></li>
-<li><a ng-href="#">New Item</a></li>
-<li><a ng-href="#">Heat Press Machine</a></li>
-<li><a ng-href="#">Mug</a></li>
-</ul></div>
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footerList"> <ul>
-<span>CONTACT US</span>
-<li>Company- digit prints pvt. ltd.
-Address: Plot # 586, sector-39
-Gurgaon, Haryana
-India,</li>
-</ul>
-</div>
-</div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footerList">
+        <ul>
+          <span>SERVICES</span>
+          <li><a ng-href="#">3D Sublimation</a></li>
+          <li><a ng-href="#">New Item</a></li>
+          <li><a ng-href="#">Heat Press Machine</a></li>
+          <li><a ng-href="#">Mug</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footerList">
+        <ul>
+          <span>CONTACT US</span>
+          <li>Company- digit prints pvt. ltd. Address: Plot # 586, sector-39 Gurgaon, Haryana India,
+          </li>
+        </ul>
+      </div>
+    </div>
 
 
 
 
-</div>
-    
+  </div>
+
   </footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function (A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/productdetails.js"></script>
-        <script src="scripts/controllers/common.js"></script>
-        <script src="scripts/controllers/sidenav.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/productdetails.js"></script>
+  <script src="scripts/controllers/common.js"></script>
+  <script src="scripts/controllers/sidenav.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>

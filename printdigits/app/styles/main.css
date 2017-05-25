@@ -6,7 +6,10 @@ body {font-family:Helvetica,Arial,sans-serif; }
 .navbar-nav > li::after {
     content: "/";
 }
-
+.lastChildColor li:last-child a {color: #00adf0!important; font-weight: bold;}
+.lastChildColor li:last-child::after {
+    content: none!important;
+}
 
 .nav > li > a:hover {color:#00adf0!important; background:none!important;}
 .bgPdf {font-size:28px!important; padding:10px 0; background: #615f61!important; color: #fff!important; }
@@ -25,19 +28,39 @@ footer p {font-size: 12px;}
 .welcomeBg {background: #f3f3f3; padding:10px 20px;}
 .pdfBox  {background: #00adf0; padding:10px 20px;}
 
-.marginTB20 {margin:20px 0;}
+.marginTB20 {margin-top:20px; margin-bottom:20px;}
+.marginTB15 {margin-top:15px; margin-bottom:15px;}
+.marginT20 {margin:20px 0 0 0;}
 .white {color: #fff;}
 .gray {color: #3e3f42;}
 .font44 {font-size: 44px;}
 .font30bold {font-size: 30px; font-weight: bold;}
 .font19 {font-size: 19px;}
-
+.borderFilter {border: 1px solid #cccccc;}
 
 p {color: #3e3f42; font-size: 15px;}
 h1 {font-size: 33px; font-family: Calibri;}
+.text-shadow {text-shadow:#000 1px 1px}
+.bg-Blue {background: #02aff0;}
 
-.bgStay {font-size:28px!important; padding:10px 0; background:url("/images/stayBg.png") repeat top center;   color:#fff!important; }
-.btn-Black, .btn:hover {background: #000; color:#fff; }
+.bgStay {padding:10px; background:url("/images/stayBg.png") repeat top center;}
+.btn-Black, .btn:hover, .btn:focus {background: #000; color:#fff; }
 .mBttom20 {margin-bottom: 20px;}
 .mb10px  {margin-bottom: 10px;}
 .marginBottomZero {margin-bottom: 0px;}
+.font28 {font-size:28px!important; }
+
+.topBgBlack {background: #000; height: 38px; line-height: 38px;  font-size: 12px;}
+.topBgBlack a {color: #fff;}
+.padding5border {border: 1px solid #444; padding: 5px;}
+.navbar-toggle {background: #00adf0; margin:0 auto; width: 100%; border-radius: 0px;}
+
+.navbar-toggle .icon-bar {background-color: #000!important;}
+.logoStyle {position: absolute; float:left;  left: 20px; top: 50px;}
+
+@media only screen and (min-width:320px) and (max-width:480px){
+.topBgBlack {background: #000; height: 80px;   font-size: 12px;}
+.textCenterMobile {text-align: center;}
+.mobileFont{font-size: 20px;}
+
+ }

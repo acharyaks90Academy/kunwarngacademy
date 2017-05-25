@@ -1,102 +1,109 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div ng-controller="CommonCtrl">
-<div class="headerBg">
-  <div class="container">
-  <img src="images/headerimg.png" class="img-responsive" border="0">
-</div>
-</div>
-<div class="container-fluid bgPdf">
-  <div class="container text-center">
-     <div class="row">
-    <div class="col-lg-9 col-sm-12">
-      View our entire sublimation product line through the PDF catalog     
-    </div>
-    <div class="col-lg-3 col-sm-12">    
-      <a ng-href="#" title="DOWNLOAD PDF"><img src="images/pdfbtn.png"></a>
+  <div class="headerBg">
+    <div class="container">
+      <img src="images/headerimg.png" class="img-responsive" border="0">
     </div>
   </div>
+  <div class="container-fluid bgPdf">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-9 col-sm-12 mobileFont">
+          View our entire sublimation product line through the PDF catalog
+        </div>
+        <div class="col-lg-3 col-sm-12">
+          <a ng-href="#" title="DOWNLOAD PDF"><img src="images/pdfbtn.png"></a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<div class="container-fluid marginTB20">
-<div class="container text-center">
-  <div class="welcomeBg">
- <div class="row">
-  
-  <div class="col-lg-12 col-sm-12">          
-     
-   <h1>WELCOME TO DIGIT PRINTS</h1>
-   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-   </div>
-   </div>
-   </div>
-</div>
-</div>
+  <div class="container-fluid marginTB20">
+    <div class="container text-center">
+      <div class="welcomeBg">
+        <div class="row">
 
-<div class="container-fluid">
-<div class="container text-center">
- <div class="row">  
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mBttom20" ng-repeat="x in listPro">
- 
-<div>
-<img ng-src="{{x.productPhoto}}" class="mb10px" border="0" />
-<p class="marginBottomZero"><strong>{{x.productName | uppercase}}</strong><br/>
-  <a ng-href="{{x.viewMore}}">{{x.viewMore}}</a>
-</p>
+          <div class="col-lg-12 col-sm-12">
 
+            <h1>WELCOME TO DIGIT PRINTS</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+              make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div class="container-fluid">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mBttom20" ng-repeat="x in listPro | limitTo:8">
 
+          <div>
+            <img ng-src="{{x.productPhoto}}" class="mb10px" border="0" />
+            <p class="marginBottomZero"><strong>{{x.productName | uppercase}}</strong><br/>
+              <a ng-href="{{x.viewMore}}">{{x.viewMore}}</a>
+            </p>
 
 
-
-</div>
-
- </div>
-
-</div>
-</div>
+          </div>
 
 
-<div class="container-fluid marginTB20">
-<div class="container text-center">
-  <div class="pdfBox">
- <div class="row">
-  
-  <div class="col-lg-12 col-sm-12">   
-      <h1 class="font44 white">View our entire sublimation product  line through the PDF catalog</h1>
-       <a ng-href="#" title="DOWNLOAD PDF"><img src="images/pdf.png"></a>
-   </div>
-   </div>
-   </div>
-</div>
-</div>
 
-<div class="container-fluid marginTB20">
-<div class="container text-center">
-  <div class="bgStay">
- <div class="row">
-  
-  <div class="col-lg-12 col-sm-12">   
-      <h1 class="font30bold gray">STAY CONNECTED</h1>
-      <p class="font19">Sign up for emails or text alerts and get 40% off 1 item.</p>
-      <form class="form-inline" name="newsLetter">
-        <span ng-show="emailErrorMessage" class="alert alert-danger alert-sm">Please enter correct email</span>
-        <span ng-show="emailSuccessMessage" class="alert alert-success">Message sent successfully</span>
-        <input type="text" name="newsEmail" class="form-control radiusZero" placeholder="Join our email list" required>
-        <input type="submit" ng-click="submitNewsletter()" class="btn btn-Black radiusZero">
-      </form>
-      <h1 class="font30bold gray">FOLLOW US ON</h1>
-      <p>
-        <a ng-href="#" title="Twiiter"><img src="images/twitter.png"><a>
-          <a ng-href="#" title="Facebook"><img src="images/facebook.png"><a>
-            <a ng-href="#" title="LinkedIn"><img src="images/linkedin.png"><a>
-              <a ng-href="#" title="Google Plus"><img src="images/googleplus.png"><a>
-      </p>
-   </div>
-   </div>
-   </div>
-</div>
-</div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--<div class="container-fluid marginTB20">
+    <div class="container text-center">
+      <div class="pdfBox">
+        <div class="row">
+
+          <div class="col-lg-12 col-sm-12">
+            <h1 class="font44 white mobileFont text-shadow">View our entire sublimation product line through the PDF catalog</h1>
+            <a ng-href="#" title="DOWNLOAD PDF"><img src="images/pdf.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="container-fluid marginTB20">
+    <div class="container text-center">
+      <div class="bgStay">
+        <div class="row">
+
+          <div class="col-lg-12 col-sm-12">
+            <h1 class="font30bold gray ">STAY CONNECTED</h1>
+            <p class="font19">Sign up for emails or text alerts and get 40% off 1 item.</p>
+            <form class="form-inline" name="newsLetter">
+              <span ng-show="emailErrorMessage" class="bg-danger padding5border">Please enter correct email</span>
+              <span ng-show="emailSuccessMessage" class="bg-success padding5border">Message sent successfully</span>
+              <input type="text" name="newsEmail" class="form-control radiusZero" placeholder="Join our email list" required>
+              <input type="submit" ng-click="submitNewsletter()" class="btn btn-Black radiusZero">
+            </form>
+            <h1 class="font30bold gray">FOLLOW US ON</h1>
+            <p>
+              <a ng-href="#" title="Twiiter"><img src="images/twitter.png">
+                <a>
+                  <a ng-href="#" title="Facebook"><img src="images/facebook.png">
+                    <a>
+                      <a ng-href="#" title="LinkedIn"><img src="images/linkedin.png">
+                        <a>
+                          <a ng-href="#" title="Google Plus"><img src="images/googleplus.png">
+                            <a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- /container -->

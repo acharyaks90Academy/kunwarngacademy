@@ -30,9 +30,12 @@ angular.module('printdigtsApp')
     $scope.emailSuccessMessage = false;
 
     $scope.submitNewsletter = function () {
-      var emailName = document.newsLetter.newsEmail.value;
 
-      if (emailName == "" || emailName == null || emailName == " ") {
+      var emailName = document.newsLetter.newsEmail.value;
+      var atposition = emailName.indexOf("@");  
+      var dotposition = emailName.lastIndexOf(".");  
+
+      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=emailName.length) {
         $scope.emailErrorMessage = true;
 
         $timeout(function () {
