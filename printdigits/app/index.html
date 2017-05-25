@@ -22,36 +22,68 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<div class="fluid-container" ng-controller="CommonCtrl">
-
-
-  <div class="fluid-container text-center">
-   <!--<img src="images/logo.png">-->
-  </div>
-  <div class="container text-center">
-  
-    
+<div  class="container-fluid" ng-controller="CommonCtrl">
+  <!--<div class="container text-center">
+  <img src="images/logo.png">
+  </div>-->
+  <div class="container text-center"> 
     <nav class="navbar">
       <ul class="nav navbar-nav">
           <li ng-repeat="x in menu">
             <a href="#" style="display:inline-block;">{{x.value}}</a >        
           </li>
-
         </ul>
     </nav>
+</div>
+ </div> 
+<div>
+  <ng-view></ng-view>
+</div>
+ 
+
+  <footer>
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+  <p><img src="images/logofooter.png"></p>
+  Copyright © {{dateTme}} Print Digits International 
+Business Development Ltd. 
+All rights reserved.
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footerList">
+  <ul>
+<span>COMPANY</span>
+<li><a ng-href="#">Home</a></li>
+<li><a ng-href="#">About Us</a></li>
+<li><a ng-href="#">Contact us</a></li>
+<li><a ng-href="#">Press Release</a></li>
+</ul>
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 footerList"> <ul>
+<span>SERVICES</span>
+<li><a ng-href="#">3D Sublimation</a></li>
+<li><a ng-href="#">New Item</a></li>
+<li><a ng-href="#">Heat Press Machine</a></li>
+<li><a ng-href="#">Mug</a></li>
+</ul></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footerList"> <ul>
+<span>CONTACT US</span>
+<li>Company- digit prints pvt. ltd.
+Address: Plot # 586, sector-39
+Gurgaon, Haryana
+India,</li>
+</ul>
+</div>
 </div>
 
 
 
-  <div ng-view></div>
-  <div class="fluid-container text-center">
-  <footer>
-    <p>Copyright © {{dateTme}} Print Digits International Business Development Ltd.</p>
-    <p>All rights reserved.</p>
-  </footer>
-  </div>
-  </div>
 
+</div>
+    
+  </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

@@ -8,29 +8,57 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location) {
+  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location, $timeout) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
     $http({
-    method: 'GET',
-    url: 'json/demoData.json'
-  }).then(function successCallback(response) {
-    $scope.menu = response.data.mainMenu;
-    $scope.ListPro = response.data.ProductList;
+      method: 'GET',
+      url: 'json/demoData.json'
+    }).then(function successCallback(response) {
+      $scope.menu = response.data.mainMenu;
+      $scope.listPro = response.data.productList;
 
-  }, function errorCallback(response) {
-    $scope.noDataFound = true;
+    }, function errorCallback(response) {
+      $scope.noDataFound = true;
 
-  });
+    });
 
-   
+    $scope.emailErrorMessage = false;
+    $scope.emailSuccessMessage = false;
 
-   var d = new Date();
+    $scope.submitNewsletter = function () {
+      var emailName = document.newsLetter.newsEmail.value;
+
+      if (emailName == "" || emailName == null || emailName == " ") {
+        $scope.emailErrorMessage = true;
+
+        $timeout(function () {
+          $scope.emailErrorMessage = false;
+
+        }, 1000)
+
+      } else {
+        $scope.emailSuccessMessage = true;
+
+
+        $timeout(function () {
+          $scope.emailErrorMessage = false;
+
+        }, 500)
+
+      }
+
+
+
+    }
+
+
+    var d = new Date();
     var n = d.getFullYear();
-   
-        $scope.dateTme = n;
+
+    $scope.dateTme = n;
 
   });

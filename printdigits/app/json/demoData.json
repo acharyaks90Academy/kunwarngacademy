@@ -15,12 +15,15 @@
     {"key" : "contactUs","value" : "Contact Us"},
     {"key" : "requestQouteNow","value" : "REQUEST A QUOTE NOW"}
   ],
-
-  "ProductList":[
-    {"productName": "images/1.jpg", "price": "$8.40", "viewMore": "View More"},
-    {"productName": "images/2.jpg", "price": "$2.16", "viewMore": "View More"}, 
-    {"productName": "images/3.jpg", "price": "$5.37", "viewMore": "View More"}, 
-    {"productName": "images/4.jpg", "price": "$3.19","viewMore": "View More"}
-  
+  "productList":[
+    {"productPhoto": "images/list1.png", "productName": "Sublimation Phone Cases", "viewMore": "View More"},
+    {"productPhoto": "images/list2.png", "productName": "Sublimation T SHIRT", "viewMore": "View More"}, 
+    {"productPhoto": "images/list3.png", "productName": "Sublimation Kid Appliances", "viewMore": "View More"}, 
+    {"productPhoto": "images/list4.png", "productName": "Sublimation Mugs(Polymer)","viewMore": "View More"},
+    {"productPhoto": "images/list5.png", "productName": "Sublimation Heat Press", "viewMore": "View More"},
+    {"productPhoto": "images/list6.png", "productName": "Sublimation Accessories", "viewMore": "View More"}, 
+    {"productPhoto": "images/list7.png", "productName": "Sublimation crystal", "viewMore": "View More"}, 
+    {"productPhoto": "images/list8.png", "productName": "Sublimation Accessories","viewMore": "View More"}
+    
     ]
 }

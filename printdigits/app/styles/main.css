@@ -1,6 +1,6 @@
 
 
-.container {width: 1170px!important;}
+body {font-family:Helvetica,Arial,sans-serif; }
 
 .nav > li > a {color: #444!important; text-transform: uppercase; padding:5px 5px!important;}
 .navbar-nav > li::after {
@@ -9,7 +9,35 @@
 
 
 .nav > li > a:hover {color:#00adf0!important; background:none!important;}
-.well {font-size:28px!important; background: #373435!important; color: #fff!important; }
+.bgPdf {font-size:28px!important; padding:10px 0; background: #615f61!important; color: #fff!important; }
 
 
-footer {background: #373435; padding: 30px 0; color: #fff;}
+footer {background: #252525; padding: 30px 0; color:#fff; font-size: 12px;}
+footer p {font-size: 12px;}
+.footerList ul {padding: 0px;}
+.footerList ul li {list-style: none; line-height: 20px;}
+.footerList ul span {text-decoration: underline; font-weight: bold; font-size: 14px;}
+.footerList ul li a {color: #fff;}
+
+.headerBg {background: #373435!important;}
+.radiusZero {border-radius: 0px!important;}
+.borderZero {border: 0px!important;}
+.welcomeBg {background: #f3f3f3; padding:10px 20px;}
+.pdfBox  {background: #00adf0; padding:10px 20px;}
+
+.marginTB20 {margin:20px 0;}
+.white {color: #fff;}
+.gray {color: #3e3f42;}
+.font44 {font-size: 44px;}
+.font30bold {font-size: 30px; font-weight: bold;}
+.font19 {font-size: 19px;}
+
+
+p {color: #3e3f42; font-size: 15px;}
+h1 {font-size: 33px; font-family: Calibri;}
+
+.bgStay {font-size:28px!important; padding:10px 0; background:url("/images/stayBg.png") repeat top center;   color:#fff!important; }
+.btn-Black, .btn:hover {background: #000; color:#fff; }
+.mBttom20 {margin-bottom: 20px;}
+.mb10px  {margin-bottom: 10px;}
+.marginBottomZero {margin-bottom: 0px;}
