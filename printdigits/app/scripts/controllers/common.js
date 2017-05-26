@@ -20,6 +20,7 @@ angular.module('printdigtsApp')
     }).then(function successCallback(response) {
       $scope.menu = response.data.mainMenu;
       $scope.listPro = response.data.productList;
+      $scope.footerLink = response.data.footerMenu
 
     }, function errorCallback(response) {
       $scope.noDataFound = true;

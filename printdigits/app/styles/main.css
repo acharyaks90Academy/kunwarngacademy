@@ -22,6 +22,7 @@ footer p {font-size: 12px;}
 .footerList ul span {text-decoration: underline; font-weight: bold; font-size: 14px;}
 .footerList ul li a {color: #fff;}
 
+
 .headerBg {background: #373435!important;}
 .radiusZero {border-radius: 0px!important;}
 .borderZero {border: 0px!important;}
@@ -62,5 +63,11 @@ h1 {font-size: 33px; font-family: Calibri;}
 .topBgBlack {background: #000; height: 80px;   font-size: 12px;}
 .textCenterMobile {text-align: center;}
 .mobileFont{font-size: 20px;}
+.logoStyle {margin:10px 0 10px 0; width:100%; text-align:center;  position: static; left: 0px;}
+
+ }
+
+ @media only screen and (min-width:768px) and (max-width:1024px){
+.logoStyle {margin:10px 0 10px 0; position:static; width:100%; text-align:center;  static; left: 0px;}
 
  }

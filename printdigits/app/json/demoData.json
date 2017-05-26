@@ -27,7 +27,21 @@
     {"productPhoto": "images/list5.png", "productName": "Sublimation Heat Press", "viewMore": "View More"},
     {"productPhoto": "images/list6.png", "productName": "Sublimation Accessories", "viewMore": "View More"}, 
     {"productPhoto": "images/list7.png", "productName": "Sublimation crystal", "viewMore": "View More"}, 
-    {"productPhoto": "images/list8.png", "productName": "Sublimation Accessories","viewMore": "View More"}
+    {"productPhoto": "images/list8.png", "productName": "Sublimation Accessories","viewMore": "View More"}    
+    ],
+    "footerMenu":[
+    {"key":"company","value":"COMPANY"},
+    {"key":"services","value":"SERVICES"},
+    {"key":"home","value":"Home"},
+    {"key":"aboutUs","value":"About Us"},
+    {"key":"contactUs","value":"Contact us"},
+    {"key":"pressRelease","value":"Press Release"},
+    {"key":"sublimation","value":"3D Sublimation"},
+    {"key":"newItem","value":"New Item"},
+    {"key":"heatPressMachine","value":"Heat Press Machine"},
+    {"key":"mug","value":"Mug"}
     
+  
+
     ]
 }
