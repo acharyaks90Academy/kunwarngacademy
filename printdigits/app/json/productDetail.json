@@ -22,11 +22,11 @@
     {
         "tableHeading" :"Freesub Mini double-station Mug Press Machine For doing mugs",
         "tableData":[
-            {"itemNo": "ST-210"},
-            {"specification": "11oz*2"},
-            {"unit": "set"},
-            {"category": "Freesub 3D Sublimation Machine"},
-            {"brows": "5077"}
+            {"key":"itemNo", "value":"ST-210"},
+            {"key":"specification", "value": "11oz*2"},
+            {"key":"unit", "value":"set"},
+            {"key":"category", "value":"Freesub 3D Sublimation Machine"},
+            {"key":"brows", "value": "5077"}
         ]
     }   
 

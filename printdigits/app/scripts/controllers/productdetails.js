@@ -16,7 +16,7 @@ angular.module('printdigtsApp')
     ];
 
   
-	$scope.productDetail = [];
+	  $scope.productDetail = [];
     $scope.productTable = [];
 
     $scope.data = function(){
@@ -26,8 +26,9 @@ angular.module('printdigtsApp')
 	    url: 'json/sideNav.json'
 	   
 	  }).then(function successCallback(response) {
-	    $scope.productDetail = response.data.sideNavMenu;
+	    $scope.sideNavLinks = response.data.sideNavMenu;
 	    $scope.productTable = response.data.productTableData;
+      $scope.productDetail = response.data.productListData;
 
 	  }, function errorCallback(response) {
 	        alert("Data Not Find");

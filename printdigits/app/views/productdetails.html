@@ -2,72 +2,47 @@
   <!-- Example row of columns -->
   <div class="row product-detail" >
     <div class="col-md-4">
-      <div ng-repeat="x in productDetail" class="margin-btm40">
-      <h3 class="grey-heading">{{x.productHeading}}</h3>
-      <ul class="list-unstyled bullets">
-        <li ng-repeat="y in x.sideNavLinks">{{y.name}}</li>
-       </ul>
+      <div ng-repeat="x in sideNavLinks" class="margin-btm40">
+        <h3 class="grey-heading">{{x.productHeading}}</h3>
+        <ul class="list-unstyled bullets">
+          <li ng-repeat="y in x.sideNavLinks">{{y.name}}</li>
+        </ul>
       </div>
     </div>
-    <div class="col-md-8">
-      <h3 class="grey-heading">{{productTable.tableHeading}}</h3>
+    <div class="col-md-8" ng-repeat="a in productTable">
+      <h3 class="grey-heading">{{a.tableHeading}}</h3>
       <div class="row margin-tb20">
         <div class="col-md-3"><img src="images/20151207104626_8574173.jpg" class="img-responsive" /></div>
-
+        <div class="col-md-9">
           <table class="table table-striped" >
-            <tr ng-repeat="(key, value) in productTable[0].tableData" >
-              <td>{{key}}</td>
-              <td>{{value}}</td>
-            </tr>
-            <tr  >
-              <td>Item No</td>
-              <td>{{myItem.itemNo}}</td>
-            </tr>
-            <tr >
-              <td>Specification</td>
-              <td>{{productTable.tableData.specification}}</td>
-            </tr>
-              <tr >
-              <td>Unit</td>
-              <td>{{productTable.tableData.unit}}</td>
-            </tr>
-              <tr>
-              <td>category</td>
-              <td>{{productTable.tableData.category}}</td>
-            </tr>
-            <tr>
-              <td>Brows</td>
-              <td>{{productTable.tableData.brows}}</td>
+            {{a.tableData}}
+            <tr ng-repeat="b in a.tableData" >
+              <td>{{b.key}}</td>
+              <td>{{b.value}}</td>
             </tr>
           </table>
         </div>
       </div>
-      <ul class="list-unstyled">
-        <li>Freesub Double-station Mug Press Machine For doing Mugs</li>
-        <li>Item No.: ST-210</li>
-        <li>Transfer mug size: 11oz,12oz, 9oz, 17oz.6oz.</li>
-        <li>Power: 280w+280w</li>
-        <li>Voltage: 220v/110</li>
-        <li>Net Weight: 5.8Kgs</li>
-        <li>Control Mode: LCD, Automatic control.</li>
-        <li>Color: silver black</li>
-        <li>Transfer Tempature: 180 ℃</li>
-        <li>Time: 180 Seconds</li>
-      </ul>
-      <p class="margin-tb20"><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-      <p><img src="images/product1.jpg" alt="Product" class="img-responsive"/></p>
-      <div class="row margin-tb20">
-
-      <div class="col-md-4">
-          <h3 class="grey-heading">Product Features</h3>
-        <ul class="list-unstyled bullets">
-        <li>New LifeStyle</li>
-        <li>Impressive Artwork</li>
-      </ul>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled">
+            <li ng-repeat="productData in productDetail">{{productData.data}}</li>
+          </ul>
+          <p class="margin-tb20"><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+          <p><img src="images/product1.jpg" alt="Product" class="img-responsive"/></p>
+        </div>
       </div>
-      <div class="col-md-8"><img src="images/product3.jpg" alt="Product" class="img-responsive"/></div>  
-      </div>  
+      <div class="row margin-tb20">
+        <div class="col-md-4">
+          <h3 class="grey-heading">Product Features</h3>
+          <ul class="list-unstyled bullets">
+            <li>New LifeStyle</li>
+            <li>Impressive Artwork</li>
+          </ul>
+        </div>
+        <div class="col-md-8"><img src="images/product3.jpg" alt="Product" class="img-responsive"/></div>
+      </div>
     </div>
   </div>
-  
+</div>
 </div>
