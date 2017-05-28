@@ -4,8 +4,12 @@
 
 {"mainMenu":[
 
-    {"key" : "home", "value" : "Home"},
-    {"key" : "sublimationMachine","value" : "3D Sublimation Machine"},
+    {"key" : "home", "value" : "Home","submenu":[{
+      "key" : "my", "value" : "Home1"
+    }]},
+    {"key" : "sublimationMachine","value" : "3D Sublimation Machine","submenu":[{
+      "key" : "my", "value" : "Home1"
+    }]  },
     {"key" : "newItem","value" : "New Item"},
     {"key" : "heatPressMachine","value" : "Heat Press Machine"},
     {"key" : "mug","value" : "Mug"},

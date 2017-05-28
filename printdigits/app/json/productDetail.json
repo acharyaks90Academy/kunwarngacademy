@@ -21,6 +21,7 @@
 "productTableData" :[
     {
         "tableHeading" :"Freesub Mini double-station Mug Press Machine For doing mugs",
+        "productImg" :"images/20151207104626_8574173.jpg",
         "tableData":[
             {"key":"itemNo", "value":"ST-210"},
             {"key":"specification", "value": "11oz*2"},
@@ -32,15 +33,15 @@
 
 ],
 "productListData": [
-    {"data": "Freesub Double-station Mug Press Machine For doing Mugs"},
-    {"data": "Item No.: ST-210"},
-    {"data": "Transfer mug size: 11oz,12oz, 9oz, 17oz.6oz."},
-    {"data": "Power: 280w+280w"},
-    {"data": "Net Weight: 5.8Kgs"},
-    {"data": "Control Mode: LCD, Automatic control."},
-    {"data": "Color: silver black"},
-    {"data": "Transfer Tempature: 180 ℃"},
-    {"data": "Time: 180 Seconds"}
+  "Freesub Double-station Mug Press Machine For doing Mugs",
+  "Item No.: ST-210",
+  "Transfer mug size: 11oz,12oz, 9oz, 17oz.6oz.",
+  "Power: 280w+280w",
+  "Net Weight: 5.8Kgs",
+  "Control Mode: LCD, Automatic control.",
+  "Color: silver black",
+  "Transfer Tempature: 180 ℃",
+  "Time: 180 Seconds"
 ]
 
 }

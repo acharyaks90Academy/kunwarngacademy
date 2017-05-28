@@ -12,10 +12,10 @@
     <div class="col-md-8" ng-repeat="a in productTable">
       <h3 class="grey-heading">{{a.tableHeading}}</h3>
       <div class="row margin-tb20">
-        <div class="col-md-3"><img src="images/20151207104626_8574173.jpg" class="img-responsive" /></div>
+        <div class="col-md-3"><img ng-src="{{a.productImg}}" class="img-responsive" /></div>
         <div class="col-md-9">
           <table class="table table-striped" >
-            {{a.tableData}}
+           
             <tr ng-repeat="b in a.tableData" >
               <td>{{b.key}}</td>
               <td>{{b.value}}</td>
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled">
-            <li ng-repeat="productData in productDetail">{{productData.data}}</li>
+            <li ng-repeat="productData in productDetail">{{productData}}</li>
           </ul>
           <p class="margin-tb20"><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
           <p><img src="images/product1.jpg" alt="Product" class="img-responsive"/></p>
