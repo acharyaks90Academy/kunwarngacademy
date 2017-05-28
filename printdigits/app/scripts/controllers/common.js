@@ -8,24 +8,36 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location, $timeout) {
+  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location, $timeout, homePage) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    $http({
-      method: 'GET',
-      url: 'json/demoData.json'
-    }).then(function successCallback(response) {
-      $scope.menu = response.data.mainMenu;
-      $scope.listPro = response.data.productList;
-      $scope.footerLink = response.data.footerMenu
+    // $http({
+    //   method: 'GET',
+    //   url: 'json/demoData.json'
+    // }).then(function successCallback(response) {
+    //   $scope.menu = response.data.mainMenu;
+    //   $scope.listPro = response.data.productList;
+    //   $scope.footerLink = response.data.footerMenu
 
-    }, function errorCallback(response) {
-      $scope.noDataFound = true;
+    // }, function errorCallback(response) {
+    //   $scope.noDataFound = true;
 
-    });
+    // });
+
+
+      // mydata a variable which we can use future
+
+     var mydata =homePage.getData($scope);
+      
+      var fData = homePage.footerData($scope);
+
+      
+
+    
+
 
     $scope.emailErrorMessage = false;
     $scope.emailSuccessMessage = false;
@@ -64,5 +76,22 @@ angular.module('printdigtsApp')
     var n = d.getFullYear();
 
     $scope.dateTme = n;
+
+
+     // $scope.typeDemo = homePage.totalCode(4, 5);
+     // console.log(homePage.totalCode(4, 5))
+
+    
+    
+
+
+
+
+
+      $scope.typeDemo = function(a,b){      
+      return homePage.totalCode(a,b);
+
+      console.log(homePage.totalCode(4, 5))
+      }
 
   });
