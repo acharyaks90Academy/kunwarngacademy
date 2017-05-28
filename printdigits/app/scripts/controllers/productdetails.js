@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('ProductdetailsCtrl', function ($scope, $http) {
+  .controller('ProductdetailsCtrl', function ($scope, $http, productdetail) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -19,23 +19,8 @@ angular.module('printdigtsApp')
 	  $scope.productDetail = [];
     $scope.productTable = [];
 
-    $scope.data = function(){
+  productdetail.sideNavLinks($scope);
+  console.log(productdetail.twoSum(1,2));
+  
 
-	  $http({
-	    method: 'GET',
-	    url: 'json/productDetail.json'
-	   
-	  }).then(function successCallback(response) {
-	    $scope.sideNavLinks = response.data.sideNavMenu;
-	    $scope.productTable = response.data.productTableData;
-      $scope.productDetail = response.data.productListData;
-
-	  }, function errorCallback(response) {
-	        alert("Data Not Find");
-	  });
-    }
-
-    $scope.data();
-
-    
 });

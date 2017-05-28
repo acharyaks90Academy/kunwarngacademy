@@ -29,7 +29,7 @@
             <li ng-repeat="productData in productDetail">{{productData}}</li>
           </ul>
           <p class="margin-tb20"><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-          <p><img src="images/product1.jpg" alt="Product" class="img-responsive"/></p>
+          <p><img ng-src="{{a.productDetailPhoto}}" alt="Product" class="img-responsive"/></p>
         </div>
       </div>
       <div class="row margin-tb20">
@@ -40,7 +40,7 @@
             <li>Impressive Artwork</li>
           </ul>
         </div>
-        <div class="col-md-8"><img src="images/product3.jpg" alt="Product" class="img-responsive"/></div>
+        <div class="col-md-8"><img ng-src="{{a.productDetailPhoto}}" alt="Product" class="img-responsive"/></div>
       </div>
     </div>
   </div>
