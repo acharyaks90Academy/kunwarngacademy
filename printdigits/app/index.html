@@ -110,7 +110,11 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav lastChildColor">
           <li ng-repeat="x in menu">
-            <a href="#" style="display:inline-block;">{{x.value}}</a >        
+            <a href="#" style="display:inline-block;">{{x.value}}</a > 
+            
+            <ul ng-if="x.submenu">
+             <li  ng-repeat="y in x.submenu">{{y.value}}</li>  
+            </ul>       
           </li>
         </ul>
     

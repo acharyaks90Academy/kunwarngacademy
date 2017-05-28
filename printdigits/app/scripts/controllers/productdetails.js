@@ -23,7 +23,7 @@ angular.module('printdigtsApp')
 
 	  $http({
 	    method: 'GET',
-	    url: 'json/sideNav.json'
+	    url: 'json/productDetail.json'
 	   
 	  }).then(function successCallback(response) {
 	    $scope.sideNavLinks = response.data.sideNavMenu;
