@@ -29,10 +29,10 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/productDetails', {
+      .when('/productdetails', {
         templateUrl: 'views/productdetails.html',
         controller: 'ProductdetailsCtrl',
-        controllerAs: 'productDetails'
+        controllerAs: 'productdetails'
       })
       .when('/common', {
         templateUrl: 'views/common.html',

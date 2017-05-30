@@ -1,51 +1,180 @@
-
-
-
-
-{"mainMenu":[
-
-    {"key" : "home", "value" : "Home","submenu":[{
-      "key" : "my", "value" : "Home1"
-    }]},
-    {"key" : "sublimationMachine","value" : "3D Sublimation Machine","submenu":[{
-      "key" : "my", "value" : "Home1"
-    }]  },
-    {"key" : "newItem","value" : "New Item"},
-    {"key" : "heatPressMachine","value" : "Heat Press Machine"},
-    {"key" : "mug","value" : "Mug"},
-    {"key" : "aboutUs","value" : "About Us"},
-    {"key" : "videos","value" : "Videos"},
-    {"key" : "photos","value" : "Photos"},
-    {"key" : "contactUs","value" : "Contact Us"},
-    {"key" : "requestQouteNow","value" : "REQUEST A QUOTE NOW"}
+{
+  "mainMenu": [
+    {
+      "key": "home",
+      "value": "Home"
+    },
+    {
+      "key": "sublimationMachine",
+      "value": "3D Sublimation Machine",
+      "submenu": [
+        {
+          "key": "subli",
+          "value": "3D Sublimation Phone Cases"
+        },
+        {
+          "key": "vac",
+          "value": "Vacuumsub System"
+        },
+        {
+          "key": "mation",
+          "value": "3D Sublimation+"
+        }
+      ]
+    },
+    {
+      "key": "newItem",
+      "value": "New Item"
+    },
+    {
+      "key": "heatPressMachine",
+      "value": "Heat Press Machine",
+       "submenu": [
+        {
+          "key": "mug",
+          "value": "Mug Press"
+        },
+        {
+          "key": "plate",
+          "value": "Plate Press"
+        },
+        {
+          "key": "mation",
+          "value": "Cap Press"
+        },
+        {
+          "key": "swing",
+          "value": "Swing Away Press"
+        }
+      ]
+    },
+    {
+      "key": "mug",
+      "value": "Mug"
+    },
+    {
+      "key": "aboutUs",
+      "value": "About Us"
+    },
+    {
+      "key": "videos",
+      "value": "Videos"
+    },
+    {
+      "key": "photos",
+      "value": "Photos"
+    },
+    {
+      "key": "contactUs",
+      "value": "Contact Us"
+    },
+    {
+      "key": "requestQouteNow",
+      "value": "REQUEST A QUOTE NOW"
+    }
   ],
-  "productList":[
-    {"productPhoto": "images/list1.png", "productName": "Sublimation Phone Cases", "viewMore": "View More"},
-    {"productPhoto": "images/list2.png", "productName": "Sublimation T SHIRT", "viewMore": "View More"}, 
-    {"productPhoto": "images/list3.png", "productName": "Sublimation Kid Appliances", "viewMore": "View More"}, 
-    {"productPhoto": "images/list4.png", "productName": "Sublimation Mugs(Polymer)","viewMore": "View More"},
-    {"productPhoto": "images/list5.png", "productName": "Sublimation Heat Press", "viewMore": "View More"},
-    {"productPhoto": "images/list6.png", "productName": "Sublimation Accessories", "viewMore": "View More"}, 
-    {"productPhoto": "images/list7.png", "productName": "Sublimation crystal", "viewMore": "View More"}, 
-    {"productPhoto": "images/list8.png", "productName": "Sublimation Accessories","viewMore": "View More"},
-    {"productPhoto": "images/list5.png", "productName": "Sublimation Heat Press", "viewMore": "View More"},
-    {"productPhoto": "images/list6.png", "productName": "Sublimation Accessories", "viewMore": "View More"}, 
-    {"productPhoto": "images/list7.png", "productName": "Sublimation crystal", "viewMore": "View More"}, 
-    {"productPhoto": "images/list8.png", "productName": "Sublimation Accessories","viewMore": "View More"}    
-    ],
-    "footerMenu":[
-    {"key":"company","value":"COMPANY"},
-    {"key":"services","value":"SERVICES"},
-    {"key":"home","value":"Home"},
-    {"key":"aboutUs","value":"About Us"},
-    {"key":"contactUs","value":"Contact us"},
-    {"key":"pressRelease","value":"Press Release"},
-    {"key":"sublimation","value":"3D Sublimation"},
-    {"key":"newItem","value":"New Item"},
-    {"key":"heatPressMachine","value":"Heat Press Machine"},
-    {"key":"mug","value":"Mug"}
-    
-  
-
-    ]
+  "productList": [
+    {
+      "productPhoto": "images/list1.png",
+      "productName": "Sublimation Phone Cases",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list2.png",
+      "productName": "Sublimation T SHIRT",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list3.png",
+      "productName": "Sublimation Kid Appliances",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list4.png",
+      "productName": "Sublimation Mugs(Polymer)",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list5.png",
+      "productName": "Sublimation Heat Press",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list6.png",
+      "productName": "Sublimation Accessories",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list7.png",
+      "productName": "Sublimation crystal",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list8.png",
+      "productName": "Sublimation Accessories",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list5.png",
+      "productName": "Sublimation Heat Press",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list6.png",
+      "productName": "Sublimation Accessories",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list7.png",
+      "productName": "Sublimation crystal",
+      "viewMore": "View More"
+    },
+    {
+      "productPhoto": "images/list8.png",
+      "productName": "Sublimation Accessories",
+      "viewMore": "View More"
+    }
+  ],
+  "footerMenu": [
+    {
+      "key": "company",
+      "value": "COMPANY"
+    },
+    {
+      "key": "services",
+      "value": "SERVICES"
+    },
+    {
+      "key": "home",
+      "value": "Home"
+    },
+    {
+      "key": "aboutUs",
+      "value": "About Us"
+    },
+    {
+      "key": "contactUs",
+      "value": "Contact us"
+    },
+    {
+      "key": "pressRelease",
+      "value": "Press Release"
+    },
+    {
+      "key": "sublimation",
+      "value": "3D Sublimation"
+    },
+    {
+      "key": "newItem",
+      "value": "New Item"
+    },
+    {
+      "key": "heatPressMachine",
+      "value": "Heat Press Machine"
+    },
+    {
+      "key": "mug",
+      "value": "Mug"
+    }
+  ]
 }
