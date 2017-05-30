@@ -24,7 +24,7 @@
 
           <div class="col-lg-12 col-sm-12">
 
-            <h1>WELCOME TO DIGIT PRINTS</h1>
+            <h1 class="font30bold gray ">WELCOME TO DIGIT PRINTS</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
               make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
@@ -38,23 +38,30 @@
   <div class="container-fluid">
     <div class="container text-center">
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mBttom20" ng-repeat="x in listPro | limitTo:8">
-
+        <h1 class="font30bold gray ">3D SUBLIMATION MACHINE</h1>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mBttom20" ng-repeat="x in listPro | limitTo:4 | orderBy:'productPhoto'">
+          
           <div>
             <img ng-src="{{x.productPhoto}}" class="mb10px" border="0" />
             <p class="marginBottomZero"><strong>{{x.productName | uppercase}}</strong><br/>
               <a ng-href="{{x.viewMore}}">{{x.viewMore}}</a>
             </p>
-
-
           </div>
-
-
-
-
         </div>
-
       </div>
+      <div class="row">
+        <h1 class="font30bold gray ">HEAT PRESS MACHINE</h1>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mBttom20" ng-repeat="x in listPro | limitTo:4 | orderBy:'productName'">
+          
+          <div>
+            <img ng-src="{{x.productPhoto}}" class="mb10px" border="0" />
+            <p class="marginBottomZero"><strong>{{x.productName | uppercase}}</strong><br/>
+              <a ng-href="{{x.viewMore}}">{{x.viewMore}}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
 
     </div>
   </div>
