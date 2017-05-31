@@ -29,7 +29,7 @@
             {"key":"category", "value":"Freesub 3D Sublimation Machine"},
             {"key":"brows", "value": "5077"}
         ],
-        "productDetailPhoto":"images/product1.jpg",
+        "productDetailPhoto":"images/product1.jpg"
         
     }   
 
@@ -44,7 +44,7 @@
   "Color: silver black",
   "Transfer Tempature: 180 ℃",
   "Time: 180 Seconds"
-],
+]
 
 
 }

@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('ProductdetailsCtrl', function ($scope, $http, productdetail) {
+  .controller('ProductdetailsCtrl', function ($scope, $http, producService) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -19,8 +19,8 @@ angular.module('printdigtsApp')
 	  $scope.productDetail = [];
     $scope.productTable = [];
 
-  productdetail.sideNavLinks($scope);
-  console.log(productdetail.twoSum(1,2));
+  producService.sideNavLinks($scope);
+  console.log(producService.twoSum(1,2));
   
 
 });
