@@ -77,7 +77,7 @@
 
     </div>
   </div>
-  <span class="logoStyle"><img ng-src="images/logo.png"></span>
+  <span class="logoStyle"><a ng-href="/"><img ng-src="images/logo.png"></a></span>
   <div class="container text-center">
     <div class="row marginT20">
       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
@@ -118,11 +118,14 @@
             </ul>       
           </li>
         </ul>-->
+
+
+
         <ul class="nav navbar-nav lastChildColor">
           <li ng-repeat="x in menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{x.value}}</a>
+            <a ng-click="navigateClick(x.key)" class="dropdown-toggle" data-toggle="dropdown">{{x.value}}</a>
             <ul class="dropdown-menu" ng-if="x.submenu">
-              <li ng-repeat="y in x.submenu"><a href="#">{{y.value}}</a></li>
+              <li ng-repeat="y in x.submenu"><a>{{y.value}}</a></li>
             </ul>
           </li>
         </ul>
@@ -200,13 +203,14 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/contactus.js"></script>
   <script src="scripts/controllers/productdetails.js"></script>
   <script src="scripts/controllers/common.js"></script>
   <script src="scripts/controllers/sidenav.js"></script>
   <script src="scripts/services/homepage.js"></script>
   <script src="scripts/jquery.js"></script>
   <script src="scripts/pace.js"></script>
-  <script src="scripts/services/producservice.js"></script>
+  <!--<script src="scripts/services/producservice.js"></script>-->
   <!-- endbuild -->
 </body>
 

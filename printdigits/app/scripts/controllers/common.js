@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 /**
  * @ngdoc function
@@ -28,15 +28,15 @@ angular.module('printdigtsApp')
     // });
 
 
-      // mydata a variable which we can use future
+    // mydata a variable which we can use future
 
-     var mydata =homePage.getData($scope);
-      
-      var fData = homePage.footerData($scope);
+    var mydata = homePage.getData($scope);
 
-      
+    var fData = homePage.footerData($scope);
 
-    
+
+
+
 
 
     $scope.emailErrorMessage = false;
@@ -45,10 +45,10 @@ angular.module('printdigtsApp')
     $scope.submitNewsletter = function () {
 
       var emailName = document.newsLetter.newsEmail.value;
-      var atposition = emailName.indexOf("@");  
-      var dotposition = emailName.lastIndexOf(".");  
+      var atposition = emailName.indexOf("@");
+      var dotposition = emailName.lastIndexOf(".");
 
-      if (atposition<1 || dotposition<atposition+2 || dotposition+2>=emailName.length) {
+      if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= emailName.length) {
         $scope.emailErrorMessage = true;
 
         $timeout(function () {
@@ -78,20 +78,71 @@ angular.module('printdigtsApp')
     $scope.dateTme = n;
 
 
-     // $scope.typeDemo = homePage.totalCode(4, 5);
-     // console.log(homePage.totalCode(4, 5))
-
-    
-    
-
-
-
+    // $scope.typeDemo = homePage.totalCode(4, 5);
+    // console.log(homePage.totalCode(4, 5))
+    // $timeout(function () {
+    //   $scope.loginError = "";
+    //   $scope.passwordError = "";
+    // }, 1500)
 
 
-      $scope.typeDemo = function(a,b){      
-      return homePage.totalCode(a,b);
+    $scope.loginError = false;
+    $scope.passwordError = false;
+    $scope.passMatch = false;
+
+
+
+    $scope.loginBtn = function () {
+
+      if ($scope.myUsername == "" || $scope.myUsername == null || $scope.myUsername == " " || $scope.myPassword == "" || $scope.myPassword == null || $scope.myPassword == " ") {
+        $scope.loginError = true;
+        $scope.passwordError = true;
+
+        $timeout(function () {
+          $scope.loginError = "";
+          $scope.passwordError = "";
+        }, 2000)
+
+
+
+      } else if ($scope.myUsername == $scope.myPassword) {
+        $scope.loginError = false;
+        $scope.passwordError = false;
+        alert("pass match...")
+
+
+
+      } else {
+
+        $scope.passMatch = true;
+      }
+
+
+    }
+
+    $scope.messageRemove = function () {
+      $scope.loginError = "";
+      $scope.passwordError = "";
+
+    }
+
+
+    $scope.navigateClick = function (loc) {
+     
+      if (loc == "contactUs") {
+      
+        $location.path('/contactus');
+      }
+    }
+
+
+  
+
+
+    $scope.typeDemo = function (a, b) {
+      return homePage.totalCode(a, b);
 
       console.log(homePage.totalCode(4, 5))
-      }
+    }
 
   });

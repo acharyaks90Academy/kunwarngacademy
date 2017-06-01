@@ -44,6 +44,11 @@ angular
         controller: 'SidenavCtrl',
         controllerAs: 'sidenav'
       })
+      .when('/contactus', {
+        templateUrl: 'views/contactus.html',
+        controller: 'ContactusCtrl',
+        controllerAs: 'contactus'
+      })
       .otherwise({
         redirectTo: '/'
       });
