@@ -33,7 +33,7 @@ this.sideNavLinks = function($scope){
 
     
 	  }, function errorCallback(response) {
-	        alert("Data Not Find");
+	        console.log("Data Not Find");
 	  });
       return 1; 
     };
