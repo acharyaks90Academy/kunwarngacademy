@@ -129,9 +129,12 @@ angular.module('printdigtsApp')
 
     $scope.navigateClick = function (loc) {
      
-      if (loc == "contactUs") {
-      
+      if (loc == "contactUs") {      
         $location.path('/contactus');
+      }else if(loc=="home"){
+        $location.path('/index');
+      }else if(loc=="aboutUs"){
+        $location.path('/about');
       }
     }
 

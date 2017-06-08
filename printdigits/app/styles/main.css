@@ -140,3 +140,10 @@ li.dropdown:hover > .dropdown-menu {
 
 .text-red {color:red!important; font-size: 11px; }
 .font11 {font-size: 11px;}
+#ww {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-color: #f2f2f2;
+}
+.aboutContent h1 {font-size: 35px;  margin-top: 30px;  margin-bottom: 30px;}
+.aboutContent p {font-weight:normal; color: #333;}
