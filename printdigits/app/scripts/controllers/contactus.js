@@ -15,12 +15,15 @@ angular.module('printdigtsApp')
       'Karma'
     ];
 
+$scope.submit =false;
 
-$scope.contatme = "contact hey";
 
 $scope.contactForm = function () {
+$scope.submit =true;
+if($scope.submit == true){
 
-alert ("submitted form!!")
+  
+}
 
 }
 
