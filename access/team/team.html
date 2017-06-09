@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<script src="js/angular.min.js"></script>
+<script src="js/team.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="js/bootstrap.min.css" rel="stylesheet" />
+<link href="team.json" type="application/json" />
+<body ng-app="teamApp">
+<div ng-controller="firstController" class="container-fluid bg-info" >
+
+<div class="row">
+
+<form role="form">
+
+<div class="col-lg-6 col-md-6">
+<div class="form-group">
+<label>First Name</label>
+<input type="text" ng-model="team.firstName" class="form-control">
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="email" ng-model="team.email" class="form-control">
+</div>
+<div class="form-group">
+<label>Gender</label><br/>
+<input type="radio" value="Male" ng-model="team.gender" class="">Male
+<input type="radio" value="Female" ng-model="team.gender" class="">Female
+</div>
+<div class="form-group">
+<label>Salary</label>
+<input type="text" ng-model="team.salary" class="form-control">
+</div>
+
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="form-group">
+<label>Last Name</label>
+<input type="text" ng-model="team.lastName" class="form-control">
+</div>
+<div class="form-group">
+<label>Certificate Number</label>
+<input type="text" ng-disabled="true" ng-model="team.certificateNumber" class="form-control">
+</div>
+<div class="form-group">
+<label>City</label>
+
+
+<select ng-model="team.city" class="form-control">
+	<option ng-value="">Select any</option>
+	<option ng-repeat="x in city">{{x}}</option>
+</select>
+
+
+</div>
+<div class="form-group">
+<label></label>
+<input type="submit" value="Submit" ng-click="pushData()" class="btn btn-success btn-block">
+</div>
+</div>
+</form>
+</div>
+<div class="alert alert-danger" ng-show="noJson">   
+No page found..!!!
+</div>
+
+<div class="alert alert-danger alert-dismissable" ng-show="deleteMessage">Your record delete successfully</div>
+<table class="table table-striped">
+	<tr>
+		<td>Sl No.</td>
+		<td>First Name</td>
+		<td>Last Name</td>
+		<td>Email</td>
+		<td>Certificate Number</td>
+		<td>Gender</td>
+		<td>City</td>
+		<td>Salary</td>
+		<td>Action</td>
+	</tr>
+
+	<tr ng-repeat="x in myTeamJson" ng-class-even="'warning'">
+		<td>{{$index + 1}}</td>
+		<td>{{x.firstName}}</td>
+		<td>{{x.lastName}}</td>
+		<td>{{x.email}}</td>
+		<td>{{x.certificateNumber}}</span></td>
+		<td>{{x.gender}}</td>
+		<td ng-class="x.city=='Choujiang'? 'bg-danger': ''">{{x.city}}</td>
+		<td>{{x.salary}}</td>
+		<td>
+		<input type="submit" ng-click="editData($index)" value="Edit" class="btn btn-info btn-sm">
+		<input type="submit" ng-click="deleteData()" value="Delete" class="btn btn-danger btn-sm">
+		</td>
+	</tr>
+
+
+</table>
+
+
+
+</div>
+</body>
+</html>
