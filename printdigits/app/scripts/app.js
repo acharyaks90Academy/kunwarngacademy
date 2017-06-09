@@ -49,6 +49,11 @@ angular
         controller: 'ContactusCtrl',
         controllerAs: 'contactus'
       })
+      .when('/adminmain', {
+        templateUrl: 'views/adminmain.html',
+        controller: 'AdminmainCtrl',
+        controllerAs: 'adminmain'
+      })
       .otherwise({
         redirectTo: '/'
       });
