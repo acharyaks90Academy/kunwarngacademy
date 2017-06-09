@@ -17,9 +17,11 @@ app.controller("firstController", function($scope,$http,$timeout, $interval){
 		  });
 
 
-			 $scope.city = ["Choujiang", "Los Mangos", "Sigiriya","Ganlin"];
+		 $scope.city = ["Choujiang", "Los Mangos", "Sigiriya","Ganlin"];
 
 
+
+		 $scope.mylistData = localStorage.myTeamJson;
 
 		
 
