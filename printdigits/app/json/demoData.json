@@ -2,71 +2,87 @@
   "mainMenu": [
     {
       "key": "home",
-      "value": "Home"
+      "value": "Home",
+      "href": ""
     },
     {
       "key": "sublimationMachine",
       "value": "3D Sublimation Machine",
+       "href": "productdetails",
       "submenu": [
         {
           "key": "subli",
-          "value": "3D Sublimation Phone Cases"
+          "value": "3D Sublimation Phone Cases",
+           "href": "productdetails"
         },
         {
           "key": "vac",
-          "value": "Vacuumsub System"
+          "value": "Vacuumsub System",
+           "href": "productdetails"
         },
         {
           "key": "mation",
-          "value": "3D Sublimation"
+          "value": "3D Sublimation",
+           "href": "productdetails"
         }
       ]
     },
     {
       "key": "newItem",
-      "value": "New Item"
+      "value": "New Item",
+       "href": "productdetails"
     },
     {
       "key": "heatPressMachine",
       "value": "Heat Press Machine",
+       "href": "productdetails",
        "submenu": [
         {
           "key": "mug",
-          "value": "Mug Press"
+          "value": "Mug Press",
+           "href": "productdetails"
         },
         {
           "key": "plate",
-          "value": "Plate Press"
+          "value": "Plate Press",
+           "href": "productdetails"
         },
         {
           "key": "mation",
-          "value": "Cap Press"
+          "value": "Cap Press",
+           "href": "productdetails"
         },
         {
           "key": "swing",
-          "value": "Swing Away Press"
+          "value": "Swing Away Press",
+           "href": "productdetails"
         }
       ]
     },
     {
       "key": "mug",
-      "value": "Mug"
+      "value": "Mug",
+       "href": "productdetails"
     },
     {
       "key": "aboutUs",
-      "value": "About Us"
+      "value": "About Us",
+       "href": "about"
     },
     {
       "key": "videos",
-      "value": "Videos"
+      "value": "Videos",
+       "href": "productdetails"
     },
     {
       "key": "photos",
-      "value": "Photos"
+      "value": "Photos",
+       "href": "productdetails"
     },
     {
       "key": "contactUs",
-      "value": "Contact Us"
+      "value": "Contact Us",
+       "href": "contactus"
     },
     {
       "key": "requestQouteNow",

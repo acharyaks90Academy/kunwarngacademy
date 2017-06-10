@@ -15,4 +15,6 @@ angular.module('printdigtsApp')
       'Karma'
     ];
      $rootScope.welcome="welcome"; 
+     //$rootScope.showHeader = false;
+
   });

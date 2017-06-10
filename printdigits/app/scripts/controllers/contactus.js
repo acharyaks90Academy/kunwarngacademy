@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('ContactusCtrl', function ($scope, $location) {
+  .controller('ContactusCtrl', function ($scope, $location, $rootScope ) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,6 +16,7 @@ angular.module('printdigtsApp')
     ];
 
 $scope.submit =false;
+  //$rootScope.showHeader = true;
 
 
 $scope.contactForm = function () {
