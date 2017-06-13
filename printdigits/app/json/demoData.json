@@ -40,7 +40,7 @@
         {
           "key": "mug",
           "value": "Mug Press",
-           "href": "productdetails"
+           "href": "mug"
         },
         {
           "key": "plate",
@@ -77,7 +77,8 @@
     {
       "key": "photos",
       "value": "Photos",
-       "href": "productdetails"
+       "href": "productdetails",
+        "href": "photos"
     },
     {
       "key": "contactUs",
@@ -193,4 +194,5 @@
       "value": "Mug"
     }
   ]
+  
 }

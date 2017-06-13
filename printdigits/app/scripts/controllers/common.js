@@ -34,6 +34,7 @@ angular.module('printdigtsApp')
 
     var fData = homePage.footerData($scope);
 
+     $rootScope.searchResult = $scope.searchResult;
 
 
 
@@ -89,6 +90,19 @@ angular.module('printdigtsApp')
     $scope.loginError = false;
     $scope.passwordError = false;
     $scope.passMatch = false;
+
+
+
+    $scope.searchPage = function(loc){
+    console.log($location.absUrl());    
+
+   if($location.path()==="/searchpage"){
+   }else{
+     $location.path("/searchpage");
+   }
+
+    }
+
 
 
 

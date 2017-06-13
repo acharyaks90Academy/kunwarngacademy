@@ -23,25 +23,25 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
-        showHeader : true
+        showHeaderFooter : true
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about',
-        showHeader : true
+        showHeaderFooter : true
       })
       .when('/productdetails', {
         templateUrl: 'views/productdetails.html',
         controller: 'ProductdetailsCtrl',
         controllerAs: 'productdetails',
-         showHeader : true
+         showHeaderFooter : true
       })
       .when('/common', {
         templateUrl: 'views/common.html',
         controller: 'CommonCtrl',
         controllerAs: 'common',
-         showHeader : true
+         showHeaderFooter : true
       })
       .when('/sidenav', {
         templateUrl: 'views/sidenav.html',
@@ -52,20 +52,26 @@ angular
         templateUrl: 'views/contactus.html',
         controller: 'ContactusCtrl',
         controllerAs: 'contactus',
-         showHeader : true
+         showHeaderFooter : true
       })
       .when('/adminmain', {
         templateUrl: 'views/adminmain.html',
         controller: 'AdminmainCtrl',
         controllerAs: 'adminmain',
-        showHeader : false
+        showHeaderFooter : false
       })
+      .when('/searchpage', {
+        templateUrl: 'views/searchpage.html',
+        controller: 'SearchpageCtrl',
+        controllerAs: 'searchpage',
+        showHeaderFooter : true
+      })     
       .otherwise({
         redirectTo: '/'
       });
   }).
   run(['$rootScope', function($rootScope) {
     $rootScope.$on("$routeChangeSuccess", function(event, next, current) {
-       $rootScope.showHeader = next.$$route.showHeader;
+       $rootScope.showHeaderFooter = next.$$route.showHeaderFooter;
     });
   }]);
