@@ -1,0 +1,29 @@
+ <section id="searchpage">
+ <div class="container-fluid marginTB20">
+    <div class="container">
+      <div class="welcomeBg">
+        <div class="row">
+
+          <div class="col-lg-12 col-sm-12">
+            <h1 class="font30bold gray  text-center">Freesub 3D Sublimation Machine</h1>    
+          </div>
+        </div>
+      </div>
+ 
+        <div class="col-lg-3 col-md-3 col-sm-3 col-sm-12 mBttom20" ng-repeat="x in searchData | filter:searchResult">
+		<article class="searchpage from-the-blog text-center">
+			<figure class="from-the-blog-image">
+				<a href="{{x.photo}}"><img src="{{x.photo}}" alt=""></a>
+				<div class="hover-icon"></div>
+			</figure>
+
+			<section class="from-the-blog-content">
+				<a href="#!/productdetails"><h5>{{x.name}}</h5></a>	
+				<a href="#!/productdetails" class="btn btn-default">Read More</a>
+			</section>
+
+		</article>
+	</div>
+    </div>
+  </div>
+ </section>
