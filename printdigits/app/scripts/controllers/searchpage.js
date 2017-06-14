@@ -34,7 +34,7 @@ angular.module('printdigtsApp')
   ];
 
 
-  $scope.searchResult = $rootScope.searchResult;
-
+ 
+ 
 
   });

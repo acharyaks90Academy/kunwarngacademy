@@ -66,6 +66,12 @@ angular
         controllerAs: 'searchpage',
         showHeaderFooter : true
       })     
+      .when('/loginadmin', {
+        templateUrl: 'views/loginadmin.html',
+        controller: 'LoginadminCtrl',
+        controllerAs: 'loginadmin',
+         showHeaderFooter : false
+      })
       .otherwise({
         redirectTo: '/'
       });

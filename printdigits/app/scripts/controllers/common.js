@@ -97,9 +97,11 @@ angular.module('printdigtsApp')
     console.log($location.absUrl());    
 
    if($location.path()==="/searchpage"){
+     
    }else{
      $location.path("/searchpage");
    }
+   $rootScope.searchResult = $scope.searchResult;    
 
     }
 
