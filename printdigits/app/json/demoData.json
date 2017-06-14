@@ -163,15 +163,18 @@
     },
     {
       "key": "home",
-      "value": "Home"
+      "value": "Home",
+      "href": ""
     },
     {
       "key": "aboutUs",
-      "value": "About Us"
+      "value": "About Us",
+      "href": "aboutus"
     },
     {
       "key": "contactUs",
-      "value": "Contact us"
+      "value": "Contact us",
+      "href": "contactus"
     },
     {
       "key": "pressRelease",

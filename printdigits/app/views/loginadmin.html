@@ -12,15 +12,18 @@ body{background: #373435;}
                 <div class="col-lg-6 col-lg-push-3 col-md-12 col-sm-12 col-xs-12 adminlogin">
                      
 <form name="loginForm" novalidate>
+    <div class="alert alert-danger" ng-show="errorMessage">Please Fill the Username/Password</div>
+
+
             <div class="form-group">
               <label>Email/Username</label>
-              <input type="text" class="form-control radiusZero" ng-model="myUsername" id="email" required>
-
+              <input type="text" class="form-control radiusZero" ng-model="myUsername" name="myUsername" ng-required="true">
+            <span ng-show="loginForm.myUsername.$touched && loginForm.myUsername.$invalid" style="color:yellow">Username is required.</span>
             </div>
             <div class="form-group">
               <label>Password</label>
-              <input type="password" class="form-control radiusZero" ng-model="myPassword" name="myPassword" required>
-              <span ng-show="loginForm.myPassword.$touched && loginForm.myPassword.$invalid" style="color:red">The Password is required.</span>
+              <input type="password" class="form-control radiusZero" ng-model="myPassword" name="myPassword" ng-required="true">
+              <span ng-show="loginForm.myPassword.$touched && loginForm.myPassword.$invalid" style="color:yellow">The Password is required.</span>
             </div>
             <button type="submit" class="btn btn-success radiusZero btn-block" ng-click="loginSubmit()">Submit</button>
           </form>

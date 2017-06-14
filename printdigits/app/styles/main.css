@@ -46,6 +46,7 @@ h1{font-size:33px; font-family:Calibri; margin-bottom: 10px;}
 
 .bgStay{padding:10px; background:url("/images/stayBg.png") repeat top center}
 .btn-Black, .btn:hover, .btn:focus{color:#fff}
+.btn-Black, btn:focus, btn:hover {background: #000;color:#fff}
 .mBttom20{margin-bottom:20px}
 .mb10px{margin-bottom:10px}
 .marginBottomZero{margin-bottom:0px}

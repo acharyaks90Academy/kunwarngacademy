@@ -8,21 +8,18 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('LoginadminCtrl', function ($scope, $rootScope, $log, $http, $location) {
+  .controller('LoginadminCtrl', function ($scope, $rootScope, $log, $http, $location,$timeout) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    $scope.login = "login page"
+    $scope.errorMessage = false;
 
     $scope.loginSubmit = function () {
-
-
-
       if ($scope.myUsername == null || $scope.myUsername == "" || $scope.myPassword == null || $scope.myPassword =="") {
-        alert("Please Enter Username/Password");
+        $scope.errorMessage = true;
       } else if ($scope.myUsername == $scope.myPassword) {
         $location.path("/adminmain");
       } else {
@@ -30,7 +27,11 @@ angular.module('printdigtsApp')
       }
 
 
+      $timeout (function(){
 
+        $scope.errorMessage = "";
+
+      },2500)
 
 
 
