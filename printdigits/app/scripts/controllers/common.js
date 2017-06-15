@@ -93,7 +93,7 @@ angular.module('printdigtsApp')
 
 
 
-    $scope.searchPage = function(loc){
+    $scope.searchPage = function(){
     console.log($location.absUrl());    
 
    if($location.path()==="/searchpage"){

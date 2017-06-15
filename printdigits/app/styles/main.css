@@ -146,6 +146,7 @@ li.dropdown:hover > .dropdown-menu {
 }
 .aboutContent h1 {font-size: 35px;  margin-top: 30px;  margin-bottom: 30px;}
 .aboutContent p {font-weight:normal; color: #333;}
+.aboutContent p.bluecolor {color:#00adf0!important;}
 
 .searchpage h5{color:#00adf0!important; font-weight: bold;}
 .from-the-blog-content span {margin:9px 0 14px 0; display: block; font-size: 12px!important;}

@@ -72,6 +72,12 @@ angular
         controllerAs: 'loginadmin',
          showHeaderFooter : false
       })
+      .when('/heatproduct1', {
+        templateUrl: 'views/heatproduct1.html',
+        controller: 'Heatproduct1Ctrl',
+        controllerAs: 'heatproduct1',
+        showHeaderFooter : true
+      })
       .otherwise({
         redirectTo: '/'
       });
