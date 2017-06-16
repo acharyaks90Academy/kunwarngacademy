@@ -16,5 +16,22 @@
       "description": "A heat press with drawer style is the machine that presses a transfer onto an imprintable substrate. Using high temperatures and pressures for a certain amount of time, the transfer is permanently embedded into the product. Heat presses are recommended for professional and satisfying results simply because standard laminating devices and home hand irons can not get even near the temperatures required for a reliable transfer."
 
 
-}]
+}],
+"productDetailsData":[
+{"key":"Product Detail","value":false},
+{"key":"Approx Price","value":"Rs 11,999 / Unit"},
+{"key":"Minimum Order Quantity","value":"2"},
+{"key":"Automatic Grade","value":"Automatic"},
+{"key":"Imprint Material","value":"T-Shirt, Ceramic, Teflon, Plastic, Metal"},
+{"key":"Printing Speed (time per product)","value":">50 sec"},
+{"key":"Color Output","value":"Colored"},
+{"key":"Temperature (degree Celsius)","value":"0-100"},
+{"key":"Paper Size","value":"A4"},
+{"key":"Brand","value":"EPSON"},
+{"key":"Item Color","value":["Black", "White", "Gray"]},
+{"key":"Model Numer","value":"Plotter01"}
+
+
+]
+
 }

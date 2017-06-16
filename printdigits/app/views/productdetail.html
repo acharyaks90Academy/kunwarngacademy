@@ -30,36 +30,29 @@
 
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="row">
-            <h1 class="bluetext">15 X15 Flat Press</h1>
+           
+          <div class="row">         
+           <h1 class="bluetext marginTopZero"></h1>
+             <table class="table table-striped">
+              <tr ng-repeat="x in productDataSecond">
+                <th>{{x.key}}</th>
+                <td>{{x.value}}</td>
+              </tr>           
+
+            </table>
+            
+            <!--<h1 class="bluetext marginTopZero">15 X15 Flat Press</h1>
             <p>Approx Price: Rs 11,999 / Unit</p>
             <p>Minimum Order Quantity: 2 Unit</p>
             <h1>Product Details:</h1>
-            <table class="table table-striped">
-              <tr>
-                <th>Automatic Grade</th>
-                <td>Automatic</td>
-              </tr>
-              <tr>
-                <th>Imprint Material</th>
-                <td>T-Shirt, Ceramic, Teflon, Plastic, Metal</td>
-              </tr>
-              <tr>
-                <th>Printing Speed (time per product)</th>
-                <td>>50 sec</td>
-              </tr>
-              <tr>
-                <th>Temperature (degree Celsius)</th>
-                <td>0-100</td>
-              </tr>
+           -->
+           
 
-            </table>
-            <p>
+          </div>
+           <p>
               <a href="" class="btn btn-success btn-block"  data-toggle="modal" data-target="#myModal">Request for a Quote</a>
 
             </p>
-
-          </div>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
