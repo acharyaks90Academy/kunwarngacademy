@@ -18,7 +18,7 @@
 
 }],
 "productDetailsData":[
-{"key":"Product Detail","value":false},
+{"key":"Product Detail","value":""},
 {"key":"Approx Price","value":"Rs 11,999 / Unit"},
 {"key":"Minimum Order Quantity","value":"2"},
 {"key":"Automatic Grade","value":"Automatic"},
