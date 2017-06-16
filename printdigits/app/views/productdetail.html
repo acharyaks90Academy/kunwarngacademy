@@ -1,0 +1,88 @@
+<section id="">
+  <div class="container-fluid bordertopproduct">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+          <img class="img-responsive" ng-src="images/pro1.jpg" alt="Chania">
+
+          <uib-tabset active="activeForm" class="marginTB20 tabStyling" ng-repeat="x in productData">
+
+            <uib-tab index="1" heading="Specification">
+              <ul ng-repeat="y in x.specification" class="paddingZerospe">
+                <li><span class="label">{{y.key}}</span><span>{{y.value}}</span></li>
+              </ul>
+            </uib-tab>
+            <uib-tab index="2" heading="Additional Info">
+              <ul ng-repeat="y in x.additionalInfo" class="paddingZerospe">
+                <li><span class="label">{{y.key}}</span><span>{{y.value}}</span></li>
+              </ul>
+            </uib-tab>
+            <uib-tab index="0" heading="Description">
+              <p> {{x.description}}</p>
+            </uib-tab>
+          </uib-tabset>
+
+
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="row">
+            <h1 class="bluetext">15 X15 Flat Press</h1>
+            <p>Approx Price: Rs 11,999 / Unit</p>
+            <p>Minimum Order Quantity: 2 Unit</p>
+            <h1>Product Details:</h1>
+            <table class="table table-striped">
+              <tr>
+                <th>Automatic Grade</th>
+                <td>Automatic</td>
+              </tr>
+              <tr>
+                <th>Imprint Material</th>
+                <td>T-Shirt, Ceramic, Teflon, Plastic, Metal</td>
+              </tr>
+              <tr>
+                <th>Printing Speed (time per product)</th>
+                <td>>50 sec</td>
+              </tr>
+              <tr>
+                <th>Temperature (degree Celsius)</th>
+                <td>0-100</td>
+              </tr>
+
+            </table>
+            <p>
+              <a href="" class="btn btn-success btn-block"  data-toggle="modal" data-target="#myModal">Request for a Quote</a>
+
+            </p>
+
+          </div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+
+
+      </div>
+    </div>
+</section>

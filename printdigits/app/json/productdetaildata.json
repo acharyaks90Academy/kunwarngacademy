@@ -1,0 +1,20 @@
+{"records":[{  
+  "specification": [
+      {"key":"Voltage", "value":"1400W"},
+      {"key":"Power", "value":"1400W"},
+      {"key":"Heat press with drawer style Printing area", "value":"38X38CM (15'X15') / 40X50CM(16'X20')"},
+      {"key":"Heat press with drawer style Package Size", "value":"74X49X48CM/74X56X50CM"},
+      {"key":"Gross Weight", "value":"27KG /60LBS--30KG/66LBS"}    
+      ],
+  "additionalInfo": 
+  [
+      {"key":"Item Code", "value":"FT04"},
+      {"key":"Port To Dispatch", "value":"Delhi"},
+      {"key":"Production Capacity", "value":"1000"},      
+      {"key":"Delivery Time", "value":"1 Day"}    
+      ],
+      "description": "A heat press with drawer style is the machine that presses a transfer onto an imprintable substrate. Using high temperatures and pressures for a certain amount of time, the transfer is permanently embedded into the product. Heat presses are recommended for professional and satisfying results simply because standard laminating devices and home hand irons can not get even near the temperatures required for a reliable transfer."
+
+
+}]
+}
