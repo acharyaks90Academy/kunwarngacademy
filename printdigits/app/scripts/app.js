@@ -32,12 +32,6 @@ angular
         controllerAs: 'about',
         showHeaderFooter : true
       })
-      .when('/productdetails', {
-        templateUrl: 'views/productdetails.html',
-        controller: 'ProductdetailsCtrl',
-        controllerAs: 'productdetails',
-         showHeaderFooter : true
-      })
       .when('/common', {
         templateUrl: 'views/common.html',
         controller: 'CommonCtrl',

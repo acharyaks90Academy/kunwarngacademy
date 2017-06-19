@@ -12,7 +12,7 @@
           <uib-tabset active="activeForm" class="marginTB20 tabStyling" ng-repeat="x in productData">
 
             <uib-tab index="1" heading="Specification">
-              <ul ng-repeat="y in x.specification" class="paddingZerospe">
+              <ul ng-repeat="y in x.specification" class="paddingZerospe">              
                 <li><span class="label">{{y.key}}</span><span>{{y.value}}</span></li>
               </ul>
             </uib-tab>
@@ -31,8 +31,14 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
            
-          <div class="row">         
-           <h1 class="bluetext marginTopZero"></h1>
+          <div class="row">
+            <div class="" ng-repeat="x in productMainHeadingData">         
+           <h1 class="bluetext marginTopZero"> {{x.productDetails}}</h1>
+            <h5>Approx Price <strong>{{x.approxPrice}}/Unit</strong></h5>
+           <h5>Minimum Order Quantity <strong>{{x.minimumOrderQuantity}}/Unit</strong></h5>
+            
+            </div>
+
              <table class="table table-striped">
               <tr ng-repeat="x in productDataSecond">
                 <th>{{x.key}}</th>
@@ -49,24 +55,67 @@
            
 
           </div>
-           <p>
-              <a href="" class="btn btn-success btn-block"  data-toggle="modal" data-target="#myModal">Request for a Quote</a>
-
-            </p>
+           <div class="row">
+              <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1 col-sm-6 col-sm-offset-3 col-xs-12">
+              <a href="" class="btn btn-success btn-block"  data-toggle="modal" data-target="#getQuote">Get best Quote</a>
+              </div>
+            <div class="row">
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="getQuote" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-gray">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Get a best qoute!</h4>       
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+       <form id="qouteForm" class="form-horizontal" role="form">
+         <p>You are just one step away from getting the best price</p>
+         {{qouteForm}}
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            
+                     
+                            <div class="input-group marginT20">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="qouteForm.username" value="" placeholder="username or email">                                        
+                                    </div>
+                                
+                            <div class="input-group marginT20">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="qouteForm.password" placeholder="password">
+                                    </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+                          
+                            <div class="input-group marginT20">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                        <input id="login-password" type="text" class="form-control" name="qouteForm.mobile" placeholder="mobile">
+                                    </div>
+
+                                                    
+                            <div class="input-group marginT20">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                                        <textarea id="login-password" rows="3" type="text" class="form-control" name="qouteForm.comment" placeholder="comment" />
+                                    </div>
+            </div>
+
+        </div>
+
+
+
+                           
+
+
+                          
+
+
+                            </form>     
       </div>
       <div class="modal-footer">
+        <button type="submit" class="btn bg-blue">Submit</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

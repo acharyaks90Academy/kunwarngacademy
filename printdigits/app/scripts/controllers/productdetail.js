@@ -25,7 +25,8 @@ angular.module('printdigtsApp')
           url: 'json/productdetaildata.json'
         }).then(function successCallback(response) {
           $scope.productData = response.data.records;
-          $scope.productDataSecond= response.data.productDetailsData;       
+          $scope.productDataSecond = response.data.productDetailsData; 
+          $scope.productMainHeadingData = response.data.productHeadingText;       
         }, function errorCallback(response) {
           $scope.noDataFound = true;
 
