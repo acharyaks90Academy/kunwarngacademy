@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('productdetailCtrl', function ($scope, $rootScope, $log, $http, $location,$timeout) {
+  .controller('productdetailCtrl', function ($scope, $rootScope, $log, $http, $location,$timeout, demoPage) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,6 +17,9 @@ angular.module('printdigtsApp')
 
 
 
+    $scope.helloTime = demoPage.sayHello();
+    $scope.byeTime = demoPage.repeatad();
+ 
 
   $scope.noDataFound = false;
 

@@ -72,7 +72,7 @@ angular
         controller: 'productdetailCtrl',
         controllerAs: 'productdetail',
         showHeaderFooter : true
-      })
+      })     
       .otherwise({
         redirectTo: '/'
       });
