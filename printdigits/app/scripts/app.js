@@ -17,7 +17,10 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, mydataServiceProvider) {
+    console.log(mydataServiceProvider.setSalutation("anil"));
+     console.log(mydataServiceProvider.getSalutation());
+     console.log(mydataServiceProvider.$get);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

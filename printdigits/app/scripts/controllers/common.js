@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location, $timeout, homePage) {
+  .controller('CommonCtrl', function ($scope, $http, $rootScope, $location, $timeout, homePage, mydataService) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -163,5 +163,7 @@ angular.module('printdigtsApp')
 
       console.log(homePage.totalCode(4, 5))
     }
+
+    $scope.fact = mydataService.greet();
 
   });
