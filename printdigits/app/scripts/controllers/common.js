@@ -30,6 +30,9 @@ angular.module('printdigtsApp')
 
     // mydata a variable which we can use future
 
+
+    
+
     var mydata = homePage.getData($scope);
 
     var fData = homePage.footerData($scope);

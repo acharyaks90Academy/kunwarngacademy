@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider, mydataServiceProvider) {
     console.log(mydataServiceProvider.setSalutation("anil"));
@@ -33,12 +34,6 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about',
         showHeaderFooter : true
-      })
-      .when('/productdetails', {
-        templateUrl: 'views/productdetails.html',
-        controller: 'ProductdetailsCtrl',
-        controllerAs: 'productdetails',
-         showHeaderFooter : true
       })
       .when('/common', {
         templateUrl: 'views/common.html',
@@ -75,12 +70,12 @@ angular
         controllerAs: 'loginadmin',
          showHeaderFooter : false
       })
-      .when('/heatproduct1', {
-        templateUrl: 'views/heatproduct1.html',
-        controller: 'Heatproduct1Ctrl',
-        controllerAs: 'heatproduct1',
+      .when('/productdetail', {
+        templateUrl: 'views/productdetail.html',
+        controller: 'productdetailCtrl',
+        controllerAs: 'productdetail',
         showHeaderFooter : true
-      })
+      })     
       .otherwise({
         redirectTo: '/'
       });

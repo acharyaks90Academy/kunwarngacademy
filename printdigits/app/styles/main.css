@@ -28,6 +28,8 @@ footer p{font-size:12px}
 .welcomeBg{background:#f3f3f3; padding:10px 20px}
 .pdfBox{background:#00adf0; padding:10px 20px}
 
+.modal-footer {background:#f2f2f2!important; }
+
 .marginTB20{margin-top:20px; margin-bottom:20px}
 .marginTB15{margin-top:15px; margin-bottom:15px}
 .marginT20{margin:20px 0 0 0}
@@ -147,6 +149,7 @@ li.dropdown:hover > .dropdown-menu {
 .aboutContent h1 {font-size: 35px;  margin-top: 30px;  margin-bottom: 30px;}
 .aboutContent p {font-weight:normal; color: #333;}
 .aboutContent p.bluecolor {color:#00adf0!important;}
+.bluetext {color:#00adf0!important;}
 
 .searchpage h5{color:#00adf0!important; font-weight: bold;}
 .from-the-blog-content span {margin:9px 0 14px 0; display: block; font-size: 12px!important;}
@@ -185,11 +188,22 @@ li.dropdown:hover > .dropdown-menu {
     opacity: 0.7;
 }
 
+.fontbold {font-weight: bold!important;}
+.marginTopZero {margin-top: 0px!important;;}
+
 .adminlogin label {font-weight: bold; color: #fff;}
 
 .adminlogo { width: 334px; height: 167px;  margin:0 auto; text-align: center; }
 
+.bordertopproduct {border:2px solid #f2f2f2; padding-top: 20px; }
 
+
+.tabStyling .nav-tabs li a.nav-link {padding:10px 10px!important;}
+.tabStyling  .tab-content {border:1px solid #ddd!important; padding: 20px; border-top: 0px!important; font-size: 12px;}
+.paddingZerospe {margin:0px!important; padding:0px!important;}
+.paddingZerospe li {margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 5px;}
+.paddingZerospe span.label {font-weight: bold; min-width: 70px; float: left; text-align: left; margin-right: 10px; color: #333; font-size: 12px;}
+.tabStyling p {line-height: 20px!important; font-size: 12px;}
 
 /*
 Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
@@ -230,7 +244,7 @@ a, a:hover, a:focus {
 
 /* Bootstrap Modifications */
 .modal-header {
-	background: #68dff0;
+	background: #373435;
 }
 
 .modal-title {
