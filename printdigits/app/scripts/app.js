@@ -18,10 +18,10 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider, mydataServiceProvider) {
-    console.log(mydataServiceProvider.setSalutation("anil"));
-     console.log(mydataServiceProvider.getSalutation());
-     console.log(mydataServiceProvider.$get);
+  .config(function ($routeProvider) {
+  //  console.log(mydataServiceProvider.setSalutation("anil"));mydataServiceProvider
+ //    console.log(mydataServiceProvider.getSalutation());
+   //  console.log(mydataServiceProvider.$get);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
