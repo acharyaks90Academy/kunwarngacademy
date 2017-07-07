@@ -76,6 +76,12 @@ angular
         controllerAs: 'productdetail',
         showHeaderFooter : true
       })     
+      .when('/category', {
+        templateUrl: 'views/category.html',
+        controller: 'CategoryCtrl',
+        controllerAs: 'category',
+        showHeaderFooter : true
+      })
       .otherwise({
         redirectTo: '/'
       });

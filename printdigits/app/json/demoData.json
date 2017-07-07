@@ -139,6 +139,7 @@
     {
       "productPhoto": "images/list1.png",
       "productName": "Sublimation Phone Cases",
+      "productCategoryList":["PolyClassic","PolyArc","PolyFlex"],
       "viewMore": "View More"
     },
     {
