@@ -1,0 +1,141 @@
+{
+  "mainMenu": [
+    {
+      "key": "home",
+      "value": "Home",
+      "href": ""
+    },
+    {
+      "key": "sublimationMachine",
+      "value": "3D Sublimation Machine",
+       "href": "productdetail",
+      "submenu": [
+        {
+          "key": "subli",
+          "value": "3D Sublimation Phone Cases",
+           "href": "productdetail"
+        },
+        {
+          "key": "vac",
+          "value": "Vacuumsub System",
+           "href": "productdetail"
+        },
+        {
+          "key": "mation",
+          "value": "3D Sublimation",
+           "href": "productdetail"
+        }
+      ]
+    },
+    {
+      "key": "newItem",
+      "value": "New Item",
+       "href": "productdetail"
+    },
+    {
+      "key": "heatPressMachine",
+      "value": "Heat Press Machine",
+       "href": "heatpressmachineall",
+       "submenu": [
+        {
+          "key": "menu1",
+          "value": "15 X15 Flat Press",
+           "href": "mug"
+        },
+        {
+          "key": "menu2",
+          "value": "16x24 Flat Heat Press",
+           "href": "productdetail"
+        },
+        {
+          "key": "menu3",
+          "value": "24x30 Flat Heat Machine",
+           "href": "productdetail"
+        },
+        {
+          "key": "menu4",
+          "value": "30x40 Flat Heat Machine",
+           "href": "productdetails"
+        },
+        {
+          "key": "menu5",
+          "value": "5 IN 1 Combo Heat Press Machine",
+           "href": "productdetails"
+        },
+        {
+          "key": "menu6",
+          "value": "6 IN 1 Combo Heat Press Machine for T- Shirt Mug Cap Plate",
+           "href": "productdetails"
+        },
+         {
+          "key": "menu7",
+          "value": "Heavy Duty Heat Press",
+           "href": "productdetails"
+        },
+         {
+          "key": "menu8",
+          "value": "Mug Heat Press Machine",
+           "href": "productdetails"
+        },
+        {
+          "key": "menu9",
+          "value": "Swing Away Heat Press Machine for Sublimation Printing",
+           "href": "productdetails"
+        },
+         {
+          "key": "menu10",
+          "value": "St-3042 Freesub 3d Sublimation Machine For Cases",
+           "href": "productdetails"
+        },
+        {
+          "key": "menu11",
+          "value": "St2030 Freesub 3d Sublimation Mobile Case Printing Machine",
+           "href": "productdetails"
+        },
+         {
+          "key": "menu12",
+          "value": "St-420 3d Sublimation Machine For T- Shirt & Mobile Covers",
+           "href": "productdetails"
+        },
+        {
+          "key": "menu13",
+          "value": "ST-1520 Multifunction 3D Sublimation Mini Machine",
+           "href": "productdetails"
+        }
+      ]
+    },
+    {
+      "key": "mug",
+      "value": "Mug",
+       "href": "productdetails"
+    },
+    {
+      "key": "aboutUs",
+      "value": "About Us",
+       "href": "about"
+    },
+    {
+      "key": "videos",
+      "value": "Videos",
+       "href": "productdetails"
+    },
+    {
+      "key": "photos",
+      "value": "Photos",
+       "href": "productdetails",
+        "href": "photos"
+    },
+    {
+      "key": "contactUs",
+      "value": "Contact Us",
+       "href": "contactus"
+    },
+    {
+      "key": "requestQouteNow",
+      "value": "REQUEST A QUOTE NOW"
+    }
+  ]
+  
+  
+  
+}

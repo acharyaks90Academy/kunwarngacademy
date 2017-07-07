@@ -14,24 +14,11 @@ angular.module('printdigtsApp')
       'AngularJS',
       'Karma'
     ];
-    // $http({
-    //   method: 'GET',
-    //   url: 'json/demoData.json'
-    // }).then(function successCallback(response) {
-    //   $scope.menu = response.data.mainMenu;
-    //   $scope.listPro = response.data.productList;
-    //   $scope.footerLink = response.data.footerMenu
-
-    // }, function errorCallback(response) {
-    //   $scope.noDataFound = true;
-
-    // });
-
-
-    // mydata a variable which we can use future
-
-
     
+    //menu data
+
+      homePage.menuData($scope);
+    // mydata a variable which we can use future
 
     var mydata = homePage.getData($scope);
 

@@ -22,7 +22,7 @@ angular.module('printdigtsApp')
           method: 'GET',
           url: 'json/demoData.json'
         }).then(function successCallback(response) {
-          $scope.menu = response.data.mainMenu;
+         
           $scope.listPro = response.data.productList;
           // $scope.footerLink = response.data.footerMenu
         }, function errorCallback(response) {
@@ -31,8 +31,22 @@ angular.module('printdigtsApp')
         });
         return data;
       },
+      menuData: function ($scope) {
+        var data = "";
+        $http({
+          method: 'GET',
+          url: 'json/menuData.json'
+        }).then(function successCallback(response) {
+          $scope.menu = response.data.mainMenu;
+         
+        }, function errorCallback(response) {
+          $scope.noDataFound = true;
 
+        });
+        return data;
+      },
 
+    
    footerData : function ($scope) {
       
     //  var anil =   4;
