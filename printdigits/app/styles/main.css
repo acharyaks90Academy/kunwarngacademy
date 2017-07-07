@@ -27,6 +27,9 @@ footer p{font-size:12px}
 .borderZero{border:0px!important}
 .welcomeBg{background:#f3f3f3; padding:10px 20px}
 .pdfBox{background:#00adf0; padding:10px 20px}
+.padding20 {padding: 20px;}
+.padding10 {padding: 10px;}
+.paddingBottomZero {padding-bottom: 0px!important;}
 
 .modal-footer {background:#f2f2f2!important; }
 
@@ -871,3 +874,16 @@ label{font-weight:400}
 
 }
 
+
+
+
+/*  */
+
+
+.categorynav .panel-group  .panel-heading {color:#fff!important; font-size: 12px!important; border:0px!important; font-weight: bold; background: #02aff0; font-weight: bold; border-radius: 0px!important;}
+.categorynav .panel {border:0px!important; border-radius:0px!important;}
+.categorynav .panel-title {font-size: 12px!important; border:0px!important; font-weight: bold;}
+.categorynav ul li, .categorynav ul  {list-style: none;  margin:0px!important; padding:5px 0px!important;}
+.categorynav ul li a {font-size:12px!important; cursor: pointer;}
+.categorynav .panel-body {padding:10px 15px!important;}
+.categorynav h3 {margin-top: 0px;}
