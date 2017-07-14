@@ -8,7 +8,7 @@
  * Controller of the printdigtsApp
  */
 angular.module('printdigtsApp')
-  .controller('CategoryCtrl', function ($scope) {
+  .controller('CategoryCtrl', function ($scope,$http) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -20,5 +20,12 @@ angular.module('printdigtsApp')
     isFirstOpen: true,
     isFirstDisabled: false
   };
+
+
+
+
+
+
+  
 
   });
